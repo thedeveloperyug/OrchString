@@ -2697,3 +2697,15 @@ main > section:not(.hero) {
   text-shadow:none !important;
   opacity:1 !important;
 }
+
+/* NEYTRA leadership: equal-height, responsive profile cards. */
+.people-carousel{align-items:stretch}
+.people-carousel .person-card{display:flex;flex-direction:column;min-height:355px}
+.people-carousel .person-card p{flex:1}
+.people-carousel .person-links{margin-top:24px;align-items:flex-start}
+.people-carousel .person-links a{display:inline-flex;align-items:center;justify-content:center}
+@media(max-width:650px){
+  .people-carousel .person-card{min-height:0}
+  .people-carousel .person-links{align-items:stretch}
+  .people-carousel .person-links a{width:100%;box-sizing:border-box}
+}
