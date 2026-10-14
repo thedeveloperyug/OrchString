@@ -2713,3 +2713,6 @@ main > section:not(.hero) {
 /* Founder portrait avatar */
 .founder-profile .person-avatar{overflow:hidden;flex-shrink:0}
 .founder-profile .person-avatar img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+
+.operations-profile .person-avatar{overflow:hidden;flex-shrink:0}
+.operations-profile .person-avatar img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
