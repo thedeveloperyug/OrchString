@@ -1039,7 +1039,7 @@ html{overflow-x:hidden}body{width:100%;min-width:0}img,svg,canvas{max-width:100%
 
 
 /* ========================================================================== */
-/* NEYTRA PRODUCT UI — clean Google-inspired visual system                    */
+/* Neytra PRODUCT UI — clean Google-inspired visual system                    */
 /* Design-only layer: content, links, structure and motion logic are intact. */
 /* ========================================================================== */
 
@@ -2698,7 +2698,7 @@ main > section:not(.hero) {
   opacity:1 !important;
 }
 
-/* NEYTRA leadership: equal-height, responsive profile cards. */
+/* Neytra leadership: equal-height, responsive profile cards. */
 .people-carousel{align-items:stretch}
 .people-carousel .person-card{display:flex;flex-direction:column;min-height:355px}
 .people-carousel .person-card p{flex:1}
@@ -2720,3 +2720,6 @@ main > section:not(.hero) {
 /* Head of Sales portrait: keep the photo within the circular team avatar. */
 .sales-profile .person-avatar{overflow:hidden;flex-shrink:0}
 .sales-profile .person-avatar img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+
+/* Keep mixed-case Neytra brand labels readable instead of forcing uppercase. */
+.eyebrow { text-transform: none; }

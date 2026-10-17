@@ -1,4 +1,4 @@
-name: Deploy NEYTRA Intelligence Website to GitHub Pages
+name: Deploy Neytra Intelligence Website to GitHub Pages
 
 on:
   push:

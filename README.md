@@ -1,18 +1,20 @@
-# NEYTRA Intelligence Platform — Website
+# Neytra Intelligence Platform — Website
 
 Official website: https://neytraintelligence.com/
 
-**Primary project:** NEYTRA Intelligence Platform (NIP)  
+**Primary project:** Neytra Intelligence Platform (NIP)  
 **Status:** Active development  
 **Tagline:** Think. Adapt. Act.
 
 ## Purpose
 
-This repository contains the public-facing website for **NIP — NEYTRA Intelligence Platform**.
+The Neytra Intelligence Platform (NIP) is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.
+
+This repository contains the public-facing website for **NIP — Neytra Intelligence Platform**.
 
 NIP is an OS-agnostic intelligent execution platform designed for reasoning, planning, model orchestration, memory, environment awareness, capability discovery, tool intelligence, multi-task execution, verification, developer intelligence and controlled autonomy.
 
-**NIP is the current engineering focus. NEYTRA OS remains a separate future operating-system project and is intentionally preserved as part of the NEYTRA vision.**
+**NIP is the current engineering focus. Neytra OS remains a separate future operating-system project and is intentionally preserved as part of the Neytra vision.**
 
 ## What NIP is
 
@@ -43,25 +45,25 @@ The architecture supports:
 - Verification and evidence traceability
 - Developer intelligence
 - Linux and future multi-OS adapters
-- Future deep NEYTRA OS integration
+- Future deep Neytra OS integration
 
-## NIP ↔ NEYTRA OS
+## NIP ↔ Neytra OS
 
 The projects have a deliberate boundary:
 
 | Project | Responsibility |
 |---|---|
 | **NIP** | Intelligence, jobs, tasks, agents, models, capabilities, tools, reasoning, verification |
-| **NEYTRA OS** | Operating system, services, desktop, hardware, isolation and system-level authority |
+| **Neytra OS** | Operating system, services, desktop, hardware, isolation and system-level authority |
 | **Integration Bridge** | Requests, events, capabilities, permissions, execution results and artifacts |
 
-**NEYTRA OS provides the system. NIP provides the intelligence.**
+**Neytra OS provides the system. NIP provides the intelligence.**
 
-The website therefore presents NIP as the active platform while retaining NEYTRA OS as the future operating-system direction.
+The website therefore presents NIP as the active platform while retaining Neytra OS as the future operating-system direction.
 
 ## Website design
 
-The site keeps the existing NEYTRA visual language and animations, including:
+The site keeps the existing Neytra visual language and animations, including:
 
 - Animated particle field
 - Interactive cursor glow
@@ -82,12 +84,12 @@ The new NIP-first experience adds visual representations for:
 - Core capabilities
 - Controlled execution
 - Model runtime
-- NIP ↔ NEYTRA OS boundary
+- NIP ↔ Neytra OS boundary
 - Development roadmap
 
 ## Repository naming
 
-The current GitHub repository is named `neytra-os-website`. The intended identity of this website is now **NEYTRA Intelligence Platform**.
+The current GitHub repository is named `neytra-os-website`. The intended identity of this website is now **Neytra Intelligence Platform**.
 
 GitHub repository renaming is an account-level repository setting; after renaming it, update the GitHub Pages URL and any external references if GitHub does not automatically preserve the expected redirect.
 
@@ -99,14 +101,14 @@ GitHub Actions deploys `main` to GitHub Pages via:
 
 ## Founder
 
-**Yogesh Pandey** — Founder & creator of the NEYTRA platform vision.
+**Yogesh Pandey** — Founder & creator of the Neytra platform vision.
 
 LinkedIn: https://www.linkedin.com/in/thedeveloperyug  
 Email: thedeveloperyug@gmail.com
 
 ---
 
-**NIP — The intelligence layer for NEYTRA.**
+**NIP — The intelligence layer for Neytra.**
 
 **Think. Adapt. Act.**
 

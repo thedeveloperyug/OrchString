@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate SEO signals for the single-page NEYTRA website before deployment."""
+"""Validate SEO signals for the single-page Neytra website before deployment."""
 
 from datetime import date
 from html.parser import HTMLParser
@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[2]
 CANONICAL = "https://neytraintelligence.com/"
 SITEMAP = CANONICAL + "sitemap.xml"
+BRAND_INTRO = "The Neytra Intelligence Platform (NIP) is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows."
 
 
 class HeadParser(HTMLParser):
@@ -45,8 +46,13 @@ def main():
         errors.append("index.html needs exactly one canonical pointing to " + CANONICAL)
     if parser.metadata.get("og:url") != CANONICAL:
         errors.append("Open Graph URL must match the canonical URL")
-    if not parser.metadata.get("description", "").strip():
-        errors.append("Missing homepage meta description")
+    if parser.metadata.get("description") != BRAND_INTRO:
+        errors.append("Homepage meta description must match the official NIP introduction")
+    homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+    if "NEYTRA" in homepage:
+        errors.append("Use Neytra title case, not all-caps NEYTRA")
+    if homepage.count(BRAND_INTRO) < 2:
+        errors.append("Official NIP introduction must appear in visible homepage content")
     robots_meta = parser.metadata.get("robots", "").lower().replace(" ", "")
     if "noindex" in robots_meta or "nofollow" in robots_meta:
         errors.append("Homepage must not be marked noindex/nofollow")
