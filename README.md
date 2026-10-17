@@ -109,3 +109,57 @@ Email: thedeveloperyug@gmail.com
 **NIP — The intelligence layer for NEYTRA.**
 
 **Think. Adapt. Act.**
+
+## SEO and domain routing
+
+**Canonical website:** `https://neytraintelligence.com/` (the one-page public site).
+
+**Secondary domain:** `neytraintelligence.in` is a redirect-only domain. Neither
+the .in domain nor a `www` alias should serve a separately indexable copy.
+
+The following should be configured at the DNS/CDN/registrar/hosting redirect layer,
+**not** as a JavaScript redirect in `index.html`:
+
+| Incoming URL | Expected response | Destination |
+| --- | --- | --- |
+| `http://neytraintelligence.in/` | 301 or 308 | `https://neytraintelligence.com/` |
+| `https://neytraintelligence.in/` | 301 or 308 | `https://neytraintelligence.com/` |
+| `http://www.neytraintelligence.in/` | 301 or 308 | `https://neytraintelligence.com/` |
+| `https://www.neytraintelligence.in/` | 301 or 308 | `https://neytraintelligence.com/` |
+| `https://www.neytraintelligence.com/` | 301 or 308 | `https://neytraintelligence.com/` |
+| `http://neytraintelligence.com/` | 301 or 308 | `https://neytraintelligence.com/` |
+
+Keep redirects **permanent, direct, and server-side**; preserve paths and query
+strings when an equivalent destination exists. Ensure all four hostnames have
+correct DNS and valid HTTPS certificates before requiring HTTPS redirects.
+Do not add `noindex` or disallow these URLs in `robots.txt` merely to remove
+Search Console's expected "Page with redirect" or "Alternate page with proper
+canonical tag" classifications.
+
+### Indexability signals
+
+- `index.html` sets a self-referencing canonical and matching Open Graph URL.
+- `robots.txt` allows crawlers and references `https://neytraintelligence.com/sitemap.xml`.
+- `sitemap.xml` lists **only** the canonical homepage. The current navigation
+  uses same-page hash fragments, which are not standalone pages to submit.
+- The GitHub Pages workflow executes `.github/scripts/check_seo.py` before deploy
+  to prevent accidental SEO regressions. Run it locally with
+  `python3 .github/scripts/check_seo.py`.
+
+### Google Search Console verification
+
+1. Verify ownership of **both domains** (Domain properties if possible).
+2. Submit `https://neytraintelligence.com/sitemap.xml` in the .com property's
+   Sitemaps section.
+3. In URL Inspection for `https://neytraintelligence.com/`, run **Test Live URL**
+   and **Request Indexing** if it is eligible but not indexed.
+4. Under Pages > Not indexed, inspect the **exact URLs** associated with
+   "Page with redirect" and "Alternate page with proper canonical tag".
+   These are normal when they point to the intended indexed .com canonical.
+   Escalate only if the preferred .com URL is itself excluded or Google selects
+   a different canonical.
+5. Test HTTP status codes and final destinations for the table above.
+   GitHub source code alone cannot configure the external .in forwarding service.
+
+Google indexing and rankings are determined by Google's crawl/indexing systems;
+deployment does not guarantee immediate inclusion in search results.
