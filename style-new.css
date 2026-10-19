@@ -2842,3 +2842,99 @@ main > section:not(.hero) {
 .invoice-pilot-link:hover,.invoice-pilot-link:focus-visible{color:#fff;background:#155ab4}
 @media(max-width:1100px){.invoice-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.invoice-value-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.invoice-impact{grid-template-columns:1fr}}
 @media(max-width:720px){.invoice-steps,.invoice-branch-grid,.invoice-decision-grid{grid-template-columns:1fr}.invoice-stack{padding:23px 16px}.invoice-stack-row{grid-template-columns:38px minmax(0,1fr);padding:16px 13px;gap:10px}.invoice-stack-num{width:34px;height:34px}.invoice-stack-role{grid-column:2;justify-self:start}.invoice-parallel{padding:21px 16px}.invoice-value-grid,.invoice-impact-stats{grid-template-columns:1fr}.invoice-impact{padding:24px 17px}.invoice-request-card{padding:22px 18px}.invoice-request-top{flex-wrap:wrap}.invoice-request-top small{margin-left:0}.invoice-pilot{flex-direction:column;align-items:stretch;padding:24px 19px}.invoice-pilot-link{text-align:center}.invoice-summary{padding:20px 15px}}
+
+
+/* Public-facing, business-first orchestration diagram and cross-industry solutions */
+.orchestration-overview{
+  width:min(100%,1080px);
+  margin:34px auto 0;
+  padding:clamp(19px,3vw,36px);
+  background:linear-gradient(155deg,#ffffff 0%,#f8fbff 100%);
+  border:1px solid #dae6f7;
+  border-radius:26px;
+  box-shadow:0 12px 36px rgba(44,86,137,.055);
+}
+.orchestration-intro{text-align:center;max-width:730px;margin:0 auto 29px}
+.orchestration-kicker{display:block;font-size:11px;color:#1a73e8;letter-spacing:.12em;font-weight:800}
+.orchestration-intro h3{font-size:clamp(24px,3.2vw,36px);color:#202124;letter-spacing:-.035em;margin:10px 0}
+.orchestration-intro h3 span{color:#1a73e8}
+.orchestration-intro p{font-size:14px;color:#5f6368;line-height:1.75;margin:0}
+.orchestration-stages{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.orchestration-stages li{
+  position:relative;display:grid;grid-template-columns:54px minmax(0,1fr) auto;align-items:center;
+  gap:17px;min-height:112px;padding:17px 23px;
+  background:#fff;border:1px solid #dce6f4;border-radius:16px;
+  margin-bottom:20px;box-shadow:0 2px 8px rgba(47,84,133,.035);
+}
+.orchestration-stages li:not(:last-child)::after{
+  content:"↓";position:absolute;left:50%;bottom:-19px;transform:translateX(-50%);
+  color:#6d9cda;font-size:17px;line-height:17px;z-index:1;
+}
+.orchestration-stage-number{display:grid;place-items:center;width:50px;height:50px;border-radius:14px;background:#eaf3ff;color:#1967d2;font-size:14px;font-weight:800}
+.orchestration-stage-content h4{color:#202124;font-size:18px;letter-spacing:-.025em;margin:0 0 6px}
+.orchestration-stage-content p{color:#5d6b7b;font-size:13px;line-height:1.65;margin:0}
+.orchestration-stage-label{color:#246abb;background:#edf5ff;padding:8px 12px;font-size:11px;font-weight:700;border-radius:999px}
+.orchestration-outcome{display:flex;align-items:center;gap:15px;padding:20px 24px;background:#eaf4ff;border:1px solid #c6dffb;border-radius:16px}
+.orchestration-outcome-icon{display:grid;place-items:center;flex:0 0 43px;width:43px;height:43px;border-radius:50%;background:#1a73e8;color:#fff;font-size:23px;font-weight:800}
+.orchestration-outcome strong{font-size:17px;color:#1d507f}
+.orchestration-outcome p{font-size:12px;color:#426078;line-height:1.7;margin:5px 0 0}
+.orchestration-fabric{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;border-top:1px solid #e1eaf6;margin-top:24px;padding-top:20px}
+.orchestration-fabric strong{font-size:12px;color:#354e6b;margin-right:9px}
+.orchestration-fabric span{display:inline-block;padding:7px 11px;border:1px solid #dce8f6;border-radius:999px;color:#4e6b89;font-size:11px;background:#fff}
+.orchestration-positioning{max-width:980px;margin:23px auto 0;padding:0 5px;color:#5f6368;font-size:14px;line-height:1.75;text-align:center}
+.orchestration-positioning strong{color:#234f8b}
+.orchestration-next{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:23px 0 0}
+.orchestration-next a{display:inline-flex;align-items:center;gap:9px;padding:12px 19px;border:1px solid #bcd5f4;border-radius:999px;color:#1a73e8;background:#fff;font-weight:700;font-size:12px;text-decoration:none;transition:border-color .2s,background .2s}
+.orchestration-next a:hover,.orchestration-next a:focus-visible{background:#edf5ff;border-color:#1a73e8;color:#1657a6}
+.orchestration-cases{max-width:1200px !important}
+.orchestration-cases > h2{margin-bottom:21px}
+.orchestration-cases-intro{color:#5f6368;font-size:16px;line-height:1.8;max-width:810px;margin:0 0 32px}
+.orchestration-case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.orchestration-case{
+  display:flex;flex-direction:column;gap:0;padding:26px 24px;
+  border:1px solid #dfe8f3;border-radius:20px;background:#fff;
+  box-shadow:0 5px 18px rgba(40,76,116,.042);min-width:0;
+}
+.orchestration-case-type{color:#226ec3;letter-spacing:.095em;font-size:10px;font-weight:800}
+.orchestration-case h3{margin:13px 0 13px;color:#202124;font-size:21px;line-height:1.3}
+.orchestration-case-flow{margin:0;color:#48596b;font-size:13px;line-height:1.75}
+.orchestration-case-value{margin:15px 0 0;padding-top:14px;border-top:1px solid #edf1f6;color:#526679;font-size:12px;line-height:1.7}
+.orchestration-case-value strong{color:#1b63ad}
+.orchestration-case a{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:18px;color:#1a73e8;text-decoration:none;font-size:12px;font-weight:750}
+.orchestration-case a:hover,.orchestration-case a:focus-visible{text-decoration:underline}
+.orchestration-example-disclaimer{font-size:12px;line-height:1.7;color:#657488;margin:21px 0 0}
+.invoice-example-section .section-heading{margin-bottom:15px}
+.invoice-value-section .invoice-value-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.orchestration-metrics{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:20px;margin:25px 0 0;border:1px solid #e0e9f4;border-radius:17px;background:#f9fbff}
+.orchestration-metrics strong{color:#2a4c70;margin-right:10px;font-size:13px}
+.orchestration-metrics span{padding:8px 11px;border:1px solid #dce8f5;border-radius:999px;background:#fff;color:#41617c;font-size:11px}
+.orchestration-scenario-head{margin:38px 0 15px}
+.orchestration-scenario-head h3{font-size:clamp(23px,2.6vw,31px);letter-spacing:-.025em;margin:10px 0;color:#202124}
+.orchestration-scenario-head p{max-width:790px;color:#5f6368;font-size:13px;line-height:1.7;margin:0}
+.orchestration-recovery{margin-top:25px;padding:25px 28px;border:1px solid #dce9f6;border-radius:20px;background:#f8fbff}
+.orchestration-recovery > div{display:flex;align-items:center;gap:12px}
+.orchestration-recovery > div span{display:grid;place-items:center;background:#e4f2ff;border-radius:13px;width:42px;height:42px;font-size:23px;color:#1a73e8}
+.orchestration-recovery h3{margin:0;color:#202124;font-size:21px}
+.orchestration-recovery p{margin:14px 0 12px;line-height:1.75;font-size:14px;color:#5f6368}
+.orchestration-recovery > strong{font-size:13px;color:#1b619c}
+@media(max-width:1100px){
+  .orchestration-case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .invoice-value-section .invoice-value-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:720px){
+  .orchestration-stages li{grid-template-columns:45px minmax(0,1fr);gap:13px;padding:16px 13px}
+  .orchestration-stage-number{width:40px;height:40px;font-size:12px}
+  .orchestration-stage-content h4{font-size:16px}
+  .orchestration-stage-content p{font-size:12px}
+  .orchestration-stage-label{grid-column:2;justify-self:start}
+  .orchestration-overview{padding:19px 14px}
+  .orchestration-outcome{padding:18px 13px;align-items:flex-start}
+  .orchestration-fabric{justify-content:flex-start}
+  .orchestration-fabric strong{flex-basis:100%}
+  .orchestration-next a{width:100%;justify-content:center}
+  .orchestration-case-grid,.invoice-value-section .invoice-value-grid{grid-template-columns:1fr}
+  .orchestration-case{padding:23px 19px}
+  .orchestration-recovery{padding:20px 17px}
+  .orchestration-recovery h3{font-size:18px}
+}
+@media(prefers-reduced-motion:reduce){.orchestration-next a{transition:none}}
