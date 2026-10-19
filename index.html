@@ -109,6 +109,7 @@
   <nav id="main-nav">
     <a href="#platform">Platform</a>
     <a href="#architecture">Architecture</a>
+    <a href="#business-impact">Business Value</a>
     <a href="#capabilities">Capabilities</a>
     <a href="#execution">Execution</a>
     <a href="#roadmap">Roadmap</a>
@@ -128,9 +129,9 @@
       <a class="secondary" href="https://github.com/thedeveloperyug/NIP">View private repository ↗</a>
     </div>
     <div class="hero-proof">
-      <span><b>REASON</b> from context</span>
-      <span><b>ORCHESTRATE</b> complex work</span>
-      <span><b>VERIFY</b> with evidence</span>
+      <span><b>AUTOMATE</b> high-volume operations</span>
+      <span><b>CONTROL</b> approvals and exceptions</span>
+      <span><b>VERIFY</b> every outcome</span>
     </div>
   </div>
 
@@ -174,131 +175,100 @@
   </div>
 </section>
 
-<section id="architecture" class="nip-section reveal">
+
+<section id="architecture" class="nip-section reveal" aria-labelledby="invoice-architecture-heading">
   <div class="section-heading">
     <div>
-      <div class="eyebrow">02 / HOW NIP THINKS</div>
-      <h2>You give the goal.<br><span>NIP builds the intelligence.</span></h2>
+      <div class="eyebrow">02 / REAL-WORLD BUSINESS WORKFLOW</div>
+      <h2 id="invoice-architecture-heading">10,000 invoices.<br><span>One coordinated workflow.</span></h2>
     </div>
-    <p>From one request to a complex multi-task job, NIP turns intent into a controlled execution graph — scheduling work, placing it on agents, invoking capabilities and model intelligence, then observing, reasoning and verifying the result.</p>
+    <p>Picture a finance team handling thousands of supplier invoices every month. NIP can be configured to coordinate document intelligence, parallel verification, authorization and evidence, turning routine operational work into a controlled process.</p>
   </div>
 
-  <div class="user-architecture">
-    <div class="user-prompt">
-      <div class="example-task-head">
-        <div class="chat-head"><span class="chat-orb"></span><b>EXAMPLE TASK</b><small>NIP receives the outcome</small></div>
-        <span class="example-task-status">INTELLIGENCE WORKFLOW</span>
-      </div>
-      <div class="task-label">YOUR REQUEST</div>
-      <div class="chat-bubble">Build me an AI agent for my daily trading analysis. Connect it to my authorized market data and research sources, analyze my watchlist, compare signals, generate a risk-aware daily report, and improve the workflow from verified feedback.</div>
-      <div class="chat-bubble multi">You give NIP <strong>the outcome</strong>. NIP assembles and coordinates the intelligence needed to reach it:<br>
-        <span>① Understand</span><span>② Build the team</span><span>③ Match intelligence</span><span>④ Execute</span><span>⑤ Verify + improve</span>
-      </div>
-      <div class="nip-agent-build">
-        <div class="build-label"><span>✦</span><b>NIP BUILDS THE INTELLIGENCE SYSTEM</b><small>Agents, models and capabilities are assembled around the outcome.</small></div>
-        <div class="build-steps">
-          <span>Goal</span><i>→</i><span>Agent team</span><i>→</i><span>Models + capabilities</span><i>→</i><span>Coordinate</span><i>→</i><strong>Outcome</strong>
-        </div>
-      </div>
+  <div class="invoice-journey">
+    <div class="invoice-request-card">
+      <div class="invoice-request-top"><span class="invoice-request-pip" aria-hidden="true"></span><strong>FINANCE TEAM REQUEST</strong><small>Illustrative NIP solution</small></div>
+      <span class="invoice-request-caption">THE BUSINESS OBJECTIVE</span>
+      <blockquote>“Process our supplier invoices from approved emails and portals. Extract key fields, match purchase orders and goods receipts, detect duplicates and tax issues, route exceptions to people, and post authorized results to accounting with a full audit trail.”</blockquote>
+      <div class="invoice-request-tags"><span>Authorized sources</span><span>Policy-based checks</span><span>Human approval</span><span>Verifiable outcomes</span></div>
     </div>
 
-    <div class="user-arrow"><span>↓</span><b>01 · UNDERSTAND & DECOMPOSE</b><small>NIP turns your goal into the work that needs to happen.</small></div>
-
-    <div class="intel-layer">
-      <div class="layer-title"><span>01</span><b>UNDERSTAND THE GOAL</b><small>Context, constraints, dependencies and acceptance criteria shape the work.</small></div>
-      <div class="intel-grid">
-        <div class="intel-node"><i>◈</i><b>UNDERSTAND</b><small>What outcome do you need?</small></div>
-        <div class="intel-node"><i>◇</i><b>DECOMPOSE</b><small>What work is required?</small></div>
-        <div class="intel-node"><i>↗</i><b>DEPENDENCIES</b><small>What can happen together?</small></div>
-        <div class="intel-node"><i>↻</i><b>PLAN</b><small>What path can reach the outcome?</small></div>
-      </div>
+    <div class="invoice-journey-title"><span>HOW NIP COORDINATES THE WORK</span><p>Independent checks can run in parallel. Actions that affect financial records wait for the required evidence and permissions.</p></div>
+    <div class="invoice-steps">
+      <article><span>01</span><h3>Receive</h3><p>Collect invoice PDFs or structured data from approved email, portals and APIs.</p></article>
+      <article><span>02</span><h3>Understand</h3><p>Use document vision and extraction to identify supplier, totals, tax and line items.</p></article>
+      <article><span>03</span><h3>Verify</h3><p>Split matching, delivery and compliance checks into independently tracked tasks.</p></article>
+      <article><span>04</span><h3>Authorize</h3><p>Apply configured policy and route mismatches or high-risk cases to people.</p></article>
+      <article><span>05</span><h3>Record</h3><p>Post permitted accounting entries, reconcile state and retain an evidence trail.</p></article>
     </div>
 
-    <div class="user-arrow"><span>↓</span><b>02 · CREATE & COLLABORATE</b><small>NIP can assemble specialized agents around the work instead of making one agent do everything.</small></div>
-
-    <div class="agents-layer">
-      <div class="layer-title"><span>02</span><b>AGENT CREATION & COLLABORATION</b><small>Specialized agents can be composed for research, analysis, coding, creation and verification, then coordinated as one team.</small></div>
-      <div class="agent-grid">
-        <div><span>🧠</span><b>RESEARCH AGENT</b><small>Find · compare · summarize</small></div>
-        <div><span>📊</span><b>ANALYSIS AGENT</b><small>Reason · calculate · interpret</small></div>
-        <div><span>💻</span><b>CODE AGENT</b><small>Build · test · debug</small></div>
-        <div><span>🎨</span><b>CREATION AGENT</b><small>Write · design · produce</small></div>
-        <div><span>🔍</span><b>VERIFICATION AGENT</b><small>Check · challenge · validate</small></div>
-        <div><span>✦</span><b>AGENT BUILDER</b><small>Compose · evaluate · improve</small></div>
+    <div class="invoice-parallel">
+      <div class="invoice-panel-heading"><span>PARALLEL TASK GRAPH</span><h3>Three checks. One evidence-backed decision.</h3><p>Each validation works from the same invoice and joins at the approval gate.</p></div>
+      <div class="invoice-branch-grid">
+        <article><span class="invoice-branch-symbol" aria-hidden="true">▤</span><h4>Purchase order</h4><p>Line items · price · invoice total</p></article>
+        <article><span class="invoice-branch-symbol" aria-hidden="true">▣</span><h4>Goods received</h4><p>Quantities · delivery confirmation</p></article>
+        <article><span class="invoice-branch-symbol" aria-hidden="true">◇</span><h4>Risk and tax</h4><p>Duplicate · vendor · GST checks</p></article>
+      </div>
+      <div class="invoice-join" aria-label="All checks feed into a policy decision"><span aria-hidden="true">↓</span><strong>JOIN EVIDENCE · APPLY POLICY</strong></div>
+      <div class="invoice-decision-grid">
+        <div class="invoice-decision-good"><strong>✓ Checks pass</strong><p>Proceed to permitted accounting writeback, following configured approval policy.</p></div>
+        <div class="invoice-decision-review"><strong>! Exception detected</strong><p>Pause the affected invoice; route evidence to an authorized reviewer and resume after a decision.</p></div>
       </div>
     </div>
-
-    <div class="user-arrow"><span>↓</span><b>03 · MATCH INTELLIGENCE</b><small>Each part of the work can use different model intelligence and capabilities.</small></div>
-
-    <div class="routing-layer">
-      <div class="layer-title"><span>03</span><b>MODEL INTELLIGENCE</b><small>NIP can route different tasks to different model families instead of forcing the whole workflow through one model.</small></div>
-      <div class="model-routing">
-        <div class="model-family"><b>TEXT · REASONING · CODING</b><span>GPT-5.6 Sol</span><span>Claude Opus 4.1</span><span>Qwen3-32B</span></div>
-        <div class="model-family"><b>VISION · MULTIMODAL</b><span>Gemini 3.1 Pro</span><span>Llama 4 Maverick</span><span>Qwen3-VL</span></div>
-        <div class="model-family"><b>VIDEO GENERATION</b><span>Veo 3.1</span><span>Veo 3.1 Lite</span></div>
-        <div class="model-family"><b>VOICE · SPEECH</b><span>Eleven v3</span><span>Eleven v3 Conversational</span></div>
-        <div class="model-family"><b>SPEECH → TEXT</b><span>Scribe v2</span><span>Whisper</span></div>
-        <div class="model-family"><b>MUSIC · SOUND</b><span>Lyria 3</span><span>Eleven Text-to-Sound</span></div>
-        <div class="model-family local"><b>LOCAL · OPEN-WEIGHT</b><span>Qwen3-32B</span><span>Llama 4 Scout</span><span>Qwen3-VL</span></div>
-      </div>
-      <div class="route-example">
-        <span>Route by</span><b>→</b><strong>modality · capability · quality · privacy · latency · cost · available resources</strong>
-      </div>
-      <div class="router-note">Illustrative model examples · NIP is provider-neutral and can choose among available intelligence resources for each part of the work.</div>
-    </div>
-
-    <div class="user-arrow"><span>↓</span><b>04 · EXECUTE TOGETHER</b><small>Independent work can run in parallel while dependent work stays coordinated.</small></div>
-
-    <div class="parallel-layer">
-      <div class="layer-title"><span>04</span><b>COORDINATED EXECUTION</b><small>Agents, models and capabilities work together as one execution system.</small></div>
-      <div class="parallel-graph">
-        <div class="graph-start">YOUR GOAL</div>
-        <div class="graph-lines"><i></i><i></i><i></i></div>
-        <div class="graph-tasks">
-          <div><b>RESEARCH</b><small>Agent + vision/text intelligence</small></div>
-          <div><b>ANALYSIS</b><small>Agent + reasoning intelligence</small></div>
-          <div><b>BUILD</b><small>Agent + coding intelligence</small></div>
-        </div>
-        <div class="graph-merge">↘ <span>SHARE · COORDINATE · ADAPT</span> ↙</div>
-        <div class="graph-result"><b>ONE COORDINATED OUTCOME</b><small>Work completed across the right agents, models and capabilities</small></div>
-      </div>
-    </div>
-
-    <div class="user-arrow"><span>↓</span><b>05 · ACT THROUGH CAPABILITIES</b><small>NIP can use authorized tools, applications, data and environments required by the task.</small></div>
-
-    <div class="environment-layer">
-      <div class="layer-title"><span>05</span><b>CAPABILITIES & ENVIRONMENTS</b><small>Capabilities connect intelligence to the real systems where work needs to happen.</small></div>
-      <div class="environment-grid">
-        <span>Web & APIs</span><span>Market Data</span><span>News & Research</span><span>Files</span><span>Code & Terminal</span><span>Applications</span><span>Databases</span><span>Cloud Services</span><span>Devices</span><span>Linux</span><span>underlying platform</span>
-      </div>
-    </div>
-
-    <div class="user-arrow final-arrow"><span>↓</span><b>06 · OBSERVE · VERIFY · IMPROVE</b><small>NIP checks what happened, learns from verified feedback and can adapt the workflow.</small></div>
-
-    <div class="verification-layer">
-      <div class="layer-title"><span>06</span><b>VERIFY & ADAPT</b><small>Results are checked against evidence and the objective before the outcome is returned.</small></div>
-      <div class="verification-flow">
-        <span>OBSERVE</span><i>→</i><span>CRITIQUE</span><i>→</i><span>REASON</span><i>→</i><span>VERIFY</span><i>→</i><strong>IMPROVE</strong>
-      </div>
-      <div class="verification-recovery">If something fails: <b>retry</b> · <b>replace</b> · <b>reroute</b> · <b>replan</b> · <b>continue</b></div>
-    </div>
+    <p class="invoice-security"><strong>Financial safety boundary:</strong> AI can interpret and recommend; it does not independently release payments. Posting and payment scheduling must respect the client's permissions, policies and human approval requirements.</p>
   </div>
 
-  <div class="architecture-principle">
-    <span class="nip-idea-label">THE NIP IDEA</span>
-    <b class="nip-idea-title">You don't manage the intelligence.<br>You define the outcome.</b>
-    <p class="nip-idea-body"><strong>NIP turns a goal into a living execution system.</strong> You give NIP an objective — not a list of models, agents or steps to manually coordinate. NIP can break the objective into dependent and independent work, assemble specialized agents, combine different models, execute work in parallel, share verified results between workers, and adapt the execution as conditions change.</p>
-    <p class="nip-idea-recovery">If an agent fails, a model becomes unavailable, a tool stops working, or the original plan is no longer valid, <strong>NIP can recover, replace, reroute or replan instead of simply stopping.</strong></p>
-    <div class="nip-idea-flow" aria-label="NIP coordinated execution flow">
-      <span>ONE GOAL</span><i>→</i>
-      <span>MANY TASKS</span><i>→</i>
-      <span>AGENTS + MODELS</span><i>→</i>
-      <span>PARALLEL EXECUTION</span><i>→</i>
-      <span>OBSERVE · VERIFY · RECOVER</span><i>→</i>
-      <strong>ONE OUTCOME</strong>
+  <div class="invoice-stack" aria-label="Technical layers supporting the invoice workflow">
+    <div class="invoice-stack-heading">
+      <span class="eyebrow">TECHNICAL EXECUTION ARCHITECTURE</span>
+      <h3>Every workflow layer has a <em>clear responsibility.</em></h3>
+      <p>From finance team interaction to durable audit evidence, NIP connects intelligent work with controlled execution.</p>
     </div>
-    <b class="nip-idea-punchline">One goal → many agents → many models → many capabilities → one coordinated result.</b>
-    <p class="nip-idea-close">NIP is not about choosing the best model. It is about building the right intelligence system for the outcome — dynamically, continuously and under control.</p>
+    <div class="invoice-stack-rows">
+      <div class="invoice-stack-row"><span class="invoice-stack-num">01</span><div><h4>Flutter Console</h4><p>Finance worklists, invoice progress, exception review and human approval interfaces</p></div><span class="invoice-stack-role">Experience</span></div>
+      <div class="invoice-stack-arrow" aria-hidden="true">↓</div>
+      <div class="invoice-stack-row"><span class="invoice-stack-num">02</span><div><h4>Go Control Plane (NCP)</h4><p>Identity, tenant boundaries, role permissions, policy gates and workflow coordination</p></div><span class="invoice-stack-role">Governance</span></div>
+      <div class="invoice-stack-arrow" aria-hidden="true">↓</div>
+      <div class="invoice-stack-row"><span class="invoice-stack-num">03</span><div><h4>C++ Runtime Gateway</h4><p>Controlled access to runtime execution and authorized capability requests</p></div><span class="invoice-stack-role">Boundary</span></div>
+      <div class="invoice-stack-arrow" aria-hidden="true">↓</div>
+      <div class="invoice-stack-row"><span class="invoice-stack-num">04</span><div><h4>NIP Engine</h4><p>Task graph scheduling, document intelligence, specialized agents, parallel matching, safe retries and verification</p></div><span class="invoice-stack-role">Execution</span></div>
+      <div class="invoice-stack-arrow" aria-hidden="true">↓</div>
+      <div class="invoice-stack-row"><span class="invoice-stack-num">05</span><div><h4>PostgreSQL</h4><p>Durable jobs, task states, approvals, reconciliation references and audit evidence</p></div><span class="invoice-stack-role">Records</span></div>
+    </div>
+    <div class="invoice-connectors"><strong>Authorized business integrations</strong><span>Email and vendor portals</span><span>Purchase orders</span><span>Goods receipts</span><span>Accounting APIs</span><span>Approval notifications</span></div>
+    <p class="invoice-stack-disclaimer">Reference solution architecture. Specific connectors, controls, extraction accuracy and accounting writeback require integration, configuration and production validation for each client.</p>
+  </div>
+
+  <div class="invoice-summary"><strong>One business objective → coordinated workers → concurrent checks → human-controlled decisions → verifiable business records.</strong><p>NIP is designed to manage execution, recovery and evidence across that journey, not merely return an AI-generated answer.</p></div>
+</section>
+
+<section id="business-impact" class="reveal invoice-value-section" aria-labelledby="invoice-value-heading">
+  <div class="eyebrow">02B / BUSINESS VALUE</div>
+  <h2 id="invoice-value-heading">Free your teams to focus on<br><span>work that moves the business.</span></h2>
+  <p class="invoice-value-lead">A useful AI platform should improve operational outcomes: fewer manual handoffs, faster decisions, visible controls and recoverable processes. Here is the value this finance solution is designed to create.</p>
+  <div class="invoice-value-grid">
+    <article><span class="invoice-value-icon" aria-hidden="true">↘</span><h3>Less manual processing</h3><p>Take repetitive invoice intake and data checking off your team's daily workload, leaving people to resolve exceptions.</p></article>
+    <article><span class="invoice-value-icon" aria-hidden="true">↗</span><h3>Faster exception handling</h3><p>Send mismatches to the right approver with purchase-order, delivery and tax evidence already attached.</p></article>
+    <article><span class="invoice-value-icon" aria-hidden="true">◎</span><h3>High-volume reliability</h3><p>Verify independent records concurrently and recover failed tasks without restarting the whole invoice batch.</p></article>
+    <article><span class="invoice-value-icon" aria-hidden="true">✓</span><h3>Traceable financial controls</h3><p>Capture decisions, authorized actions and reconciliation results so reviewers can see what happened and why.</p></article>
+  </div>
+  <div class="invoice-impact">
+    <div class="invoice-impact-story">
+      <span class="invoice-impact-disclaimer">ILLUSTRATIVE SCENARIO · NOT A CLAIM OF MEASURED NIP PERFORMANCE</span>
+      <h3>What if your finance team gained back 750 hours each month?</h3>
+      <p>Consider <strong>10,000 invoices per month</strong>. If a configured solution handles <strong>75%</strong> of those invoices and avoids <strong>6 minutes</strong> of manual work per invoice, the estimated capacity freed is <strong>750 staff-hours monthly</strong>.</p>
+      <p>At an assumed loaded labor cost of <strong>₹300 per hour</strong>, that represents <strong>₹2.25 lakh in potential gross monthly labor value</strong> (₹27 lakh annually), before AI, infrastructure, integration, support and review costs.</p>
+    </div>
+    <div class="invoice-impact-stats">
+      <div><strong>10,000</strong><span>Monthly invoices</span></div>
+      <div><strong>75%</strong><span>Scenario automation rate</span></div>
+      <div><strong>750 h</strong><span>Potential monthly time freed</span></div>
+      <div><strong>₹2.25L</strong><span>Potential gross monthly value</span></div>
+    </div>
+  </div>
+  <div class="invoice-pilot">
+    <div><h3>Start with a measurable finance operations pilot.</h3><p>Compare invoice cycle time, straight-through rate, exception resolution, duplicate detection, approval turnaround and audit coverage with your existing baseline. Actual business value depends on document quality, policies and integration readiness.</p></div>
+    <a href="mailto:rishabh@neytraintelligence.com?subject=NIP%20Finance%20Operations%20Pilot" class="invoice-pilot-link">Discuss your use case <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
