@@ -89,7 +89,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style-new.css?v=20261020-orchestration">
+<link rel="stylesheet" href="style-new.css?v=20261020-connected-workspace">
 </head>
 <body>
 <div id="progress"></div>
@@ -112,7 +112,7 @@
     <a href="#use-cases">Use Cases</a>
     <a href="#business-impact">Business Value</a>
     <a href="#capabilities">Capabilities</a>
-    <a href="#execution">Execution</a>
+    <a href="#any-os">Connected Apps</a>
     <a href="#roadmap">Roadmap</a>
   </nav>
 </header>
@@ -391,41 +391,126 @@
   <p>LOCAL CHECK → EXECUTE<br>NEED EXTERNAL ACCESS → EXPLAIN → AUTHORIZE → AUDIT</p>
 </section>
 
-<section id="any-os" class="reveal any-os-section">
+
+<section id="any-os" class="reveal any-os-section workspace-section" aria-labelledby="workspace-title">
   <div class="section-heading">
     <div>
-      <div class="eyebrow">09 / ADAPTIVE ENVIRONMENTS</div>
-      <h2>Intelligence that<br><span>adapts to your environment.</span></h2>
+      <div class="eyebrow">09 / CONNECTED WORKSPACE</div>
+      <h2 id="workspace-title">Your work, connected.<br><span>Wherever business happens.</span></h2>
     </div>
-    <p>NIP is designed to keep intelligence separate from the underlying environment. The same task model can work across supported environments through controlled platform capabilities and adapters.</p>
+    <p>Neytra Intelligence Platform (NIP) is designed to bring everyday business workflows into one coordinated experience — across the devices people use and the applications they already work with. Less app switching. More work getting done.</p>
   </div>
 
-  <div class="os-adaptive">
-    <div class="os-adaptive-center">
-      <div class="adaptive-orbit orbit-one"></div>
-      <div class="adaptive-orbit orbit-two"></div>
-      <div class="adaptive-core"><span>NIP</span><small>INTELLIGENCE</small></div>
+  <div class="workspace-platform-panel">
+    <div class="workspace-panel-heading">
+      <span class="workspace-eyebrow">ONE EXPERIENCE · MULTIPLE WAYS TO WORK</span>
+      <h3>A familiar workspace for <span>every kind of team.</span></h3>
+      <p>Start work at your desk, check progress in a browser or review an important decision on the go.</p>
     </div>
-    <div class="os-platforms">
-      <article><span>🐧</span><b>Linux</b><small>Native Linux environments</small></article>
-      <article><span>🟠</span><b>Ubuntu</b><small>Desktop · server · edge</small></article>
-      <article><span>◈</span><b>Other Linux</b><small>Distribution-independent design</small></article>
-      <article><span>⊞</span><b>Windows</b><small>Windows applications & services</small></article>
-      <article><span>⌘</span><b>macOS</b><small>Apple desktop environments</small></article>
-      <article><span>✦</span><b>underlying platform</b><small>Deep native integration</small></article>
+    <div class="workspace-device-grid" aria-label="Cross-platform experiences">
+      <article class="workspace-device-card">
+        <span class="workspace-device-symbol" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><rect x="5" y="9" width="38" height="30" rx="5" stroke="currentColor" stroke-width="2.5"/><path d="M5 18h38" stroke="currentColor" stroke-width="2.5"/><circle cx="11" cy="13.5" r="1.2" fill="currentColor"/><circle cx="16" cy="13.5" r="1.2" fill="currentColor"/></svg>
+        </span>
+        <h4>Web app</h4>
+        <p>Open your workflow dashboard through a modern browser.</p>
+        <span class="workspace-device-tag">Work from anywhere</span>
+      </article>
+      <article class="workspace-device-card">
+        <span class="workspace-device-symbol" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><rect x="5" y="7" width="38" height="28" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M17 41h14M24 35v6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </span>
+        <h4>Desktop</h4>
+        <p>Coordinate day-to-day business tasks alongside your desktop work.</p>
+        <span class="workspace-device-tag">Focused operations</span>
+      </article>
+      <article class="workspace-device-card">
+        <span class="workspace-device-symbol" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><rect x="12" y="4" width="24" height="40" rx="5" stroke="currentColor" stroke-width="2.5"/><path d="M20 10h8M22 38h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M17 16h14M17 21h14M17 26h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <h4>Android</h4>
+        <p>Follow assigned work, alerts and approvals on mobile.</p>
+        <span class="workspace-device-tag">On-the-go visibility</span>
+      </article>
+      <article class="workspace-device-card">
+        <span class="workspace-device-symbol" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><rect x="13" y="4" width="22" height="40" rx="5" stroke="currentColor" stroke-width="2.5"/><path d="M19 9h10M20 38h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 18l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h4>iOS</h4>
+        <p>Keep decisions and workflow status within reach.</p>
+        <span class="workspace-device-tag">Review &amp; approve</span>
+      </article>
+    </div>
+    <p class="workspace-platform-note">Cross-platform experience shown as a product direction. Availability of particular web, desktop and mobile clients depends on release and deployment support.</p>
+  </div>
+
+  <div class="workspace-connectors" aria-labelledby="workspace-connectors-heading">
+    <div class="workspace-connectors-heading">
+      <span class="workspace-eyebrow">CONNECTED APPLICATIONS &amp; DATA</span>
+      <h3 id="workspace-connectors-heading">Connect the tools <span>your team already uses.</span></h3>
+      <p>Bring authorized emails, conversations, files and business data into coordinated workflows. NIP can connect through supported, configured integrations rather than asking people to copy information between apps all day.</p>
+    </div>
+    <div class="workspace-connector-grid" aria-label="Examples of business integrations">
+      <article class="workspace-connector-card">
+        <span class="workspace-connector-mark workspace-mark-gmail" aria-hidden="true">M</span><div><h4>Gmail</h4><p>Email requests and follow-ups</p></div>
+      </article>
+      <article class="workspace-connector-card">
+        <span class="workspace-connector-mark workspace-mark-outlook" aria-hidden="true">O</span><div><h4>Outlook</h4><p>Mail and calendar workflows</p></div>
+      </article>
+      <article class="workspace-connector-card">
+        <span class="workspace-connector-mark workspace-mark-teams" aria-hidden="true">T</span><div><h4>Microsoft Teams</h4><p>Team updates and approvals</p></div>
+      </article>
+      <article class="workspace-connector-card">
+        <span class="workspace-connector-mark workspace-mark-whatsapp" aria-hidden="true">W</span><div><h4>WhatsApp Business</h4><p>Supported business messaging</p></div>
+      </article>
+      <article class="workspace-connector-card">
+        <span class="workspace-connector-mark workspace-mark-slack" aria-hidden="true">S</span><div><h4>Slack</h4><p>Channel events and task handoffs</p></div>
+      </article>
+      <article class="workspace-connector-card">
+        <span class="workspace-connector-mark workspace-mark-google" aria-hidden="true">G</span><div><h4>Google Workspace</h4><p>Shared files and productivity data</p></div>
+      </article>
+      <article class="workspace-connector-card">
+        <span class="workspace-connector-mark workspace-mark-microsoft" aria-hidden="true">M</span><div><h4>Microsoft accounts</h4><p>Authorized work accounts and data</p></div>
+      </article>
+      <article class="workspace-connector-card">
+        <span class="workspace-connector-mark workspace-mark-files" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M5 9h9l3 3h10v13H5V9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </span><div><h4>Local storage</h4><p>Approved documents and folders</p></div>
+      </article>
+      <article class="workspace-connector-card">
+        <span class="workspace-connector-mark workspace-mark-more" aria-hidden="true">+</span><div><h4>Other business tools</h4><p>Supported APIs and custom adapters</p></div>
+      </article>
+    </div>
+    <div class="workspace-connector-policy">
+      <span aria-hidden="true">◎</span>
+      <p><strong>Your accounts stay under your control.</strong> Access is limited to explicitly authorized connections and permitted actions. Listed services illustrate potential integration targets; individual connector availability, permissions and setup depend on the deployment.</p>
     </div>
   </div>
 
-  <div class="adaptive-flow">
-    <span>YOUR TASK</span><i>→</i><b>NIP INTELLIGENCE</b><i>→</i><span>OS CAPABILITIES</span><i>→</i><strong>RESULT</strong>
+  <div class="workspace-dayflow" aria-labelledby="workspace-dayflow-title">
+    <div class="workspace-dayflow-heading">
+      <span class="workspace-eyebrow">EXAMPLE / A CONNECTED DAY AT WORK</span>
+      <h3 id="workspace-dayflow-title">One request. <span>Less manual coordination.</span></h3>
+      <p>See how the same orchestration framework can carry a task between different kinds of business tools.</p>
+    </div>
+    <div class="workspace-dayflow-steps">
+      <article><span class="workspace-flow-number">01</span><h4>Request arrives</h4><p>A customer email or supported business message starts a tracked workflow.</p><small>Email / messaging</small></article>
+      <article><span class="workspace-flow-number">02</span><h4>Information gathered</h4><p>Find authorized documents and check the details required for action.</p><small>Workspace / files</small></article>
+      <article><span class="workspace-flow-number">03</span><h4>Teams coordinate</h4><p>Route questions, decisions and approvals to the right people.</p><small>Team collaboration</small></article>
+      <article><span class="workspace-flow-number">04</span><h4>Work completed</h4><p>Update permitted records, notify stakeholders and preserve the outcome.</p><small>Business applications</small></article>
+    </div>
   </div>
 
-  <div class="adaptive-note">
-    <b>Same intelligence. Different environment.</b>
-    <p>NIP can reason about the environment it is running in, discover available capabilities, select the appropriate execution path and keep the intelligence layer independent from the underlying operating system.</p>
+  <div class="workspace-benefits" aria-label="Connected workflow benefits">
+    <div><strong>Less copy and paste</strong><span>Move information between approved tools through a coordinated process.</span></div>
+    <div><strong>Fewer missed handoffs</strong><span>Track ownership and approvals instead of chasing messages.</span></div>
+    <div><strong>More time for real work</strong><span>Automate repetitive coordination while people retain control of important decisions.</span></div>
+  </div>
+  <div class="workspace-cta">
+    <p><strong>Bring your existing workflow.</strong> Tell us which apps your team uses and what manual work slows you down. We can scope the relevant connectors, controls and outcome measures for a pilot.</p>
+    <a href="mailto:rishabh@neytraintelligence.com?subject=NIP%20Connected%20Business%20Workflow" aria-label="Discuss integrating your business applications with NIP">Discuss your workflow <span aria-hidden="true">↗</span></a>
   </div>
 </section>
-
 
 <section id="roadmap" class="reveal">
   <div class="eyebrow">10 / VISION</div>
