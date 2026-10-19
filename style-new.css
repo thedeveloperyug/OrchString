@@ -2749,3 +2749,133 @@ main > section:not(.hero) {
 
 /* Keep mixed-case Neytra brand labels readable instead of forcing uppercase. */
 .eyebrow { text-transform: none; }
+
+/* Neytra 2026 logo: vector-first assets and corrected, non-stretched header. */
+.site-header .brand{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  min-height:100%;
+}
+.site-header .brand-mark{
+  display:grid !important;
+  place-items:center !important;
+  width:42px !important;
+  height:42px !important;
+  min-width:42px !important;
+  min-height:42px !important;
+  flex:0 0 42px !important;
+  padding:0 !important;
+  margin:0 !important;
+  overflow:visible !important;
+  line-height:0;
+}
+.site-header .brand-mark picture{
+  display:block;
+  width:100%;
+  height:100%;
+}
+.site-header .brand-mark img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  aspect-ratio:1 / 1 !important;
+  object-fit:contain !important;
+  position:static !important;
+  transform:none !important;
+  filter:none !important;
+}
+/* Gloss is part of the vector; only the large hero mark gets movement. */
+.hero-core .core-logo{
+  position:relative !important;
+  display:grid !important;
+  place-items:center !important;
+  width:78% !important;
+  height:auto !important;
+  aspect-ratio:1 / 1 !important;
+  isolation:isolate;
+  overflow:visible !important;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  animation:none !important;
+}
+.hero-core .core-logo picture{
+  display:block;
+  width:100%;
+  height:100%;
+  position:relative;
+  z-index:1;
+  filter:drop-shadow(0 18px 25px rgba(12,96,242,.19));
+  animation:neytraLogoLevitate 7s ease-in-out infinite;
+  will-change:transform;
+}
+.hero-core .core-logo picture img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  aspect-ratio:1 / 1 !important;
+  object-fit:contain !important;
+  transform:none !important;
+  animation:none !important;
+  filter:none !important;
+}
+.hero-core .core-logo::before{
+  content:"";
+  position:absolute;
+  inset:13%;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(36,171,255,.23) 0%,rgba(56,218,255,.14) 38%,transparent 72%);
+  filter:blur(30px);
+  z-index:-1;
+  pointer-events:none;
+  animation:neytraGlassGlow 7s ease-in-out infinite;
+}
+.hero-core .core-logo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  opacity:.22;
+  background:linear-gradient(115deg,transparent 28%,rgba(255,255,255,.03) 42%,rgba(255,255,255,.85) 49%,rgba(164,252,255,.20) 55%,transparent 70%);
+  background-size:250% 100%;
+  -webkit-mask:url("assets/neytra-logo-glass.svg") center / contain no-repeat;
+  mask:url("assets/neytra-logo-glass.svg") center / contain no-repeat;
+  animation:neytraGlassSweep 9s ease-in-out infinite;
+}
+@keyframes neytraLogoLevitate{
+  0%,100%{transform:translate3d(0,0,0) rotate(-.35deg)}
+  50%{transform:translate3d(0,-11px,0) rotate(.4deg)}
+}
+@keyframes neytraGlassGlow{
+  0%,100%{opacity:.52;transform:scale(.96)}
+  50%{opacity:.9;transform:scale(1.08)}
+}
+@keyframes neytraGlassSweep{
+  0%,18%{background-position:120% center;opacity:.07}
+  46%{background-position:-110% center;opacity:.34}
+  60%,100%{background-position:-110% center;opacity:.07}
+}
+@media(max-width:720px){
+  .site-header .brand-mark{
+    width:34px !important;
+    height:34px !important;
+    min-width:34px !important;
+    min-height:34px !important;
+    flex-basis:34px !important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-core .core-logo picture,
+  .hero-core .core-logo::before,
+  .hero-core .core-logo::after{
+    animation:none !important;
+  }
+  .hero-core .core-logo::after{opacity:.1}
+}
