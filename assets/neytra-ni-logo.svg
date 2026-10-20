@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+          <defs>
+            
+            <linearGradient id="grad-left-upper" x1="173" y1="620" x2="365" y2="390" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#007BFF"></stop>
+              <stop offset="55%" stop-color="#005BF3"></stop>
+              <stop offset="100%" stop-color="#0038C8"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-left-lower" x1="180" y1="780" x2="410" y2="480" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0048EC"></stop>
+              <stop offset="65%" stop-color="#003CE2"></stop>
+              <stop offset="100%" stop-color="#0029AC"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-fold-shadow-upper" x1="292" y1="393" x2="242" y2="440" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#00126E" stop-opacity="0.80"></stop>
+              <stop offset="48%" stop-color="#001F96" stop-opacity="0.36"></stop>
+              <stop offset="100%" stop-color="#0048E8" stop-opacity="0"></stop>
+            </linearGradient>
+
+            <linearGradient id="grad-fold-shadow-lower" x1="382" y1="490" x2="332" y2="545" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#001168" stop-opacity="0.82"></stop>
+              <stop offset="50%" stop-color="#001E8E" stop-opacity="0.38"></stop>
+              <stop offset="100%" stop-color="#003CE2" stop-opacity="0"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-n-ribbon-main" x1="210" y1="220" x2="660" y2="780" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0080FF"></stop>
+              <stop offset="35%" stop-color="#069CFF"></stop>
+              <stop offset="70%" stop-color="#0077FF"></stop>
+              <stop offset="100%" stop-color="#0044EE"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-n-ribbon-crest" x1="535" y1="375" x2="415" y2="505" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#2AD0FF" stop-opacity="0.88"></stop>
+              <stop offset="45%" stop-color="#08A6FF" stop-opacity="0.35"></stop>
+              <stop offset="100%" stop-color="#0047EE" stop-opacity="0"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-i-dot" x1="662" y1="352" x2="816" y2="212" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#003CE8"></stop>
+              <stop offset="38%" stop-color="#0074FF"></stop>
+              <stop offset="75%" stop-color="#02C0FF"></stop>
+              <stop offset="100%" stop-color="#08F2FF"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-i-top-cap" x1="658" y1="425" x2="829" y2="510" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0066FA"></stop>
+              <stop offset="48%" stop-color="#00ACFF"></stop>
+              <stop offset="100%" stop-color="#07F0FF"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-i-dark-band" x1="658" y1="445" x2="829" y2="675" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0020A4"></stop>
+              <stop offset="35%" stop-color="#0038CA"></stop>
+              <stop offset="75%" stop-color="#0064F6"></stop>
+              <stop offset="100%" stop-color="#0080FF"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-i-band-shadow" x1="658" y1="470" x2="725" y2="540" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#00126B" stop-opacity="0.65"></stop>
+              <stop offset="100%" stop-color="#0020A4" stop-opacity="0"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-i-cyan-base" x1="658" y1="535" x2="818" y2="785" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0096FF"></stop>
+              <stop offset="42%" stop-color="#02CBFF"></stop>
+              <stop offset="85%" stop-color="#06F0FF"></stop>
+              <stop offset="100%" stop-color="#0AF8FF"></stop>
+            </linearGradient>
+
+            
+            <clipPath id="clip-left-stem">
+              <path d="M 173,266 L 200,245 L 410,470 L 410,733 A 80,80 0 0 1 330,813 L 253,813 A 80,80 0 0 1 173,733 Z"></path>
+            </clipPath>
+
+            
+            <clipPath id="clip-right-stem">
+              <path d="M 658,460 A 62,62 0 0 1 720,398 L 767,398 A 62,62 0 0 1 829,460 L 829,728 A 85,85 0 0 1 744,813 L 684,813 C 674,813 665,812.6 658,811.2 L 657,800 L 657,518 L 658,518 Z"></path>
+            </clipPath>
+          </defs>
+
+          
+          
+
+          
+          
+          
+          <g clip-path="url(#clip-left-stem)">
+            
+            <path id="path-left-lower" d="M 173,632 L 354,460 L 410,460 L 410,813 L 173,813 Z" fill="url(#grad-left-lower)"></path>
+
+            
+            <path id="path-left-upper" d="M 173,250 L 370,445 L 354,460 L 173,632 Z" fill="url(#grad-left-upper)"></path>
+
+            
+            <path d="M 173,266 L 354,460 L 295,516 L 173,375 Z" fill="url(#grad-fold-shadow-upper)"></path>
+
+            
+            <path d="M 354,460 L 410,526.4 L 410,615 L 295,516 Z" fill="url(#grad-fold-shadow-lower)"></path>
+          </g>
+
+          
+          
+          
+          <g clip-path="url(#clip-right-stem)">
+            
+            <path id="path-i-top-cap" d="M 656,398 L 829,398 L 829,595 L 656,424 Z" fill="url(#grad-i-top-cap)"></path>
+
+            
+            <path id="path-i-dark-band" d="M 656,424 L 829,595 L 829,713 L 656,518 Z" fill="url(#grad-i-dark-band)"></path>
+            
+            <path d="M 656,424 L 829,595 L 829,713 L 656,518 Z" fill="url(#grad-i-band-shadow)"></path>
+
+            
+            <path id="path-i-cyan-base" d="M 656,518 L 829,713 L 829,813 L 656,813 Z" fill="url(#grad-i-cyan-base)"></path>
+          </g>
+
+          
+          
+          
+          <g id="layer-main-ribbon">
+            
+            <path id="path-n-ribbon" d="M 173,266
+                 C 173,225 207,197 256,197
+                 L 318,197
+                 C 352,197 376,204 398,221
+                 L 658,518
+                 L 658,811.2
+                 C 644,808.4 630,788 618,773
+                 L 354,460
+                 Z" fill="url(#grad-n-ribbon-main)"></path>
+
+            
+            <path d="M 173,266
+                 C 173,225 207,197 256,197
+                 L 318,197
+                 C 352,197 376,204 398,221
+                 L 658,518
+                 L 658,811.2
+                 C 644,808.4 630,788 618,773
+                 L 354,460
+                 Z" fill="url(#grad-n-ribbon-crest)"></path>
+          </g>
+
+          
+          
+          
+          <circle id="path-i-dot" cx="738.5" cy="285.5" r="90.5" fill="url(#grad-i-dot)"></circle>
+
+          
+          
+          
+          
+        </svg>

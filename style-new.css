@@ -2750,8 +2750,8 @@ main > section:not(.hero) {
 /* Keep mixed-case Neytra brand labels readable instead of forcing uppercase. */
 .eyebrow { text-transform: none; }
 
-/* Neytra original glossy N: self-contained SVG embeds the source PNG at 768px.
-   The official artwork never deforms; only the surrounding light is animated. */
+/* Official Neytra Ni vector logo. The uploaded SVG geometry and gradients are unchanged;
+   only image layout and the surrounding light are controlled by CSS. */
 .site-header .brand{display:inline-flex !important;align-items:center !important;gap:10px !important;min-height:100%}
 .site-header .brand-mark{display:grid !important;place-items:center !important;width:42px !important;height:42px !important;min-width:42px !important;min-height:42px !important;flex:0 0 42px !important;padding:0 !important;margin:0 !important;overflow:visible !important;line-height:0}
 .site-header .brand-mark picture{display:block;width:100%;height:100%}
