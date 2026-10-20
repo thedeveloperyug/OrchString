@@ -89,7 +89,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style-new.css?v=20261020-connected-workspace">
+<link rel="stylesheet" href="style-new.css?v=20261020-ni-dot-gravity">
 </head>
 <body>
 <div id="progress"></div>
@@ -136,17 +136,31 @@
     </div>
   </div>
 
-  <div class="hero-core" aria-label="Animated NIP intelligence core">
-    <div class="core-ring ring-a"></div>
-    <div class="core-ring ring-b"></div>
-    <div class="core-ring ring-c"></div>
-    <div class="core-grid"></div>
-    <div class="core-logo logo-glass"><picture>
-      <source srcset="assets/neytra-ni-logo.svg" type="image/svg+xml">
-      <img src="assets/neytra-ni-logo.svg" alt="Neytra Intelligence Platform logo" width="768" height="768" decoding="async">
-    </picture></div>
-    <div class="core-label">NIP / EXECUTION INTELLIGENCE</div>
-    <div class="motion-hint">REASON <span>●</span> EXECUTE <span>●</span> VERIFY</div>
+  <div class="hero-core">
+    <div class="core-logo logo-glass">
+      <!-- The original vector file is displayed unchanged in both layers.
+           Masking separates only the i dot for a gravity-style jump. -->
+      <svg class="hero-ni-artwork" xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 1000 1000" role="img" aria-labelledby="hero-ni-title">
+        <title id="hero-ni-title">Neytra Intelligence Ni logo with a gently bouncing i dot</title>
+        <defs>
+          <mask id="hero-ni-body-mask" maskUnits="userSpaceOnUse"
+                x="0" y="0" width="1000" height="1000">
+            <rect x="0" y="0" width="1000" height="1000" fill="#fff"/>
+            <circle cx="738.5" cy="285.5" r="90.5" fill="#000"/>
+          </mask>
+          <clipPath id="hero-ni-dot-clip" clipPathUnits="userSpaceOnUse">
+            <circle cx="738.5" cy="285.5" r="90.5"/>
+          </clipPath>
+        </defs>
+        <image href="assets/neytra-ni-logo.svg" x="0" y="0"
+               width="1000" height="1000" mask="url(#hero-ni-body-mask)"/>
+        <g class="hero-ni-dot">
+          <image href="assets/neytra-ni-logo.svg" x="0" y="0"
+                 width="1000" height="1000" clip-path="url(#hero-ni-dot-clip)"/>
+        </g>
+      </svg>
+    </div>
   </div>
 </section>
 
