@@ -51,6 +51,10 @@ def main():
     homepage = (ROOT / "index.html").read_text(encoding="utf-8")
     if "NEYTRA" in homepage:
         errors.append("Use Neytra title case, not all-caps NEYTRA")
+    if "github.com/" in homepage:
+        errors.append("Public website must not redirect visitors to GitHub repositories")
+    if 'id="contact"' not in homepage or 'href="mailto:rishabh@neytraintelligence.com' not in homepage:
+        errors.append("Sales contact section and direct email link are required")
     if homepage.count(BRAND_INTRO) < 2:
         errors.append("Official NIP introduction must appear in visible homepage content")
     robots_meta = parser.metadata.get("robots", "").lower().replace(" ", "")
