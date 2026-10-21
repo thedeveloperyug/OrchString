@@ -90,7 +90,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style-new.css?v=20261021-i-illumination">
+<link rel="stylesheet" href="style-new.css?v=20261021-ni-trace">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" class="ni-icon-sprite" aria-hidden="true" focusable="false"><defs>
@@ -252,6 +252,12 @@
             <clipPath id="clip-right-stem">
               <path d="M 658,460 A 62,62 0 0 1 720,398 L 767,398 A 62,62 0 0 1 829,460 L 829,728 A 85,85 0 0 1 744,813 L 684,813 C 674,813 665,812.6 658,811.2 L 657,800 L 657,518 L 658,518 Z"></path>
             </clipPath>
+            <!-- Decorative light-trace gradient, separate from official logo fills. -->
+            <linearGradient id="hero-ni-trace-gradient" x1="215" y1="360" x2="757" y2="660" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#DDF9FF"></stop>
+              <stop offset="48%" stop-color="#9BE7FF"></stop>
+              <stop offset="100%" stop-color="#63BFFF"></stop>
+            </linearGradient>
           </defs>
 
           
@@ -321,6 +327,12 @@
           
           
           <circle id="path-i-dot" cx="738.5" cy="285.5" r="90.5" fill="url(#grad-i-dot)"></circle>
+
+          <g class="hero-ni-trace-group" aria-hidden="true" pointer-events="none">
+            <path class="hero-ni-trace hero-ni-trace-halo" pathLength="1000" d="M 274 745 C 260 656 230 545 230 435 L 230 306 Q 230 263 267 261 Q 307 258 342 310 L 615 625 Q 642 656 645 711 L 650 744 Q 674 768 700 743 Q 739 713 741 628 L 743 447"></path>
+            <path class="hero-ni-trace hero-ni-trace-line" pathLength="1000" d="M 274 745 C 260 656 230 545 230 435 L 230 306 Q 230 263 267 261 Q 307 258 342 310 L 615 625 Q 642 656 645 711 L 650 744 Q 674 768 700 743 Q 739 713 741 628 L 743 447"></path>
+            <path class="hero-ni-trace hero-ni-trace-tip" pathLength="1000" d="M 274 745 C 260 656 230 545 230 435 L 230 306 Q 230 263 267 261 Q 307 258 342 310 L 615 625 Q 642 656 645 711 L 650 744 Q 674 768 700 743 Q 739 713 741 628 L 743 447"></path>
+          </g>
 
           
           

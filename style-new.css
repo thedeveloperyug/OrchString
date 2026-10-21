@@ -2768,42 +2768,68 @@ main > section:not(.hero) {
   overflow:visible;
   filter:drop-shadow(0 18px 26px rgba(12,96,242,.16));
 }
-/* Precision activation: only the right-hand "i" catches a soft cyan light.
-   N, i stem and dot remain perfectly aligned and stationary throughout.
-   The short dot-to-stem illumination passes once per 7.2-second cycle,
-   then returns to the unfiltered vector for an extended quiet interval. */
-.hero-core .hero-ni-artwork #layer-right-stem,
-.hero-core .hero-ni-artwork #path-i-dot{
-  transform:none !important;
-  transform-origin:initial;
+/* Light drawn from N to i: the original branded fills stay fixed.
+   Three lightweight strokes share one centerline: soft halo, fine ink,
+   and a short traveling highlight. Nothing in the Ni shape translates,
+   rotates, scales or fades. The light fades out before restarting. */
+.hero-core .hero-ni-trace-group{
+  opacity:0;
+  pointer-events:none;
+  animation:neytraTracePresence 8s linear infinite;
+}
+.hero-core .hero-ni-trace{
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:1000 1000;
+  stroke-dashoffset:1000;
+  animation:neytraTraceDraw 8s linear infinite;
+}
+.hero-core .hero-ni-trace-halo{
+  stroke:#67d6ff;
+  stroke-width:28;
+  opacity:.25;
+  filter:blur(7px);
+}
+.hero-core .hero-ni-trace-line{
+  stroke:url(#hero-ni-trace-gradient);
+  stroke-width:6.5;
+  opacity:.82;
+}
+.hero-core .hero-ni-trace-tip{
+  stroke:#effcff;
+  stroke-width:10;
+  stroke-dasharray:75 1000;
+  stroke-dashoffset:75;
+  opacity:.9;
+  filter:drop-shadow(0 0 7px rgba(90,204,255,.75));
+  animation:neytraTraceTip 8s linear infinite;
+}
+@keyframes neytraTraceDraw{
+  0%,17%{stroke-dashoffset:1000;animation-timing-function:cubic-bezier(.45,0,.22,1)}
+  55%,100%{stroke-dashoffset:0}
+}
+@keyframes neytraTraceTip{
+  0%,17%{stroke-dashoffset:75;animation-timing-function:cubic-bezier(.45,0,.22,1)}
+  55%,100%{stroke-dashoffset:-1000}
+}
+@keyframes neytraTracePresence{
+  0%,16%{opacity:0}
+  20%,54%{opacity:1}
+  65%,100%{opacity:0}
 }
 .hero-core .hero-ni-artwork #path-i-dot{
-  animation:neytraIDotIlluminate 7.2s ease-in-out infinite;
+  animation:neytraTraceDotFinish 8s ease-in-out infinite;
 }
-.hero-core .hero-ni-artwork #layer-right-stem{
-  animation:neytraIStemIlluminate 7.2s ease-in-out infinite;
-}
-@keyframes neytraIDotIlluminate{
-  0%,14%,43%,100%{
-    filter:brightness(1) saturate(1) drop-shadow(0 0 0 rgba(52,188,255,0));
-  }
-  25%{
-    filter:brightness(1.15) saturate(1.08) drop-shadow(0 0 16px rgba(44,182,255,.38));
-  }
-}
-@keyframes neytraIStemIlluminate{
-  0%,27%,56%,100%{
-    filter:brightness(1) saturate(1) drop-shadow(0 0 0 rgba(52,188,255,0));
-  }
-  39%{
-    filter:brightness(1.12) saturate(1.06) drop-shadow(0 0 10px rgba(44,182,255,.23));
-  }
+@keyframes neytraTraceDotFinish{
+  0%,50%,70%,100%{filter:brightness(1) drop-shadow(0 0 0 rgba(40,190,255,0))}
+  59%{filter:brightness(1.12) drop-shadow(0 0 16px rgba(40,190,255,.38))}
 }
 @media(max-width:720px){
   .site-header .brand-mark{width:34px !important;height:34px !important;min-width:34px !important;min-height:34px !important;flex-basis:34px !important}
 }
 @media(prefers-reduced-motion:reduce){
-  .hero-core .hero-ni-artwork #layer-right-stem,.hero-core .hero-ni-artwork #path-i-dot{animation:none!important;filter:none!important;transform:none!important}
+  .hero-core .hero-ni-trace-group,.hero-core .hero-ni-trace,.hero-core .hero-ni-artwork #path-i-dot{animation:none!important}.hero-core .hero-ni-trace-group{opacity:0!important}.hero-core .hero-ni-artwork #path-i-dot{filter:none!important}
 }
 
 /* Finance Operations solution: dedicated layout with mobile and accessible styles. */
@@ -3140,4 +3166,4 @@ svg.ni-icon{display:inline-block;width:1.1em;height:1.1em;flex:none;vertical-ali
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a73e8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14m-6-6 6 6-6 6'/%3E%3C/svg%3E");
   background-position:center;background-repeat:no-repeat;background-size:17px 17px
 }
-@media(prefers-reduced-motion:reduce){.hero-core .hero-ni-artwork #layer-right-stem,.hero-core .hero-ni-artwork #path-i-dot{animation:none!important;filter:none!important;transform:none!important}}
+@media(prefers-reduced-motion:reduce){.hero-core .hero-ni-trace-group,.hero-core .hero-ni-trace,.hero-core .hero-ni-artwork #path-i-dot{animation:none!important}.hero-core .hero-ni-trace-group{opacity:0!important}.hero-core .hero-ni-artwork #path-i-dot{filter:none!important}}
