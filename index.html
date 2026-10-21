@@ -90,7 +90,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style-new.css?v=20261021-original-jelly-reveal">
+<link rel="stylesheet" href="style-new.css?v=20261021-glass-jelly-v2">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" class="ni-icon-sprite" aria-hidden="true" focusable="false"><defs>
@@ -258,13 +258,22 @@
                   x="0" y="0" width="1000" height="1000" style="mask-type:alpha">
               <g class="hero-ni-fill-level">
                 <g class="hero-ni-fill-back">
-                  <path class="hero-ni-mask-surface" fill="#fff" opacity=".60" d="M -1000 0 C -830 47 -660 -55 -490 0 C -330 56 -160 -44 10 0 C 170 53 320 -50 490 0 C 655 49 830 -46 995 0 C 1160 52 1330 -48 1500 0 C 1670 50 1830 -45 2000 0 L 2000 1450 L -1000 1450 Z"></path>
+                  <path class="hero-ni-mask-surface" fill="#fff" opacity=".60" d="M -1100 0 C -940 -90 -770 105 -580 0 C -385 -106 -205 83 -15 0 C 175 -90 360 108 545 0 C 735 -105 915 93 1100 0 C 1285 -99 1470 105 1650 0 C 1840 -91 2010 88 2200 0 L 2200 1500 L -1100 1500 Z"></path>
                 </g>
                 <g class="hero-ni-fill-front">
-                  <path class="hero-ni-mask-surface" fill="#fff" d="M -1000 0 C -840 -40 -670 52 -500 0 C -330 -52 -170 44 0 0 C 160 -44 330 55 500 0 C 665 -54 840 48 1000 0 C 1180 -56 1350 53 1500 0 C 1650 -45 1850 48 2000 0 L 2000 1450 L -1000 1450 Z"></path>
+                  <path class="hero-ni-mask-surface" fill="#fff" d="M -1100 0 C -930 110 -740 -118 -560 0 C -375 116 -190 -108 -5 0 C 170 119 355 -117 545 0 C 735 120 920 -108 1105 0 C 1295 116 1480 -121 1665 0 C 1855 118 2020 -107 2200 0 L 2200 1500 L -1100 1500 Z"></path>
                 </g>
               </g>
             </mask>
+            <!-- Neutral glass edge only; original logo fills are not displayed until revealed. -->
+            <filter id="hero-ni-glass-edge" x="-5%" y="-5%" width="110%" height="110%"
+                    color-interpolation-filters="sRGB">
+              <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="outer"></feMorphology>
+              <feMorphology in="SourceAlpha" operator="erode" radius="4" result="inner"></feMorphology>
+              <feComposite in="outer" in2="inner" operator="out" result="rim"></feComposite>
+              <feFlood flood-color="#8CA4BA" flood-opacity=".84" result="glass-tone"></feFlood>
+              <feComposite in="glass-tone" in2="rim" operator="in"></feComposite>
+            </filter>
           </defs>
 
           
@@ -275,7 +284,8 @@
           
           <!-- A faint original-color silhouette gives the filling logo its container shape.
                These use elements repeat the unchanged official SVG, not new colors. -->
-          <g class="hero-ni-unfilled" opacity=".11" aria-hidden="true">
+          <g class="hero-ni-empty-glass" filter="url(#hero-ni-glass-edge)"
+             aria-hidden="true" pointer-events="none">
             <use href="#layer-left-stem"></use>
             <use href="#layer-right-stem"></use>
             <use href="#layer-main-ribbon"></use>
