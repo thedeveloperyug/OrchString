@@ -90,7 +90,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style-new.css?v=20261021-ni-liquid-gel">
+<link rel="stylesheet" href="style-new.css?v=20261021-ni-waterfill">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" class="ni-icon-sprite" aria-hidden="true" focusable="false"><defs>
@@ -268,24 +268,26 @@
               <stop offset="70%" stop-color="#FFFFFF" stop-opacity=".035"></stop>
               <stop offset="100%" stop-color="#5BEAFF" stop-opacity=".14"></stop>
             </linearGradient>
-            <!-- Transparent sides keep the endless loop invisible at its wrap point. -->
-            <linearGradient id="hero-ni-liquid-ribbon" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#8CDBFF" stop-opacity="0"></stop>
-              <stop offset="18%" stop-color="#54C5FF" stop-opacity=".04"></stop>
-              <stop offset="32%" stop-color="#65DBFF" stop-opacity=".19"></stop>
-              <stop offset="43%" stop-color="#C1FFFF" stop-opacity=".43"></stop>
-              <stop offset="49%" stop-color="#FFFFFF" stop-opacity=".70"></stop>
-              <stop offset="52%" stop-color="#EEFFFF" stop-opacity=".78"></stop>
-              <stop offset="58%" stop-color="#8AEAFF" stop-opacity=".42"></stop>
-              <stop offset="73%" stop-color="#55C9FF" stop-opacity=".14"></stop>
-              <stop offset="100%" stop-color="#57C5FF" stop-opacity="0"></stop>
+            <!-- The original Ni silhouette acts as the water container. -->
+            <linearGradient id="hero-ni-water-front-gradient"
+                            x1="235" y1="180" x2="770" y2="860" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#B5F7FF"></stop>
+              <stop offset="28%" stop-color="#5CE5FF"></stop>
+              <stop offset="59%" stop-color="#16B6F9"></stop>
+              <stop offset="100%" stop-color="#0062F0"></stop>
             </linearGradient>
-            <radialGradient id="hero-ni-liquid-caustic">
-              <stop offset="0%" stop-color="#F5FFFF" stop-opacity=".56"></stop>
-              <stop offset="32%" stop-color="#A7F4FF" stop-opacity=".25"></stop>
-              <stop offset="72%" stop-color="#64D9FF" stop-opacity=".05"></stop>
-              <stop offset="100%" stop-color="#60D4FF" stop-opacity="0"></stop>
-            </radialGradient>
+            <linearGradient id="hero-ni-water-back-gradient"
+                            x1="230" y1="90" x2="800" y2="780" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#E6FFFF"></stop>
+              <stop offset="50%" stop-color="#8DEBFF"></stop>
+              <stop offset="100%" stop-color="#20AFFF"></stop>
+            </linearGradient>
+            <linearGradient id="hero-ni-water-gloss-gradient"
+                            x1="0%" y1="0%" x2="90%" y2="100%">
+              <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".42"></stop>
+              <stop offset="52%" stop-color="#9AEFFF" stop-opacity=".09"></stop>
+              <stop offset="100%" stop-color="#B5F9FF" stop-opacity="0"></stop>
+            </linearGradient>
           </defs>
 
           
@@ -356,25 +358,29 @@
           
           <circle id="path-i-dot" cx="738.5" cy="285.5" r="90.5" fill="url(#grad-i-dot)"></circle>
 
-          <!-- The glow is inside the Ni silhouette; no drawn outline or moving logo. -->
+          <!-- A water level physically rises and falls inside the unmodified Ni.
+               Curved, independently moving liquid surfaces replace straight shimmer bands. -->
           <g class="hero-ni-liquid-surface" mask="url(#hero-ni-liquid-silhouette)"
              aria-hidden="true" pointer-events="none">
             <rect class="hero-ni-liquid-coat" width="1000" height="1000"
                   fill="url(#hero-ni-liquid-coat)"></rect>
-            <g class="hero-ni-liquid-flow hero-ni-liquid-flow-primary">
-              <rect x="-780" y="-30" width="650" height="1050"
-                    fill="url(#hero-ni-liquid-ribbon)"></rect>
+            <g class="hero-ni-water-level">
+              <g class="hero-ni-water-wave hero-ni-water-back">
+                <path class="hero-ni-water-shape" d="M -900 0 C -730 -43 -590 55 -430 0 C -270 -58 -130 45 30 0 C 195 -48 335 60 495 0 C 655 -53 795 54 955 0 C 1120 -48 1265 60 1425 0 C 1590 -52 1730 50 1900 0 L 1900 1240 L -900 1240 Z"
+                      fill="url(#hero-ni-water-back-gradient)"></path>
+              </g>
+              <g class="hero-ni-water-wave hero-ni-water-front">
+                <path class="hero-ni-water-shape" d="M -900 0 C -740 57 -590 -52 -425 0 C -255 52 -120 -59 45 0 C 210 60 350 -55 510 0 C 675 62 815 -60 980 0 C 1145 55 1285 -58 1450 0 C 1615 62 1750 -55 1900 0 L 1900 1240 L -900 1240 Z"
+                      fill="url(#hero-ni-water-front-gradient)"></path>
+              </g>
+              <g class="hero-ni-water-bubbles">
+                <ellipse cx="260" cy="138" rx="12" ry="19"></ellipse>
+                <ellipse cx="361" cy="304" rx="7" ry="12"></ellipse>
+                <ellipse cx="533" cy="208" rx="10" ry="16"></ellipse>
+                <ellipse cx="736" cy="145" rx="14" ry="21"></ellipse>
+                <ellipse cx="704" cy="318" rx="8" ry="13"></ellipse>
+              </g>
             </g>
-            <g class="hero-ni-liquid-flow hero-ni-liquid-flow-secondary">
-              <rect x="-780" y="-70" width="650" height="1150"
-                    fill="url(#hero-ni-liquid-ribbon)"></rect>
-            </g>
-            <ellipse class="hero-ni-liquid-caustic hero-ni-liquid-caustic-n"
-                     cx="290" cy="410" rx="170" ry="305"
-                     fill="url(#hero-ni-liquid-caustic)"></ellipse>
-            <ellipse class="hero-ni-liquid-caustic hero-ni-liquid-caustic-i"
-                     cx="743" cy="535" rx="160" ry="325"
-                     fill="url(#hero-ni-liquid-caustic)"></ellipse>
           </g>
 
           
