@@ -2768,28 +2768,30 @@ main > section:not(.hero) {
   overflow:visible;
   filter:drop-shadow(0 18px 26px rgba(12,96,242,.16));
 }
-.hero-core .hero-ni-dot{
+/* Orbit the original, single SVG circle. No mask, duplicate or static ghost.
+   The 1000x1000 viewBox center is (500,500), the original dot (738.5,285.5).
+   A radial offset of (+89,-80) puts the orbit outside the Ni artwork.
+   Faster descending motion and slower ascent suggest gravitational momentum. */
+.hero-core .hero-ni-artwork #path-i-dot{
   transform-box:view-box;
-  transform-origin:center;
+  transform-origin:500px 500px;
   will-change:transform;
-  animation:neytraDotGravity 4.2s infinite;
+  animation:neytraDotOrbitGravity 6.2s infinite;
 }
-/* 0.4s settle, ~2.7s airborne/landing bounces, then a short pause.
-   Slow rising motion and accelerating descent simulate gravity. */
-@keyframes neytraDotGravity{
-  0%,10%{transform:translateY(0);animation-timing-function:cubic-bezier(.20,.72,.36,1)}
-  28%{transform:translateY(-135px);animation-timing-function:cubic-bezier(.58,.03,.92,.58)}
-  46%{transform:translateY(0);animation-timing-function:cubic-bezier(.20,.67,.35,1)}
-  55%{transform:translateY(-42px);animation-timing-function:cubic-bezier(.60,.03,.89,.58)}
-  64%{transform:translateY(0);animation-timing-function:cubic-bezier(.20,.65,.35,1)}
-  70%{transform:translateY(-10px);animation-timing-function:cubic-bezier(.58,.05,.88,.60)}
-  75%,100%{transform:translateY(0)}
+@keyframes neytraDotOrbitGravity{
+  0%,7%{transform:rotate(0deg) translate(0px,0px);animation-timing-function:cubic-bezier(.25,.1,.3,1)}
+  13%{transform:rotate(0deg) translate(89px,-80px);animation-timing-function:cubic-bezier(.4,.02,.85,.5)}
+  27%{transform:rotate(132deg) translate(89px,-80px);animation-timing-function:cubic-bezier(.2,.6,.4,1)}
+  39%{transform:rotate(200deg) translate(89px,-80px);animation-timing-function:linear}
+  57%{transform:rotate(270deg) translate(89px,-80px);animation-timing-function:cubic-bezier(.3,0,.6,1)}
+  85%{transform:rotate(360deg) translate(89px,-80px);animation-timing-function:cubic-bezier(.18,.55,.35,1)}
+  93%,100%{transform:rotate(360deg) translate(0px,0px)}
 }
 @media(max-width:720px){
   .site-header .brand-mark{width:34px !important;height:34px !important;min-width:34px !important;min-height:34px !important;flex-basis:34px !important}
 }
 @media(prefers-reduced-motion:reduce){
-  .hero-core .hero-ni-dot{animation:none !important;transform:none !important;will-change:auto}
+  .hero-core .hero-ni-artwork #path-i-dot{animation:none !important;transform:none !important;will-change:auto}
 }
 
 /* Finance Operations solution: dedicated layout with mobile and accessible styles. */
@@ -2892,7 +2894,7 @@ main > section:not(.hero) {
   margin-bottom:20px;box-shadow:0 2px 8px rgba(47,84,133,.035);
 }
 .orchestration-stages li:not(:last-child)::after{
-  content:"↓";position:absolute;left:50%;bottom:-19px;transform:translateX(-50%);
+  content:"";position:absolute;left:50%;bottom:-19px;transform:translateX(-50%);
   color:#6d9cda;font-size:17px;line-height:17px;z-index:1;
 }
 .orchestration-stage-number{display:grid;place-items:center;width:50px;height:50px;border-radius:14px;background:#eaf3ff;color:#1967d2;font-size:14px;font-weight:800}
@@ -3043,7 +3045,7 @@ main > section:not(.hero) {
   padding:19px 16px;border:1px solid #e0e8f2;border-radius:16px;background:#fff
 }
 .workspace-dayflow-steps article:not(:last-child)::after{
-  content:"→";position:absolute;right:-13px;top:30px;width:25px;height:25px;
+  content:"";position:absolute;right:-13px;top:30px;width:25px;height:25px;
   display:grid;place-items:center;border-radius:50%;background:#eaf3ff;color:#1a73e8;
   font-size:17px;font-weight:700;z-index:1;border:1px solid #d4e6fa
 }
@@ -3106,3 +3108,24 @@ main > section:not(.hero) {
   text-underline-offset:3px;
 }
 .cta .sales-contact-address a:hover{color:#174ea6 !important}
+
+/* Unified, scalable outline iconography; no text glyph stand-ins. */
+.ni-icon-sprite{position:absolute!important;width:0!important;height:0!important;overflow:hidden!important;pointer-events:none}
+svg.ni-icon{display:inline-block;width:1.1em;height:1.1em;flex:none;vertical-align:-.17em;fill:none;stroke:currentColor;stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round}
+.menu-toggle .ni-icon{width:23px;height:23px;vertical-align:middle}
+.orchestration-outcome-icon .ni-icon{width:24px;height:24px}
+.invoice-branch-symbol .ni-icon{width:28px;height:28px}
+.invoice-value-icon .ni-icon{width:25px;height:25px}
+.tilt-card>span .ni-icon,.card-icon .ni-icon{width:1.2em;height:1.2em}
+.invoice-decision-good strong .ni-icon{vertical-align:-.2em}
+.invoice-join .ni-icon,.execution-flow i .ni-icon{width:19px;height:19px}
+.orchestration-case-flow .ni-icon{width:.95em;height:.95em;vertical-align:-.15em;margin:0 .14em}
+.orchestration-stages li:not(:last-child)::after{
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236d9cda' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5v14m-6-6 6 6 6-6'/%3E%3C/svg%3E") center / 18px 18px no-repeat;
+  width:20px;height:20px
+}
+.workspace-dayflow-steps article:not(:last-child)::after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a73e8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14m-6-6 6 6-6 6'/%3E%3C/svg%3E");
+  background-position:center;background-repeat:no-repeat;background-size:17px 17px
+}
+@media(prefers-reduced-motion:reduce){.hero-core .hero-ni-artwork #path-i-dot{animation:none!important;transform:none!important;will-change:auto}}

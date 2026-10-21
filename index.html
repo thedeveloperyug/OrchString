@@ -90,9 +90,31 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style-new.css?v=20261020-sales-contact">
+<link rel="stylesheet" href="style-new.css?v=20261021-ni-orbit-icons">
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" class="ni-icon-sprite" aria-hidden="true" focusable="false"><defs>
+<symbol id="ni-icon-menu" viewBox="0 0 24 24"><path d='M4 6h16M4 12h16M4 18h16'/></symbol>
+<symbol id="ni-icon-arrow-up-right" viewBox="0 0 24 24"><path d='M7 17 17 7M8 7h9v9'/></symbol>
+<symbol id="ni-icon-arrow-right" viewBox="0 0 24 24"><path d='M5 12h14m-6-6 6 6-6 6'/></symbol>
+<symbol id="ni-icon-arrow-down" viewBox="0 0 24 24"><path d='M12 5v14m-6-6 6 6 6-6'/></symbol>
+<symbol id="ni-icon-check-circle" viewBox="0 0 24 24"><circle cx='12' cy='12' r='9'/><path d='m8 12 3 3 5-6'/></symbol>
+<symbol id="ni-icon-file-text" viewBox="0 0 24 24"><path d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h6'/></symbol>
+<symbol id="ni-icon-package-check" viewBox="0 0 24 24"><path d='m12 3 9 5-9 5-9-5 9-5ZM3 8v9l9 5 9-5V8M12 13v9m4-6 2 2 4-4'/></symbol>
+<symbol id="ni-icon-shield-check" viewBox="0 0 24 24"><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z'/><path d='m9 12 2 2 4-4'/></symbol>
+<symbol id="ni-icon-clock" viewBox="0 0 24 24"><circle cx='12' cy='12' r='9'/><path d='M12 7v5l4 2'/></symbol>
+<symbol id="ni-icon-trending-up" viewBox="0 0 24 24"><path d='m3 17 6-6 4 4 8-8M15 7h6v6'/></symbol>
+<symbol id="ni-icon-refresh-cw" viewBox="0 0 24 24"><path d='M20 7v5h-5M4 17v-5h5'/><path d='M5.8 9a7 7 0 0 1 12.5-2L20 12M4 12l1.7 5a7 7 0 0 0 12.5-2'/></symbol>
+<symbol id="ni-icon-layers" viewBox="0 0 24 24"><path d='m12 2 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 17l9 5 9-5'/></symbol>
+<symbol id="ni-icon-workflow" viewBox="0 0 24 24"><rect x='3' y='3' width='6' height='6' rx='1'/><rect x='15' y='15' width='6' height='6' rx='1'/><rect x='3' y='15' width='6' height='6' rx='1'/><path d='M9 6h5a4 4 0 0 1 4 4v5M6 9v6'/></symbol>
+<symbol id="ni-icon-network" viewBox="0 0 24 24"><circle cx='12' cy='4' r='2'/><circle cx='5' cy='19' r='2'/><circle cx='19' cy='19' r='2'/><path d='m11 6-5 11m7-11 5 11M7 19h10'/></symbol>
+<symbol id="ni-icon-brain" viewBox="0 0 24 24"><path d='M12 5a3 3 0 0 0-5-2 4 4 0 0 0-2 5 4 4 0 0 0-1 7 4 4 0 0 0 3 6 3 3 0 0 0 5-2V5ZM12 5a3 3 0 0 1 5-2 4 4 0 0 1 2 5 4 4 0 0 1 1 7 4 4 0 0 1-3 6 3 3 0 0 1-5-2V5Z'/><path d='M8 9h2m4 6h2'/></symbol>
+<symbol id="ni-icon-puzzle" viewBox="0 0 24 24"><path d='M3 3h7v3a2 2 0 1 0 4 0V3h7v7h-3a2 2 0 1 0 0 4h3v7h-7v-3a2 2 0 1 0-4 0v3H3v-7h3a2 2 0 1 0 0-4H3V3Z'/></symbol>
+<symbol id="ni-icon-file-check" viewBox="0 0 24 24"><path d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm0 0v6h6'/><path d='m8 15 3 3 5-6'/></symbol>
+<symbol id="ni-icon-monitor" viewBox="0 0 24 24"><rect x='3' y='4' width='18' height='13' rx='2'/><path d='M8 21h8M12 17v4'/></symbol>
+<symbol id="ni-icon-code" viewBox="0 0 24 24"><path d='m8 8-4 4 4 4m8-8 4 4-4 4m-3-12-2 24'/></symbol>
+<symbol id="ni-icon-circle-dot" viewBox="0 0 24 24"><circle cx='12' cy='12' r='9'/><circle cx='12' cy='12' r='3'/></symbol>
+</defs></svg>
 <div id="progress"></div>
 <canvas id="particle-field" aria-hidden="true"></canvas>
 <div class="noise" aria-hidden="true"></div>
@@ -106,7 +128,7 @@
     </picture></span>
     <span>Neytra <i>Intelligence</i></span>
   </a>
-  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-menu"></use></svg></button>
   <nav id="main-nav">
     <a href="#platform">Platform</a>
     <a href="#architecture">Architecture</a>
@@ -127,9 +149,9 @@
     <h1>Neytra Intelligence<br><span>that can execute.</span></h1>
     <p>The Neytra Intelligence Platform (NIP) is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.</p>
     <div class="buttons">
-      <a class="primary magnetic" href="https://neytra-console.pages.dev/#/login" target="_blank" rel="noopener noreferrer">Explore Neytra Console <span>↗</span></a>
-      <a class="secondary" href="#platform">Explore NIP <span>→</span></a>
-      <a class="secondary" href="mailto:rishabh@neytraintelligence.com?subject=Neytra%20Intelligence%20Business%20Inquiry">Contact Sales <span aria-hidden="true">↗</span></a>
+      <a class="primary magnetic" href="https://neytra-console.pages.dev/#/login" target="_blank" rel="noopener noreferrer">Explore Neytra Console <span><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></span></a>
+      <a class="secondary" href="#platform">Explore NIP <span><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg></span></a>
+      <a class="secondary" href="mailto:rishabh@neytraintelligence.com?subject=Neytra%20Intelligence%20Business%20Inquiry">Contact Sales <span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></span></a>
     </div>
     <div class="hero-proof">
       <span><b>AUTOMATE</b> high-volume operations</span>
@@ -140,28 +162,171 @@
 
   <div class="hero-core">
     <div class="core-logo logo-glass">
-      <!-- The original vector file is displayed unchanged in both layers.
-           Masking separates only the i dot for a gravity-style jump. -->
-      <svg class="hero-ni-artwork" xmlns="http://www.w3.org/2000/svg"
-           viewBox="0 0 1000 1000" role="img" aria-labelledby="hero-ni-title">
-        <title id="hero-ni-title">Neytra Intelligence Ni logo with a gently bouncing i dot</title>
-        <defs>
-          <mask id="hero-ni-body-mask" maskUnits="userSpaceOnUse"
-                x="0" y="0" width="1000" height="1000">
-            <rect x="0" y="0" width="1000" height="1000" fill="#fff"/>
-            <circle cx="738.5" cy="285.5" r="90.5" fill="#000"/>
-          </mask>
-          <clipPath id="hero-ni-dot-clip" clipPathUnits="userSpaceOnUse">
-            <circle cx="738.5" cy="285.5" r="90.5"/>
-          </clipPath>
-        </defs>
-        <image href="assets/neytra-ni-logo.svg" x="0" y="0"
-               width="1000" height="1000" mask="url(#hero-ni-body-mask)"/>
-        <g class="hero-ni-dot">
-          <image href="assets/neytra-ni-logo.svg" x="0" y="0"
-                 width="1000" height="1000" clip-path="url(#hero-ni-dot-clip)"/>
-        </g>
-      </svg>
+<svg class="hero-ni-artwork" role="img" aria-label="Neytra Ni logo with an orbiting i dot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+          <defs>
+            
+            <linearGradient id="grad-left-upper" x1="173" y1="620" x2="365" y2="390" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#007BFF"></stop>
+              <stop offset="55%" stop-color="#005BF3"></stop>
+              <stop offset="100%" stop-color="#0038C8"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-left-lower" x1="180" y1="780" x2="410" y2="480" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0048EC"></stop>
+              <stop offset="65%" stop-color="#003CE2"></stop>
+              <stop offset="100%" stop-color="#0029AC"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-fold-shadow-upper" x1="292" y1="393" x2="242" y2="440" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#00126E" stop-opacity="0.80"></stop>
+              <stop offset="48%" stop-color="#001F96" stop-opacity="0.36"></stop>
+              <stop offset="100%" stop-color="#0048E8" stop-opacity="0"></stop>
+            </linearGradient>
+
+            <linearGradient id="grad-fold-shadow-lower" x1="382" y1="490" x2="332" y2="545" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#001168" stop-opacity="0.82"></stop>
+              <stop offset="50%" stop-color="#001E8E" stop-opacity="0.38"></stop>
+              <stop offset="100%" stop-color="#003CE2" stop-opacity="0"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-n-ribbon-main" x1="210" y1="220" x2="660" y2="780" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0080FF"></stop>
+              <stop offset="35%" stop-color="#069CFF"></stop>
+              <stop offset="70%" stop-color="#0077FF"></stop>
+              <stop offset="100%" stop-color="#0044EE"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-n-ribbon-crest" x1="535" y1="375" x2="415" y2="505" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#2AD0FF" stop-opacity="0.88"></stop>
+              <stop offset="45%" stop-color="#08A6FF" stop-opacity="0.35"></stop>
+              <stop offset="100%" stop-color="#0047EE" stop-opacity="0"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-i-dot" x1="662" y1="352" x2="816" y2="212" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#003CE8"></stop>
+              <stop offset="38%" stop-color="#0074FF"></stop>
+              <stop offset="75%" stop-color="#02C0FF"></stop>
+              <stop offset="100%" stop-color="#08F2FF"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-i-top-cap" x1="658" y1="425" x2="829" y2="510" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0066FA"></stop>
+              <stop offset="48%" stop-color="#00ACFF"></stop>
+              <stop offset="100%" stop-color="#07F0FF"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-i-dark-band" x1="658" y1="445" x2="829" y2="675" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0020A4"></stop>
+              <stop offset="35%" stop-color="#0038CA"></stop>
+              <stop offset="75%" stop-color="#0064F6"></stop>
+              <stop offset="100%" stop-color="#0080FF"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-i-band-shadow" x1="658" y1="470" x2="725" y2="540" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#00126B" stop-opacity="0.65"></stop>
+              <stop offset="100%" stop-color="#0020A4" stop-opacity="0"></stop>
+            </linearGradient>
+
+            
+            <linearGradient id="grad-i-cyan-base" x1="658" y1="535" x2="818" y2="785" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0096FF"></stop>
+              <stop offset="42%" stop-color="#02CBFF"></stop>
+              <stop offset="85%" stop-color="#06F0FF"></stop>
+              <stop offset="100%" stop-color="#0AF8FF"></stop>
+            </linearGradient>
+
+            
+            <clipPath id="clip-left-stem">
+              <path d="M 173,266 L 200,245 L 410,470 L 410,733 A 80,80 0 0 1 330,813 L 253,813 A 80,80 0 0 1 173,733 Z"></path>
+            </clipPath>
+
+            
+            <clipPath id="clip-right-stem">
+              <path d="M 658,460 A 62,62 0 0 1 720,398 L 767,398 A 62,62 0 0 1 829,460 L 829,728 A 85,85 0 0 1 744,813 L 684,813 C 674,813 665,812.6 658,811.2 L 657,800 L 657,518 L 658,518 Z"></path>
+            </clipPath>
+          </defs>
+
+          
+          
+
+          
+          
+          
+          <g clip-path="url(#clip-left-stem)">
+            
+            <path id="path-left-lower" d="M 173,632 L 354,460 L 410,460 L 410,813 L 173,813 Z" fill="url(#grad-left-lower)"></path>
+
+            
+            <path id="path-left-upper" d="M 173,250 L 370,445 L 354,460 L 173,632 Z" fill="url(#grad-left-upper)"></path>
+
+            
+            <path d="M 173,266 L 354,460 L 295,516 L 173,375 Z" fill="url(#grad-fold-shadow-upper)"></path>
+
+            
+            <path d="M 354,460 L 410,526.4 L 410,615 L 295,516 Z" fill="url(#grad-fold-shadow-lower)"></path>
+          </g>
+
+          
+          
+          
+          <g clip-path="url(#clip-right-stem)">
+            
+            <path id="path-i-top-cap" d="M 656,398 L 829,398 L 829,595 L 656,424 Z" fill="url(#grad-i-top-cap)"></path>
+
+            
+            <path id="path-i-dark-band" d="M 656,424 L 829,595 L 829,713 L 656,518 Z" fill="url(#grad-i-dark-band)"></path>
+            
+            <path d="M 656,424 L 829,595 L 829,713 L 656,518 Z" fill="url(#grad-i-band-shadow)"></path>
+
+            
+            <path id="path-i-cyan-base" d="M 656,518 L 829,713 L 829,813 L 656,813 Z" fill="url(#grad-i-cyan-base)"></path>
+          </g>
+
+          
+          
+          
+          <g id="layer-main-ribbon">
+            
+            <path id="path-n-ribbon" d="M 173,266
+                 C 173,225 207,197 256,197
+                 L 318,197
+                 C 352,197 376,204 398,221
+                 L 658,518
+                 L 658,811.2
+                 C 644,808.4 630,788 618,773
+                 L 354,460
+                 Z" fill="url(#grad-n-ribbon-main)"></path>
+
+            
+            <path d="M 173,266
+                 C 173,225 207,197 256,197
+                 L 318,197
+                 C 352,197 376,204 398,221
+                 L 658,518
+                 L 658,811.2
+                 C 644,808.4 630,788 618,773
+                 L 354,460
+                 Z" fill="url(#grad-n-ribbon-crest)"></path>
+          </g>
+
+          
+          
+          
+          <circle id="path-i-dot" cx="738.5" cy="285.5" r="90.5" fill="url(#grad-i-dot)"></circle>
+
+          
+          
+          
+          
+        </svg>
     </div>
   </div>
 </section>
@@ -210,14 +375,14 @@
       <li><div class="orchestration-stage-number">05</div><div class="orchestration-stage-content"><h4>Verification &amp; control</h4><p>Check results, surface exceptions, request human decisions and keep supporting evidence.</p></div><span class="orchestration-stage-label">Control</span></li>
       <li><div class="orchestration-stage-number">06</div><div class="orchestration-stage-content"><h4>Continuous improvement</h4><p>Use measured outcomes and verified feedback to refine how the next workflow runs.</p></div><span class="orchestration-stage-label">Improve</span></li>
     </ol>
-    <div class="orchestration-outcome"><span class="orchestration-outcome-icon" aria-hidden="true">✓</span><div><strong>One coordinated, reviewable business outcome.</strong><p>Less time handing work between disconnected steps. More clarity about progress, decisions, exceptions and results.</p></div></div>
+    <div class="orchestration-outcome"><span class="orchestration-outcome-icon" aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-check-circle"></use></svg></span><div><strong>One coordinated, reviewable business outcome.</strong><p>Less time handing work between disconnected steps. More clarity about progress, decisions, exceptions and results.</p></div></div>
     <div class="orchestration-fabric">
       <strong>The same framework can coordinate different kinds of work:</strong>
       <span>People &amp; approvals</span><span>Documents &amp; data</span><span>Business applications</span><span>AI-assisted tasks</span><span>Policy checks</span><span>Notifications &amp; actions</span>
     </div>
   </div>
   <p class="orchestration-positioning"><strong>Designed to adapt, not dictate.</strong> NIP can coordinate the steps your business already relies on, including automated checks, human judgment and external systems, subject to the integrations and permissions configured for your environment.</p>
-  <div class="orchestration-next"><a href="#use-cases">Explore business workflows <span aria-hidden="true">↓</span></a><a href="#business-impact">See the potential value <span aria-hidden="true">↗</span></a></div>
+  <div class="orchestration-next"><a href="#use-cases">Explore business workflows <span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-down"></use></svg></span></a><a href="#business-impact">See the potential value <span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></span></a></div>
 </section>
 
 <section id="use-cases" class="reveal orchestration-cases" aria-labelledby="orchestration-cases-title">
@@ -228,38 +393,38 @@
     <article class="orchestration-case">
       <span class="orchestration-case-type">FINANCE &amp; OPERATIONS</span>
       <h3>Supplier invoice processing</h3>
-      <p class="orchestration-case-flow">Receive invoices → verify orders and deliveries → route exceptions → record outcomes.</p>
+      <p class="orchestration-case-flow">Receive invoices <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> verify orders and deliveries <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> route exceptions <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> record outcomes.</p>
       <p class="orchestration-case-value"><strong>Business value:</strong> Less manual reconciliation, faster approvals and stronger traceability.</p>
-      <a href="#finance-example">Explore the full example <span aria-hidden="true">↗</span></a>
+      <a href="#finance-example">Explore the full example <span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></span></a>
     </article>
     <article class="orchestration-case">
       <span class="orchestration-case-type">CUSTOMER EXPERIENCE</span>
       <h3>Customer onboarding</h3>
-      <p class="orchestration-case-flow">Collect forms → validate documents → coordinate teams → approve and activate.</p>
+      <p class="orchestration-case-flow">Collect forms <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> validate documents <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> coordinate teams <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> approve and activate.</p>
       <p class="orchestration-case-value"><strong>Business value:</strong> Fewer missed handoffs and a shorter path from sign-up to getting started.</p>
     </article>
     <article class="orchestration-case">
       <span class="orchestration-case-type">SERVICE &amp; OPERATIONS</span>
       <h3>Service request resolution</h3>
-      <p class="orchestration-case-flow">Receive requests → classify urgency → assign owners → escalate and confirm resolution.</p>
+      <p class="orchestration-case-flow">Receive requests <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> classify urgency <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> assign owners <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> escalate and confirm resolution.</p>
       <p class="orchestration-case-value"><strong>Business value:</strong> More predictable service, clearer ownership and less follow-up work.</p>
     </article>
     <article class="orchestration-case">
       <span class="orchestration-case-type">ANALYTICS &amp; MANAGEMENT</span>
       <h3>Recurring business reporting</h3>
-      <p class="orchestration-case-flow">Gather approved data → check inconsistencies → prepare a report → coordinate sign-off.</p>
+      <p class="orchestration-case-flow">Gather approved data <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> check inconsistencies <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> prepare a report <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> coordinate sign-off.</p>
       <p class="orchestration-case-value"><strong>Business value:</strong> Less spreadsheet chasing, repeatable reporting cycles and timely visibility.</p>
     </article>
     <article class="orchestration-case">
       <span class="orchestration-case-type">PROCUREMENT &amp; SUPPLY</span>
       <h3>Purchasing and inventory coordination</h3>
-      <p class="orchestration-case-flow">Detect a need → confirm availability → compare policy limits → coordinate purchasing.</p>
+      <p class="orchestration-case-flow">Detect a need <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> confirm availability <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> compare policy limits <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> coordinate purchasing.</p>
       <p class="orchestration-case-value"><strong>Business value:</strong> Fewer purchasing delays and better oversight of approvals and stock needs.</p>
     </article>
     <article class="orchestration-case">
       <span class="orchestration-case-type">COMPLIANCE &amp; GOVERNANCE</span>
       <h3>Evidence and approval reviews</h3>
-      <p class="orchestration-case-flow">Collect evidence → check requirements → assign reviewers → record decisions.</p>
+      <p class="orchestration-case-flow">Collect evidence <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> check requirements <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> assign reviewers <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> record decisions.</p>
       <p class="orchestration-case-value"><strong>Business value:</strong> Clearer accountability, fewer missing records and reviewable decisions.</p>
     </article>
   </div>
@@ -294,13 +459,13 @@
     <div class="invoice-parallel">
       <div class="invoice-panel-heading"><span>PARALLEL TASK GRAPH</span><h3>Three checks. One evidence-backed decision.</h3><p>Each validation works from the same invoice and joins at the approval gate.</p></div>
       <div class="invoice-branch-grid">
-        <article><span class="invoice-branch-symbol" aria-hidden="true">▤</span><h4>Purchase order</h4><p>Line items · price · invoice total</p></article>
-        <article><span class="invoice-branch-symbol" aria-hidden="true">▣</span><h4>Goods received</h4><p>Quantities · delivery confirmation</p></article>
-        <article><span class="invoice-branch-symbol" aria-hidden="true">◇</span><h4>Risk and tax</h4><p>Duplicate · vendor · GST checks</p></article>
+        <article><span class="invoice-branch-symbol" aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-file-text"></use></svg></span><h4>Purchase order</h4><p>Line items · price · invoice total</p></article>
+        <article><span class="invoice-branch-symbol" aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-package-check"></use></svg></span><h4>Goods received</h4><p>Quantities · delivery confirmation</p></article>
+        <article><span class="invoice-branch-symbol" aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-shield-check"></use></svg></span><h4>Risk and tax</h4><p>Duplicate · vendor · GST checks</p></article>
       </div>
-      <div class="invoice-join" aria-label="All checks feed into a policy decision"><span aria-hidden="true">↓</span><strong>JOIN EVIDENCE · APPLY POLICY</strong></div>
+      <div class="invoice-join" aria-label="All checks feed into a policy decision"><span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-down"></use></svg></span><strong>JOIN EVIDENCE · APPLY POLICY</strong></div>
       <div class="invoice-decision-grid">
-        <div class="invoice-decision-good"><strong>✓ Checks pass</strong><p>Proceed to permitted accounting writeback, following configured approval policy.</p></div>
+        <div class="invoice-decision-good"><strong><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-check-circle"></use></svg> Checks pass</strong><p>Proceed to permitted accounting writeback, following configured approval policy.</p></div>
         <div class="invoice-decision-review"><strong>! Exception detected</strong><p>Pause the affected invoice; route evidence to an authorized reviewer and resume after a decision.</p></div>
       </div>
     </div>
@@ -316,12 +481,12 @@
   <h2 id="invoice-value-heading">Make complex work simpler.<br><span>Make the impact measurable.</span></h2>
   <p class="invoice-value-lead">NIP is intended to reduce coordination overhead across departments, not just automate one isolated task. It brings together the people, systems and intelligent capabilities needed to move business work forward.</p>
   <div class="invoice-value-grid">
-    <article><span class="invoice-value-icon" aria-hidden="true">↘</span><h3>Give teams time back</h3><p>Reduce repetitive data handling and follow-ups so staff can focus on judgment, customers and exceptions.</p></article>
-    <article><span class="invoice-value-icon" aria-hidden="true">↗</span><h3>Move work faster</h3><p>Run independent checks together and reduce delays between teams, systems and approval steps.</p></article>
-    <article><span class="invoice-value-icon" aria-hidden="true">◎</span><h3>Stay in control</h3><p>Keep permissions, policy boundaries and people in the loop for actions that require oversight.</p></article>
-    <article><span class="invoice-value-icon" aria-hidden="true">✓</span><h3>Know what happened</h3><p>Track workflow status, evidence, decisions and exceptions instead of relying on disconnected updates.</p></article>
-    <article><span class="invoice-value-icon" aria-hidden="true">↻</span><h3>Handle interruptions</h3><p>Design recoverable workflows so one failed step need not derail an entire business process.</p></article>
-    <article><span class="invoice-value-icon" aria-hidden="true">◇</span><h3>Reuse the framework</h3><p>Adapt orchestration patterns to finance, customer operations, procurement, reporting and more.</p></article>
+    <article><span class="invoice-value-icon" aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-clock"></use></svg></span><h3>Give teams time back</h3><p>Reduce repetitive data handling and follow-ups so staff can focus on judgment, customers and exceptions.</p></article>
+    <article><span class="invoice-value-icon" aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-trending-up"></use></svg></span><h3>Move work faster</h3><p>Run independent checks together and reduce delays between teams, systems and approval steps.</p></article>
+    <article><span class="invoice-value-icon" aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-shield-check"></use></svg></span><h3>Stay in control</h3><p>Keep permissions, policy boundaries and people in the loop for actions that require oversight.</p></article>
+    <article><span class="invoice-value-icon" aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-check-circle"></use></svg></span><h3>Know what happened</h3><p>Track workflow status, evidence, decisions and exceptions instead of relying on disconnected updates.</p></article>
+    <article><span class="invoice-value-icon" aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-refresh-cw"></use></svg></span><h3>Handle interruptions</h3><p>Design recoverable workflows so one failed step need not derail an entire business process.</p></article>
+    <article><span class="invoice-value-icon" aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-layers"></use></svg></span><h3>Reuse the framework</h3><p>Adapt orchestration patterns to finance, customer operations, procurement, reporting and more.</p></article>
   </div>
   <div class="orchestration-metrics">
     <strong>What can clients measure?</strong>
@@ -349,7 +514,7 @@
 
   <div class="invoice-pilot">
     <div><h3>Start with your workflow. Prove the business value.</h3><p>Choose a high-friction process, define a baseline, agree on the needed controls and measure results in a scoped pilot. Actual gains depend on the work, available integrations, data quality and deployment design.</p></div>
-    <a href="mailto:rishabh@neytraintelligence.com?subject=NIP%20Business%20Orchestration%20Pilot" class="invoice-pilot-link">Discuss your business workflow <span aria-hidden="true">↗</span></a>
+    <a href="mailto:rishabh@neytraintelligence.com?subject=NIP%20Business%20Orchestration%20Pilot" class="invoice-pilot-link">Discuss your business workflow <span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></span></a>
   </div>
 </section>
 
@@ -357,15 +522,15 @@
   <div class="eyebrow">06 / CORE CAPABILITIES</div>
   <h2>Built for <span>real work.</span></h2>
   <div class="feature-grid">
-    <article class="tilt-card"><span>◈</span><h3>Goal-driven agents</h3><p>Agents operate around explicit objectives, lifecycle states, cancellation, retry, replanning and verification rather than an unbounded chat loop.</p></article>
-    <article class="tilt-card"><span>⌁</span><h3>Multi-task orchestration</h3><p>Jobs can contain independent and dependent work, enabling deterministic task graphs, parallel execution and partial recovery.</p></article>
-    <article class="tilt-card"><span>◎</span><h3>Model-independent runtime</h3><p>Models are replaceable execution resources. Routing can account for capability, hardware, latency, privacy, cost and policy.</p></article>
-    <article class="tilt-card"><span>◉</span><h3>Capability-first tools</h3><p>Intent maps to required capabilities, then to permitted implementations. NIP is not hard-coded to one application.</p></article>
-    <article class="tilt-card"><span>▣</span><h3>Evidence & verification</h3><p>Observation, criticism, reasoning and verification create an evidence trail instead of trusting model output blindly.</p></article>
-    <article class="tilt-card"><span>△</span><h3>Recovery & fencing</h3><p>Execution attempts, leases and fencing protect durable state when workers fail, restart or are replaced.</p></article>
-    <article class="tilt-card"><span>◇</span><h3>Security by boundary</h3><p>Discovery never grants permission. Consequential actions flow through authorization, policy, risk and audit controls.</p></article>
-    <article class="tilt-card"><span>↯</span><h3>OS agnostic</h3><p>NIP can run on ordinary Linux and other supported systems while leaving room for deep native underlying platform integration.</p></article>
-    <article class="tilt-card"><span>⌘</span><h3>Developer intelligence</h3><p>Software engineering is a first-class workload: inspect, reason, modify, build, test, debug, benchmark and verify.</p></article>
+    <article class="tilt-card"><span><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-workflow"></use></svg></span><h3>Goal-driven agents</h3><p>Agents operate around explicit objectives, lifecycle states, cancellation, retry, replanning and verification rather than an unbounded chat loop.</p></article>
+    <article class="tilt-card"><span><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-network"></use></svg></span><h3>Multi-task orchestration</h3><p>Jobs can contain independent and dependent work, enabling deterministic task graphs, parallel execution and partial recovery.</p></article>
+    <article class="tilt-card"><span><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-brain"></use></svg></span><h3>Model-independent runtime</h3><p>Models are replaceable execution resources. Routing can account for capability, hardware, latency, privacy, cost and policy.</p></article>
+    <article class="tilt-card"><span><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-puzzle"></use></svg></span><h3>Capability-first tools</h3><p>Intent maps to required capabilities, then to permitted implementations. NIP is not hard-coded to one application.</p></article>
+    <article class="tilt-card"><span><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-file-check"></use></svg></span><h3>Evidence & verification</h3><p>Observation, criticism, reasoning and verification create an evidence trail instead of trusting model output blindly.</p></article>
+    <article class="tilt-card"><span><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-refresh-cw"></use></svg></span><h3>Recovery & fencing</h3><p>Execution attempts, leases and fencing protect durable state when workers fail, restart or are replaced.</p></article>
+    <article class="tilt-card"><span><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-shield-check"></use></svg></span><h3>Security by boundary</h3><p>Discovery never grants permission. Consequential actions flow through authorization, policy, risk and audit controls.</p></article>
+    <article class="tilt-card"><span><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-monitor"></use></svg></span><h3>OS agnostic</h3><p>NIP can run on ordinary Linux and other supported systems while leaving room for deep native underlying platform integration.</p></article>
+    <article class="tilt-card"><span><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-code"></use></svg></span><h3>Developer intelligence</h3><p>Software engineering is a first-class workload: inspect, reason, modify, build, test, debug, benchmark and verify.</p></article>
   </div>
 </section>
 
@@ -379,14 +544,14 @@
     <p>NIP can coordinate independent and dependent tasks, keep track of decisions, and support recovery when an approved service, worker or process step becomes unavailable.</p>
   </div>
   <div class="execution-flow">
-    <div><b>RECEIVE</b><small>A business request arrives</small></div><i>→</i>
-    <div><b>COORDINATE</b><small>Assign people, tools and intelligent tasks</small></div><i>→</i>
-    <div><b>ACT</b><small>Carry out permitted steps</small></div><i>→</i>
-    <div><b>REVIEW</b><small>Validate results and decisions</small></div><i>→</i>
+    <div><b>RECEIVE</b><small>A business request arrives</small></div><i><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg></i>
+    <div><b>COORDINATE</b><small>Assign people, tools and intelligent tasks</small></div><i><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg></i>
+    <div><b>ACT</b><small>Carry out permitted steps</small></div><i><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg></i>
+    <div><b>REVIEW</b><small>Validate results and decisions</small></div><i><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg></i>
     <div><b>COMPLETE</b><small>Return an evidence-backed outcome</small></div>
   </div>
   <div class="orchestration-recovery">
-    <div><span aria-hidden="true">↻</span><h3>What if something interrupts the workflow?</h3></div>
+    <div><span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-refresh-cw"></use></svg></span><h3>What if something interrupts the workflow?</h3></div>
     <p>Rather than lose track of the entire process, a well-configured workflow can pause affected steps, preserve progress, request human help, retry safely and continue once the required conditions are met.</p>
     <strong>Less operational disruption. Clearer accountability. More predictable handoffs.</strong>
   </div>
@@ -396,15 +561,15 @@
   <div class="eyebrow">07 / INTELLIGENT CAPABILITIES</div>
   <h2>Use the right intelligence<br><span>for the right task.</span></h2>
   <div class="cards">
-    <article class="tilt-card"><small>ROUTING</small><div class="card-icon">◈</div><h3>Adaptive model selection</h3><p>Select intelligence according to the work: capability, privacy, latency, quality, hardware and cost can all shape the choice.</p></article>
-    <article class="tilt-card"><small>LOCAL + CLOUD</small><div class="card-icon">⌁</div><h3>Provider independence</h3><p>Keep models replaceable so the platform can combine local and external intelligence without binding the system to one provider.</p></article>
-    <article class="tilt-card"><small>CONTROL</small><div class="card-icon">◎</div><h3>Bounded inference</h3><p>Model work can operate with explicit context, budgets, deadlines, cancellation and traceable results inside the larger execution flow.</p></article>
+    <article class="tilt-card"><small>ROUTING</small><div class="card-icon"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-workflow"></use></svg></div><h3>Adaptive model selection</h3><p>Select intelligence according to the work: capability, privacy, latency, quality, hardware and cost can all shape the choice.</p></article>
+    <article class="tilt-card"><small>LOCAL + CLOUD</small><div class="card-icon"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-network"></use></svg></div><h3>Provider independence</h3><p>Keep models replaceable so the platform can combine local and external intelligence without binding the system to one provider.</p></article>
+    <article class="tilt-card"><small>CONTROL</small><div class="card-icon"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-brain"></use></svg></div><h3>Bounded inference</h3><p>Model work can operate with explicit context, budgets, deadlines, cancellation and traceable results inside the larger execution flow.</p></article>
   </div>
 </section>
 
 <section class="network reveal">
   <div><div class="eyebrow">08 / CONNECTIVITY &amp; CONTROL</div><h2>The network is a <span>capability.</span></h2></div>
-  <p>LOCAL CHECK → EXECUTE<br>NEED EXTERNAL ACCESS → EXPLAIN → AUTHORIZE → AUDIT</p>
+  <p>LOCAL CHECK <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> EXECUTE<br>NEED EXTERNAL ACCESS <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> EXPLAIN <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> AUTHORIZE <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg> AUDIT</p>
 </section>
 
 
@@ -498,7 +663,7 @@
       </article>
     </div>
     <div class="workspace-connector-policy">
-      <span aria-hidden="true">◎</span>
+      <span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-circle-dot"></use></svg></span>
       <p><strong>Your accounts stay under your control.</strong> Access is limited to explicitly authorized connections and permitted actions. Listed services illustrate potential integration targets; individual connector availability, permissions and setup depend on the deployment.</p>
     </div>
   </div>
@@ -524,7 +689,7 @@
   </div>
   <div class="workspace-cta">
     <p><strong>Bring your existing workflow.</strong> Tell us which apps your team uses and what manual work slows you down. We can scope the relevant connectors, controls and outcome measures for a pilot.</p>
-    <a href="mailto:rishabh@neytraintelligence.com?subject=NIP%20Connected%20Business%20Workflow" aria-label="Discuss integrating your business applications with NIP">Discuss your workflow <span aria-hidden="true">↗</span></a>
+    <a href="mailto:rishabh@neytraintelligence.com?subject=NIP%20Connected%20Business%20Workflow" aria-label="Discuss integrating your business applications with NIP">Discuss your workflow <span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></span></a>
   </div>
 </section>
 
@@ -554,7 +719,7 @@
       <p>Founder and creator of Neytra Intelligence Platform. Leading the architecture and engineering vision for an intelligent execution platform that can reason, coordinate and act across digital environments.</p>
       <div class="person-links">
         <a class="primary" href="mailto:thedeveloperyug@gmail.com">Connect by email</a>
-        <a class="secondary" href="https://www.linkedin.com/in/thedeveloperyug" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+        <a class="secondary" href="https://www.linkedin.com/in/thedeveloperyug" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></a>
       </div>
     </article>
     <article class="person-card cofounder-profile">
@@ -563,8 +728,8 @@
       <h3>Rishabh Saluja</h3>
       <p>Co-founder helping build Neytra Intelligence Platform into a business. Focused on commercial strategy, partnerships and turning NIP's capabilities into practical solutions for organizations.</p>
       <div class="person-links">
-        <a class="primary" href="https://www.linkedin.com/in/rishabh-saluja-4000641b7/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
-        <a class="secondary" href="mailto:rishabh@neytraintelligence.com">Email Rishabh ↗</a>
+        <a class="primary" href="https://www.linkedin.com/in/rishabh-saluja-4000641b7/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></a>
+        <a class="secondary" href="mailto:rishabh@neytraintelligence.com">Email Rishabh <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></a>
       </div>
     </article>
     <article class="person-card operations-profile">
@@ -573,7 +738,7 @@
       <h3>Sreepada Bharadwaj</h3>
       <p>Supporting financial planning and day-to-day operations at Neytra Intelligence, helping the business build the processes and foundations needed to grow sustainably.</p>
       <div class="person-links">
-        <a class="primary" href="https://www.linkedin.com/in/sreepada-bharadwaj/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+        <a class="primary" href="https://www.linkedin.com/in/sreepada-bharadwaj/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></a>
       </div>
     </article>
     <article class="person-card sales-profile">
@@ -582,7 +747,7 @@
       <h3>Ujjwal Krishna</h3>
       <p>Leading sales and customer engagement, connecting companies with Neytra Intelligence Platform and identifying where AI-powered execution can solve real business challenges.</p>
       <div class="person-links">
-        <a class="primary" href="https://www.linkedin.com/in/ujjwal-krishna-6913a8172/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+        <a class="primary" href="https://www.linkedin.com/in/ujjwal-krishna-6913a8172/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></a>
       </div>
     </article>
   </div>
@@ -592,7 +757,7 @@
   <div class="ownership-badge">PROPRIETARY SOFTWARE</div>
   <h2>Built under<br><span>private ownership.</span></h2>
   <p>Neytra Intelligence Platform and its source code are proprietary and confidential. Copyright © 2026 Yogesh Pandey. All rights reserved. The project is not open source, and no permission is granted to copy, modify, distribute, sublicense, sell or otherwise use the software without prior written permission from the copyright holder.</p>
-  <a class="secondary" href="mailto:rishabh@neytraintelligence.com?subject=NIP%20Business%20Partnership">Discuss a Business Partnership <span aria-hidden="true">↗</span></a>
+  <a class="secondary" href="mailto:rishabh@neytraintelligence.com?subject=NIP%20Business%20Partnership">Discuss a Business Partnership <span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></span></a>
 </section>
 
 <section id="contact" class="cta reveal">
@@ -600,8 +765,8 @@
   <h2>Let's build what's next<br><span>for your business.</span></h2>
   <p>Explore how Neytra Intelligence Platform can support your workflows, integrations and enterprise needs. Connect with our team to discuss a pilot, partnership or business inquiry.</p>
   <div class="buttons">
-    <a class="primary" href="mailto:rishabh@neytraintelligence.com?subject=Neytra%20Intelligence%20Business%20Inquiry">Connect with Our Sales Team <span aria-hidden="true">↗</span></a>
-    <a class="secondary" href="#platform">Explore the Platform <span aria-hidden="true">→</span></a>
+    <a class="primary" href="mailto:rishabh@neytraintelligence.com?subject=Neytra%20Intelligence%20Business%20Inquiry">Connect with Our Sales Team <span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></span></a>
+    <a class="secondary" href="#platform">Explore the Platform <span aria-hidden="true"><svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-right"></use></svg></span></a>
   </div>
   <p class="sales-contact-address">Business inquiries: <a href="mailto:rishabh@neytraintelligence.com">rishabh@neytraintelligence.com</a></p>
 </section>
@@ -610,7 +775,7 @@
 <footer>
   <span>© 2026 YOGESH PANDEY · Neytra Intelligence</span>
   <span>Neytra Intelligence Platform (NIP) — Think. Adapt. Act.</span>
-  <a href="https://www.linkedin.com/in/thedeveloperyug">Yogesh Pandey on LinkedIn ↗</a>
+  <a href="https://www.linkedin.com/in/thedeveloperyug">Yogesh Pandey on LinkedIn <svg class="ni-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#ni-icon-arrow-up-right"></use></svg></a>
   <a href="mailto:rishabh@neytraintelligence.com">Sales: rishabh@neytraintelligence.com</a>
 </footer>
 <script src="app.js"></script>
