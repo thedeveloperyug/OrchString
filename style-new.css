@@ -2768,72 +2768,55 @@ main > section:not(.hero) {
   overflow:visible;
   filter:drop-shadow(0 18px 26px rgba(12,96,242,.16));
 }
-/* Real masked water fill, not straight light beams.
-   The original Ni remains fixed. Two softly undulating curved surfaces
-   rise through it like water in a glass, overshoot gently at the top,
-   then recede. The 10.8s cycle repeats forever without a hard reset. */
-.hero-core .hero-ni-artwork .hero-ni-liquid-surface{
+/* Original-color jelly fill: only the official Ni gradient vectors are drawn.
+   Two undulating ALPHA-masks reveal the real artwork from bottom to top.
+   No replacement water paint, no exterior spill, and no change to SVG shapes.
+   One complete gentle fill and drain takes 26 seconds (~17 seconds to fill). */
+.hero-core .hero-ni-artwork .hero-ni-unfilled{
   pointer-events:none;
-  isolation:isolate;
 }
-.hero-core .hero-ni-artwork .hero-ni-liquid-coat{opacity:.2}
-.hero-core .hero-ni-artwork .hero-ni-water-level{
+.hero-core .hero-ni-artwork .hero-ni-filled{
+  pointer-events:none;
+}
+.hero-core .hero-ni-artwork .hero-ni-fill-level{
   transform-box:view-box;
   transform-origin:center;
   will-change:transform;
-  animation:niWaterFillLevel 10.8s infinite;
+  animation:niOriginalJellyLevel 26s infinite;
 }
-.hero-core .hero-ni-artwork .hero-ni-water-wave{
+.hero-core .hero-ni-artwork .hero-ni-fill-front,
+.hero-core .hero-ni-artwork .hero-ni-fill-back{
   transform-box:view-box;
   transform-origin:center;
   will-change:transform;
 }
-.hero-core .hero-ni-artwork .hero-ni-water-back{
-  opacity:.47;
-  animation:niWaterSurfaceBack 5.6s ease-in-out -1.3s infinite alternate;
+.hero-core .hero-ni-artwork .hero-ni-fill-front{
+  animation:niOriginalJellyFront 4.6s ease-in-out infinite alternate;
 }
-.hero-core .hero-ni-artwork .hero-ni-water-front{
-  opacity:.86;
-  animation:niWaterSurfaceFront 4.2s ease-in-out infinite alternate;
+.hero-core .hero-ni-artwork .hero-ni-fill-back{
+  animation:niOriginalJellyBack 5.9s ease-in-out -1.4s infinite alternate;
 }
-.hero-core .hero-ni-artwork .hero-ni-water-bubbles{
-  fill:url(#hero-ni-water-gloss-gradient);
-  stroke:#dcffff;
-  stroke-opacity:.5;
-  stroke-width:2;
-  opacity:.72;
-  transform-box:view-box;
-  animation:niWaterBubbles 6.2s ease-in-out infinite alternate;
+@keyframes niOriginalJellyLevel{
+  0%{transform:translateY(935px);animation-timing-function:cubic-bezier(.36,.02,.52,.98)}
+  67%{transform:translateY(94px);animation-timing-function:cubic-bezier(.15,.72,.27,1)}
+  78%{transform:translateY(82px);animation-timing-function:cubic-bezier(.4,0,.74,1)}
+  100%{transform:translateY(935px)}
 }
-@keyframes niWaterFillLevel{
-  0%{transform:translateY(875px);animation-timing-function:cubic-bezier(.4,.08,.64,1)}
-  26%{transform:translateY(478px);animation-timing-function:cubic-bezier(.3,.05,.44,1)}
-  49%{transform:translateY(135px);animation-timing-function:cubic-bezier(.14,.6,.25,1)}
-  54%{transform:translateY(160px);animation-timing-function:cubic-bezier(.35,.05,.45,.9)}
-  59%{transform:translateY(145px);animation-timing-function:cubic-bezier(.4,.04,.7,.95)}
-  79%{transform:translateY(505px);animation-timing-function:cubic-bezier(.34,.05,.6,1)}
-  100%{transform:translateY(875px)}
+@keyframes niOriginalJellyFront{
+  0%{transform:translate(-50px,7px) scaleY(.90)}
+  50%{transform:translate(13px,-12px) scaleY(1.07)}
+  100%{transform:translate(52px,8px) scaleY(.96)}
 }
-@keyframes niWaterSurfaceFront{
-  0%{transform:translate(-52px,8px) scaleY(.88)}
-  50%{transform:translate(18px,-13px) scaleY(1.09)}
-  100%{transform:translate(60px,10px) scaleY(.94)}
-}
-@keyframes niWaterSurfaceBack{
-  0%{transform:translate(55px,-23px) scaleY(1.07)}
-  50%{transform:translate(-8px,-33px) scaleY(.89)}
-  100%{transform:translate(-56px,-16px) scaleY(1.04)}
-}
-@keyframes niWaterBubbles{
-  0%{opacity:.35;transform:translateY(26px) scale(.92)}
-  50%{opacity:.8;transform:translateY(-35px) scale(1.08)}
-  100%{opacity:.4;transform:translateY(-78px) scale(.96)}
+@keyframes niOriginalJellyBack{
+  0%{transform:translate(51px,-21px) scaleY(1.09)}
+  50%{transform:translate(-10px,-29px) scaleY(.90)}
+  100%{transform:translate(-53px,-17px) scaleY(1.05)}
 }
 @media(max-width:720px){
   .site-header .brand-mark{width:34px !important;height:34px !important;min-width:34px !important;min-height:34px !important;flex-basis:34px !important}
 }
 @media(prefers-reduced-motion:reduce){
-  .hero-core .hero-ni-artwork .hero-ni-water-level,.hero-core .hero-ni-artwork .hero-ni-water-wave,.hero-core .hero-ni-artwork .hero-ni-water-bubbles{animation:none!important;will-change:auto}.hero-core .hero-ni-artwork .hero-ni-water-level{opacity:0!important}.hero-core .hero-ni-artwork .hero-ni-liquid-coat{opacity:.12!important}
+  .hero-core .hero-ni-artwork .hero-ni-fill-level,.hero-core .hero-ni-artwork .hero-ni-fill-front,.hero-core .hero-ni-artwork .hero-ni-fill-back{animation:none!important;will-change:auto}.hero-core .hero-ni-artwork .hero-ni-fill-level{transform:translateY(82px)!important}
 }
 
 /* Finance Operations solution: dedicated layout with mobile and accessible styles. */
@@ -3170,4 +3153,4 @@ svg.ni-icon{display:inline-block;width:1.1em;height:1.1em;flex:none;vertical-ali
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a73e8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14m-6-6 6 6-6 6'/%3E%3C/svg%3E");
   background-position:center;background-repeat:no-repeat;background-size:17px 17px
 }
-@media(prefers-reduced-motion:reduce){.hero-core .hero-ni-artwork .hero-ni-water-level,.hero-core .hero-ni-artwork .hero-ni-water-wave,.hero-core .hero-ni-artwork .hero-ni-water-bubbles{animation:none!important;will-change:auto}.hero-core .hero-ni-artwork .hero-ni-water-level{opacity:0!important}.hero-core .hero-ni-artwork .hero-ni-liquid-coat{opacity:.12!important}}
+@media(prefers-reduced-motion:reduce){.hero-core .hero-ni-artwork .hero-ni-fill-level,.hero-core .hero-ni-artwork .hero-ni-fill-front,.hero-core .hero-ni-artwork .hero-ni-fill-back{animation:none!important;will-change:auto}.hero-core .hero-ni-artwork .hero-ni-fill-level{transform:translateY(82px)!important}}

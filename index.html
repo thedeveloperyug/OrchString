@@ -90,7 +90,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style-new.css?v=20261021-ni-waterfill">
+<link rel="stylesheet" href="style-new.css?v=20261021-original-jelly-reveal">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" class="ni-icon-sprite" aria-hidden="true" focusable="false"><defs>
@@ -252,42 +252,19 @@
             <clipPath id="clip-right-stem">
               <path d="M 658,460 A 62,62 0 0 1 720,398 L 767,398 A 62,62 0 0 1 829,460 L 829,728 A 85,85 0 0 1 744,813 L 684,813 C 674,813 665,812.6 658,811.2 L 657,800 L 657,518 L 658,518 Z"></path>
             </clipPath>
-            <!-- Alpha mask reuses the existing vector shapes without changing their paths. -->
-            <mask id="hero-ni-liquid-silhouette" maskUnits="userSpaceOnUse"
+            <!-- Alpha-only moving waterline. White is a mask value, not a displayed color. -->
+            <mask id="hero-ni-fill-mask" maskUnits="userSpaceOnUse"
+                  maskContentUnits="userSpaceOnUse"
                   x="0" y="0" width="1000" height="1000" style="mask-type:alpha">
-              <use href="#layer-left-stem"></use>
-              <use href="#layer-main-ribbon"></use>
-              <use href="#layer-right-stem"></use>
-              <use href="#path-i-dot"></use>
+              <g class="hero-ni-fill-level">
+                <g class="hero-ni-fill-back">
+                  <path class="hero-ni-mask-surface" fill="#fff" opacity=".60" d="M -1000 0 C -830 47 -660 -55 -490 0 C -330 56 -160 -44 10 0 C 170 53 320 -50 490 0 C 655 49 830 -46 995 0 C 1160 52 1330 -48 1500 0 C 1670 50 1830 -45 2000 0 L 2000 1450 L -1000 1450 Z"></path>
+                </g>
+                <g class="hero-ni-fill-front">
+                  <path class="hero-ni-mask-surface" fill="#fff" d="M -1000 0 C -840 -40 -670 52 -500 0 C -330 -52 -170 44 0 0 C 160 -44 330 55 500 0 C 665 -54 840 48 1000 0 C 1180 -56 1350 53 1500 0 C 1650 -45 1850 48 2000 0 L 2000 1450 L -1000 1450 Z"></path>
+                </g>
+              </g>
             </mask>
-            <!-- A soft, permanently wet surface sheen. -->
-            <linearGradient id="hero-ni-liquid-coat" x1="190" y1="230" x2="835" y2="780" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#F2FFFF" stop-opacity=".28"></stop>
-              <stop offset="23%" stop-color="#7AE4FF" stop-opacity=".04"></stop>
-              <stop offset="47%" stop-color="#B4FFFF" stop-opacity=".22"></stop>
-              <stop offset="70%" stop-color="#FFFFFF" stop-opacity=".035"></stop>
-              <stop offset="100%" stop-color="#5BEAFF" stop-opacity=".14"></stop>
-            </linearGradient>
-            <!-- The original Ni silhouette acts as the water container. -->
-            <linearGradient id="hero-ni-water-front-gradient"
-                            x1="235" y1="180" x2="770" y2="860" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#B5F7FF"></stop>
-              <stop offset="28%" stop-color="#5CE5FF"></stop>
-              <stop offset="59%" stop-color="#16B6F9"></stop>
-              <stop offset="100%" stop-color="#0062F0"></stop>
-            </linearGradient>
-            <linearGradient id="hero-ni-water-back-gradient"
-                            x1="230" y1="90" x2="800" y2="780" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#E6FFFF"></stop>
-              <stop offset="50%" stop-color="#8DEBFF"></stop>
-              <stop offset="100%" stop-color="#20AFFF"></stop>
-            </linearGradient>
-            <linearGradient id="hero-ni-water-gloss-gradient"
-                            x1="0%" y1="0%" x2="90%" y2="100%">
-              <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".42"></stop>
-              <stop offset="52%" stop-color="#9AEFFF" stop-opacity=".09"></stop>
-              <stop offset="100%" stop-color="#B5F9FF" stop-opacity="0"></stop>
-            </linearGradient>
           </defs>
 
           
@@ -296,6 +273,17 @@
           
           
           
+          <!-- A faint original-color silhouette gives the filling logo its container shape.
+               These use elements repeat the unchanged official SVG, not new colors. -->
+          <g class="hero-ni-unfilled" opacity=".11" aria-hidden="true">
+            <use href="#layer-left-stem"></use>
+            <use href="#layer-right-stem"></use>
+            <use href="#layer-main-ribbon"></use>
+            <use href="#path-i-dot"></use>
+          </g>
+          <!-- Reveal the actual, original gradient-filled vectors with a gentle waterline.
+               Only this group is masked, so no color can paint outside Ni. -->
+          <g class="hero-ni-filled" mask="url(#hero-ni-fill-mask)">
           <g id="layer-left-stem" clip-path="url(#clip-left-stem)">
             
             <path id="path-left-lower" d="M 173,632 L 354,460 L 410,460 L 410,813 L 173,813 Z" fill="url(#grad-left-lower)"></path>
@@ -357,37 +345,8 @@
           
           
           <circle id="path-i-dot" cx="738.5" cy="285.5" r="90.5" fill="url(#grad-i-dot)"></circle>
-
-          <!-- A water level physically rises and falls inside the unmodified Ni.
-               Curved, independently moving liquid surfaces replace straight shimmer bands. -->
-          <g class="hero-ni-liquid-surface" mask="url(#hero-ni-liquid-silhouette)"
-             aria-hidden="true" pointer-events="none">
-            <rect class="hero-ni-liquid-coat" width="1000" height="1000"
-                  fill="url(#hero-ni-liquid-coat)"></rect>
-            <g class="hero-ni-water-level">
-              <g class="hero-ni-water-wave hero-ni-water-back">
-                <path class="hero-ni-water-shape" d="M -900 0 C -730 -43 -590 55 -430 0 C -270 -58 -130 45 30 0 C 195 -48 335 60 495 0 C 655 -53 795 54 955 0 C 1120 -48 1265 60 1425 0 C 1590 -52 1730 50 1900 0 L 1900 1240 L -900 1240 Z"
-                      fill="url(#hero-ni-water-back-gradient)"></path>
-              </g>
-              <g class="hero-ni-water-wave hero-ni-water-front">
-                <path class="hero-ni-water-shape" d="M -900 0 C -740 57 -590 -52 -425 0 C -255 52 -120 -59 45 0 C 210 60 350 -55 510 0 C 675 62 815 -60 980 0 C 1145 55 1285 -58 1450 0 C 1615 62 1750 -55 1900 0 L 1900 1240 L -900 1240 Z"
-                      fill="url(#hero-ni-water-front-gradient)"></path>
-              </g>
-              <g class="hero-ni-water-bubbles">
-                <ellipse cx="260" cy="138" rx="12" ry="19"></ellipse>
-                <ellipse cx="361" cy="304" rx="7" ry="12"></ellipse>
-                <ellipse cx="533" cy="208" rx="10" ry="16"></ellipse>
-                <ellipse cx="736" cy="145" rx="14" ry="21"></ellipse>
-                <ellipse cx="704" cy="318" rx="8" ry="13"></ellipse>
-              </g>
-            </g>
           </g>
-
-          
-          
-          
-          
-        </svg>
+</svg>
     </div>
   </div>
 </section>
