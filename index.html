@@ -90,7 +90,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style-new.css?v=20261021-ni-glow-wave">
+<link rel="stylesheet" href="style-new.css?v=20261021-ni-liquid-gel">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" class="ni-icon-sprite" aria-hidden="true" focusable="false"><defs>
@@ -252,6 +252,40 @@
             <clipPath id="clip-right-stem">
               <path d="M 658,460 A 62,62 0 0 1 720,398 L 767,398 A 62,62 0 0 1 829,460 L 829,728 A 85,85 0 0 1 744,813 L 684,813 C 674,813 665,812.6 658,811.2 L 657,800 L 657,518 L 658,518 Z"></path>
             </clipPath>
+            <!-- Alpha mask reuses the existing vector shapes without changing their paths. -->
+            <mask id="hero-ni-liquid-silhouette" maskUnits="userSpaceOnUse"
+                  x="0" y="0" width="1000" height="1000" style="mask-type:alpha">
+              <use href="#layer-left-stem"></use>
+              <use href="#layer-main-ribbon"></use>
+              <use href="#layer-right-stem"></use>
+              <use href="#path-i-dot"></use>
+            </mask>
+            <!-- A soft, permanently wet surface sheen. -->
+            <linearGradient id="hero-ni-liquid-coat" x1="190" y1="230" x2="835" y2="780" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#F2FFFF" stop-opacity=".28"></stop>
+              <stop offset="23%" stop-color="#7AE4FF" stop-opacity=".04"></stop>
+              <stop offset="47%" stop-color="#B4FFFF" stop-opacity=".22"></stop>
+              <stop offset="70%" stop-color="#FFFFFF" stop-opacity=".035"></stop>
+              <stop offset="100%" stop-color="#5BEAFF" stop-opacity=".14"></stop>
+            </linearGradient>
+            <!-- Transparent sides keep the endless loop invisible at its wrap point. -->
+            <linearGradient id="hero-ni-liquid-ribbon" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#8CDBFF" stop-opacity="0"></stop>
+              <stop offset="18%" stop-color="#54C5FF" stop-opacity=".04"></stop>
+              <stop offset="32%" stop-color="#65DBFF" stop-opacity=".19"></stop>
+              <stop offset="43%" stop-color="#C1FFFF" stop-opacity=".43"></stop>
+              <stop offset="49%" stop-color="#FFFFFF" stop-opacity=".70"></stop>
+              <stop offset="52%" stop-color="#EEFFFF" stop-opacity=".78"></stop>
+              <stop offset="58%" stop-color="#8AEAFF" stop-opacity=".42"></stop>
+              <stop offset="73%" stop-color="#55C9FF" stop-opacity=".14"></stop>
+              <stop offset="100%" stop-color="#57C5FF" stop-opacity="0"></stop>
+            </linearGradient>
+            <radialGradient id="hero-ni-liquid-caustic">
+              <stop offset="0%" stop-color="#F5FFFF" stop-opacity=".56"></stop>
+              <stop offset="32%" stop-color="#A7F4FF" stop-opacity=".25"></stop>
+              <stop offset="72%" stop-color="#64D9FF" stop-opacity=".05"></stop>
+              <stop offset="100%" stop-color="#60D4FF" stop-opacity="0"></stop>
+            </radialGradient>
           </defs>
 
           
@@ -321,6 +355,27 @@
           
           
           <circle id="path-i-dot" cx="738.5" cy="285.5" r="90.5" fill="url(#grad-i-dot)"></circle>
+
+          <!-- The glow is inside the Ni silhouette; no drawn outline or moving logo. -->
+          <g class="hero-ni-liquid-surface" mask="url(#hero-ni-liquid-silhouette)"
+             aria-hidden="true" pointer-events="none">
+            <rect class="hero-ni-liquid-coat" width="1000" height="1000"
+                  fill="url(#hero-ni-liquid-coat)"></rect>
+            <g class="hero-ni-liquid-flow hero-ni-liquid-flow-primary">
+              <rect x="-780" y="-30" width="650" height="1050"
+                    fill="url(#hero-ni-liquid-ribbon)"></rect>
+            </g>
+            <g class="hero-ni-liquid-flow hero-ni-liquid-flow-secondary">
+              <rect x="-780" y="-70" width="650" height="1150"
+                    fill="url(#hero-ni-liquid-ribbon)"></rect>
+            </g>
+            <ellipse class="hero-ni-liquid-caustic hero-ni-liquid-caustic-n"
+                     cx="290" cy="410" rx="170" ry="305"
+                     fill="url(#hero-ni-liquid-caustic)"></ellipse>
+            <ellipse class="hero-ni-liquid-caustic hero-ni-liquid-caustic-i"
+                     cx="743" cy="535" rx="160" ry="325"
+                     fill="url(#hero-ni-liquid-caustic)"></ellipse>
+          </g>
 
           
           

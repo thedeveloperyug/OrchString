@@ -2768,50 +2768,69 @@ main > section:not(.hero) {
   overflow:visible;
   filter:drop-shadow(0 18px 26px rgba(12,96,242,.16));
 }
-/* Polished Ni illumination: a soft internal-brightness wave moves N -> i.
-   No drawn path, stroke, moving dot, separate layer, or geometry changes.
-   Each original filled SVG layer briefly glows while its neighbor lights up.
-   The sequence rests for several seconds before the next sweep. */
-.hero-core .hero-ni-artwork #layer-left-stem,
-.hero-core .hero-ni-artwork #layer-main-ribbon,
-.hero-core .hero-ni-artwork #layer-right-stem,
-.hero-core .hero-ni-artwork #path-i-dot{
-  transform:none !important;
-  will-change:filter;
+/* Infinite liquid-glass glow. The real Ni paths never move.
+   Two offset watery specular waves flow across the original silhouette
+   with staggered organic caustics. Every wave loops while fully off-logo;
+   there is no jump-cut, fixed pause, separate dot or drawn stroke. */
+.hero-core .hero-ni-artwork .hero-ni-liquid-surface{
+  pointer-events:none;
+  mix-blend-mode:screen;
+  isolation:isolate;
 }
-.hero-core .hero-ni-artwork #layer-left-stem{
-  animation:niGlowLeft 7.8s ease-in-out infinite;
+.hero-core .hero-ni-artwork .hero-ni-liquid-coat{opacity:.64}
+.hero-core .hero-ni-artwork .hero-ni-liquid-flow{
+  transform-box:view-box;
+  transform-origin:center;
+  will-change:transform;
 }
-.hero-core .hero-ni-artwork #layer-main-ribbon{
-  animation:niGlowRibbon 7.8s ease-in-out infinite;
+.hero-core .hero-ni-artwork .hero-ni-liquid-flow-primary{
+  animation:niLiquidWaveMain 6.2s linear infinite;
 }
-.hero-core .hero-ni-artwork #layer-right-stem{
-  animation:niGlowRight 7.8s ease-in-out infinite;
+.hero-core .hero-ni-artwork .hero-ni-liquid-flow-secondary{
+  opacity:.44;
+  animation:niLiquidWaveSecondary 8.8s linear -4.4s infinite;
 }
-.hero-core .hero-ni-artwork #path-i-dot{
-  animation:niGlowDot 7.8s ease-in-out infinite;
+.hero-core .hero-ni-artwork .hero-ni-liquid-caustic{
+  will-change:transform,opacity;
+  transform-box:view-box;
+  transform-origin:center;
+  opacity:.3;
 }
-@keyframes niGlowLeft{
-  0%,8%,34%,100%{filter:brightness(1) saturate(1) drop-shadow(0 0 0 rgba(50,180,255,0))}
-  19%{filter:brightness(1.25) saturate(1.15) drop-shadow(0 0 17px rgba(60,192,255,.48))}
+.hero-core .hero-ni-artwork .hero-ni-liquid-caustic-n{
+  animation:niLiquidRippleN 5.6s ease-in-out infinite alternate;
 }
-@keyframes niGlowRibbon{
-  0%,14%,43%,100%{filter:brightness(1) saturate(1) drop-shadow(0 0 0 rgba(50,180,255,0))}
-  29%{filter:brightness(1.22) saturate(1.16) drop-shadow(0 0 18px rgba(50,190,255,.43))}
+.hero-core .hero-ni-artwork .hero-ni-liquid-caustic-i{
+  animation:niLiquidRippleI 6.7s ease-in-out -2.8s infinite alternate;
 }
-@keyframes niGlowRight{
-  0%,25%,54%,100%{filter:brightness(1) saturate(1) drop-shadow(0 0 0 rgba(50,180,255,0))}
-  39%{filter:brightness(1.25) saturate(1.16) drop-shadow(0 0 17px rgba(55,199,255,.45))}
+@keyframes niLiquidWaveMain{
+  0%{transform:translate(-20px,14px) skewX(-5deg)}
+  25%{transform:translate(410px,-13px) skewX(3deg)}
+  50%{transform:translate(890px,14px) skewX(-4deg)}
+  75%{transform:translate(1320px,-12px) skewX(4deg)}
+  100%{transform:translate(1760px,14px) skewX(-5deg)}
 }
-@keyframes niGlowDot{
-  0%,36%,63%,100%{filter:brightness(1) saturate(1) drop-shadow(0 0 0 rgba(50,180,255,0))}
-  48%{filter:brightness(1.18) saturate(1.12) drop-shadow(0 0 18px rgba(55,199,255,.46))}
+@keyframes niLiquidWaveSecondary{
+  0%{transform:translate(1770px,-10px) skewX(4deg)}
+  25%{transform:translate(1300px,16px) skewX(-3deg)}
+  50%{transform:translate(875px,-12px) skewX(4deg)}
+  75%{transform:translate(415px,13px) skewX(-4deg)}
+  100%{transform:translate(-20px,-10px) skewX(4deg)}
+}
+@keyframes niLiquidRippleN{
+  0%{opacity:.16;transform:translate(-30px,12px) scale(1,.97)}
+  50%{opacity:.42;transform:translate(16px,-16px) scale(1.08,1.04)}
+  100%{opacity:.2;transform:translate(28px,13px) scale(.98,1.06)}
+}
+@keyframes niLiquidRippleI{
+  0%{opacity:.17;transform:translate(16px,-15px) scale(.97,1)}
+  50%{opacity:.38;transform:translate(-18px,16px) scale(1.04,.97)}
+  100%{opacity:.23;transform:translate(-11px,-12px) scale(1.07,1.05)}
 }
 @media(max-width:720px){
   .site-header .brand-mark{width:34px !important;height:34px !important;min-width:34px !important;min-height:34px !important;flex-basis:34px !important}
 }
 @media(prefers-reduced-motion:reduce){
-  .hero-core .hero-ni-artwork #layer-left-stem,.hero-core .hero-ni-artwork #layer-main-ribbon,.hero-core .hero-ni-artwork #layer-right-stem,.hero-core .hero-ni-artwork #path-i-dot{animation:none!important;filter:none!important;will-change:auto}
+  .hero-core .hero-ni-artwork .hero-ni-liquid-flow,.hero-core .hero-ni-artwork .hero-ni-liquid-caustic{animation:none!important;will-change:auto;opacity:0!important}.hero-core .hero-ni-artwork .hero-ni-liquid-coat{opacity:.22!important}
 }
 
 /* Finance Operations solution: dedicated layout with mobile and accessible styles. */
@@ -3148,4 +3167,4 @@ svg.ni-icon{display:inline-block;width:1.1em;height:1.1em;flex:none;vertical-ali
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a73e8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14m-6-6 6 6-6 6'/%3E%3C/svg%3E");
   background-position:center;background-repeat:no-repeat;background-size:17px 17px
 }
-@media(prefers-reduced-motion:reduce){.hero-core .hero-ni-artwork #layer-left-stem,.hero-core .hero-ni-artwork #layer-main-ribbon,.hero-core .hero-ni-artwork #layer-right-stem,.hero-core .hero-ni-artwork #path-i-dot{animation:none!important;filter:none!important;will-change:auto}}
+@media(prefers-reduced-motion:reduce){.hero-core .hero-ni-artwork .hero-ni-liquid-flow,.hero-core .hero-ni-artwork .hero-ni-liquid-caustic{animation:none!important;will-change:auto;opacity:0!important}.hero-core .hero-ni-artwork .hero-ni-liquid-coat{opacity:.22!important}}
