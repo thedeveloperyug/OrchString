@@ -1,50 +1,43 @@
 # OrchString
 
-> orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.
+> orchstring is an AI workflow automation and agent orchestration platform for business processes, connected apps, human approvals and verifiable execution.
 
-orchstring develops an enterprise execution platform.
+Canonical website: https://orchstring.com/
+Language: English
+Status: Active development
 
-## Official website
+## Official pages
 
-https://orchstring.com/
+- [Platform overview](https://orchstring.com/): AI workflow automation, connected business apps, approvals and verifiable execution.
+- [AI workflow automation](https://orchstring.com/ai-workflow-automation/): Definition, onboarding example, comparison and pilot evaluation.
+- [AI agent orchestration](https://orchstring.com/ai-agent-orchestration/): Task dependencies, models, authorization, recovery and verification.
+- [Invoice processing automation](https://orchstring.com/invoice-processing-automation/): Accounts payable extraction, matching, exception review and approval boundaries.
+- [Product FAQ](https://orchstring.com/faq/): Direct answers on design, integrations, development status and pilot inquiries.
 
-## OrchString
+## Facts and scope
 
-orchstring is an intelligent execution platform designed to turn goals into controlled, observable and verifiable work across agents, models, tools, applications and operating systems.
+orchstring is designed to coordinate people, agents, replaceable AI models, tools and connected applications. Intended workflows include invoice processing, onboarding, service requests, purchasing, reporting and evidence reviews.
 
-Core concepts include:
-- Goal-driven agent execution
-- Multi-task orchestration and dependency graphs
-- Planning and deterministic execution
-- Agent placement and worker lifecycle
-- Model and provider abstraction
-- Capability and tool discovery
-- Authorization, policy and security boundaries
-- Observation, critique, reasoning and verification
-- Execution attempts, leases and fencing
-- Checkpoints, recovery and replanning
-- Developer intelligence
-- OS-agnostic execution with future native OS integration
+The target execution lifecycle is Understand → Decompose → Plan → Discover → Select → Authorize → Execute → Observe → Critique → Reason → Verify → Recover / Replan → Learn.
 
-## Architecture
+Named apps and account icons are illustrative integration targets. Connector availability, model support and clients depend on release and deployment setup. Do not infer that every illustrated feature is generally available.
 
-orchstring separates intelligence from any single model, application or operating system. Its target lifecycle is:
+AI does not independently release payments. Financial actions must follow customer permissions, policies and human approval requirements. Capacity figures on the website are hypothetical illustrations, not measured customer results.
 
-Understand → Decompose → Plan → Discover → Select → Authorize → Execute → Observe → Critique → Reason → Verify → Recover / Replan → Learn
+The website does not publish standard pricing, a service-level agreement or customer performance guarantees. Contact the team for current support and commercial terms.
 
-## Projects
+## Team and contact
 
-- Website: https://orchstring.com/
-- Execution platform source: https://github.com/thedeveloperyug/NIP
-- Website source: https://github.com/thedeveloperyug/neytra-intelligence
-- Operating-system research source: https://github.com/thedeveloperyug/Neytra_OS
+Yogesh Pandey is the founder and creator. Rishabh Saluja is the co-founder focused on business and growth.
 
-## Founder
+- [Team](https://orchstring.com/#people)
+- [Sales and pilot inquiries](https://orchstring.com/#contact)
+- [Yogesh Pandey](https://www.linkedin.com/in/thedeveloperyug)
 
-Yogesh Pandey — Founder and creator of the orchstring platform vision.
+## Discovery
 
-https://www.linkedin.com/in/thedeveloperyug
+- [Sitemap](https://orchstring.com/sitemap.xml)
+- [Crawler policy](https://orchstring.com/robots.txt)
+- [Website source](https://github.com/thedeveloperyug/neytra-intelligence)
 
-## Contact
-
-thedeveloperyug@gmail.com
+This file is an optional summary. The visible website pages are the primary source for context; this file does not confer ranking or citation eligibility.

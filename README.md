@@ -9,7 +9,7 @@ Official website: https://orchstring.com/
 
 ## Purpose
 
-orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.
+orchstring is an AI workflow automation and agent orchestration platform for business processes, connected apps, human approvals and verifiable execution.
 
 This repository contains the public-facing website for **orchstring**.
 
@@ -131,7 +131,13 @@ Email: thedeveloperyug@gmail.com
 
 ## SEO and domain routing
 
-**Canonical website:** `https://orchstring.com/` (the one-page public site).
+**Canonical website:** `https://orchstring.com/`.
+
+**Sitemap:** https://orchstring.com/sitemap.xml
+
+The site includes dedicated guides for AI workflow automation, agent
+orchestration and invoice processing, plus a product FAQ. See the
+[keyword themes and follow-up actions](docs/seo-plan.md).
 
 Any previous domains or `www` aliases should redirect permanently and directly
 to the canonical website at the DNS/CDN/registrar/hosting layer. Preserve paths
@@ -143,18 +149,19 @@ managed outside this repository.
 
 - `index.html` sets a self-referencing canonical and matching Open Graph URL.
 - `robots.txt` allows crawlers and references `https://orchstring.com/sitemap.xml`.
-- `sitemap.xml` lists **only** the canonical homepage. The current navigation
-  uses same-page hash fragments, which are not standalone pages to submit.
+- `sitemap.xml` lists the homepage, three workflow guides and the FAQ. Same-page
+  navigation fragments are not separate sitemap pages.
 - The GitHub Pages workflow executes `.github/scripts/check_seo.py` before deploy
-  to prevent accidental SEO regressions. Run it locally with
+  to validate every canonical page, internal link, schema, FAQ answer, sitemap
+  entry and social preview asset. Run it locally with
   `python3 .github/scripts/check_seo.py`.
 
 ### Google Search Console verification
 
 1. Verify ownership of `orchstring.com` (a Domain property if possible).
 2. Submit `https://orchstring.com/sitemap.xml` in the property's Sitemaps section.
-3. In URL Inspection for `https://orchstring.com/`, run **Test Live URL** and
-   **Request Indexing** if it is eligible but not indexed.
+3. In URL Inspection for the homepage and each guide, run **Test Live URL** and
+   **Request Indexing** if the URL is eligible but not indexed.
 4. Confirm that redirected and alternate URLs point to the canonical homepage.
    Configure any old-domain forwarding at the external hosting or DNS provider.
 5. Check HTTP status codes and final destinations after routing changes.
