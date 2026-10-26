@@ -27,6 +27,9 @@ jobs:
       - name: Validate OrchString branding, SEO metadata and sitemap
         run: python3 .github/scripts/check_seo.py
 
+      - name: Validate website JavaScript
+        run: node --check app.js
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 

@@ -64,19 +64,16 @@ The website therefore presents orchstring as the active platform while retaining
 
 ## Website design
 
-The site keeps the existing orchstring visual language and animations, including:
+The site uses a white, blue and black visual system, including:
 
-- Animated particle field
-- Interactive cursor glow
-- Animated intelligence core
-- Rotating rings and orbital effects
-- Scroll-reactive core motion
-- Device-orientation interaction where supported
+- Text-only navigation wordmark: blue **orch**, black **string**
+- A blue neural network with soft wave and jelly deformation
+- Curved connections, depth-aware neurons and traveling signals
+- Blue, slightly bold **OrchString** emphasis in the visible introductions
 - Reveal-on-scroll sections
-- Animated grid background
-- Hover / tilt-style cards
 - Responsive mobile navigation
-- Reduced-motion accessibility support
+- Reduced-motion accessibility support with a still network illustration
+- Animation that pauses when off-screen or the browser tab is hidden
 
 The orchstring experience adds visual representations for:
 
@@ -111,9 +108,9 @@ node --check app.js
 The Pages custom domain is `orchstring.com`. `CNAME` records the same domain in
 source control. No build step or package installation is required.
 
-The existing logo artwork and favicon assets are retained until replacement
-artwork is provided. Existing sales email and console destinations are retained
-until replacement addresses are configured; the console link is labeled
+The hero and navigation no longer display the previous logo. Favicon assets
+remain available for browser icons. Existing sales email and console destinations
+are retained until replacement addresses are configured; the console link is labeled
 **Explore OrchString Console**.
 
 ## Founder

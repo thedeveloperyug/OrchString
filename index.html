@@ -90,7 +90,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style-new.css?v=20261026-orchstring">
+<link rel="stylesheet" href="style-new.css?v=20261026-neural-network">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" class="orchstring-icon-sprite" aria-hidden="true" focusable="false"><defs>
@@ -116,17 +116,11 @@
 <symbol id="orchstring-icon-circle-dot" viewBox="0 0 24 24"><circle cx='12' cy='12' r='9'/><circle cx='12' cy='12' r='3'/></symbol>
 </defs></svg>
 <div id="progress"></div>
-<canvas id="particle-field" aria-hidden="true"></canvas>
 <div class="noise" aria-hidden="true"></div>
-<div class="cursor-glow" aria-hidden="true"></div>
 
 <header class="site-header">
   <a class="brand" href="#top" aria-label="OrchString home">
-    <span class="brand-mark"><picture>
-      <source srcset="assets/neytra-ni-logo.svg" type="image/svg+xml">
-      <img src="assets/neytra-ni-logo.svg" alt="OrchString logo" width="42" height="42" decoding="async">
-    </picture></span>
-    <span>OrchString</span>
+    <span class="brand-wordmark"><span class="brand-orch">orch</span><span class="brand-string">string</span></span>
   </a>
   <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><svg class="orchstring-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#orchstring-icon-menu"></use></svg></button>
   <nav id="main-nav">
@@ -146,8 +140,8 @@
   <div class="hero-grid"></div>
   <div class="hero-copy reveal">
     <div class="eyebrow"><span class="live-dot"></span> OrchString</div>
-    <h1>OrchString<br><span>that can execute.</span></h1>
-    <p>orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.</p>
+    <h1><span class="hero-brand-name">OrchString</span><br><span class="hero-tagline">that can execute.</span></h1>
+    <p class="brand-introduction"><strong class="intro-brand">OrchString</strong> is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.</p>
     <div class="buttons">
       <a class="primary magnetic" href="https://neytra-console.pages.dev/#/login" target="_blank" rel="noopener noreferrer">Explore OrchString Console <span><svg class="orchstring-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#orchstring-icon-arrow-up-right"></use></svg></span></a>
       <a class="secondary" href="#platform">Explore OrchString <span><svg class="orchstring-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#orchstring-icon-arrow-right"></use></svg></span></a>
@@ -160,211 +154,20 @@
     </div>
   </div>
 
-  <div class="hero-core">
-    <div class="core-logo logo-glass">
-<svg class="hero-ni-artwork" role="img" aria-label="OrchString logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
-          <defs>
-            
-            <linearGradient id="grad-left-upper" x1="173" y1="620" x2="365" y2="390" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#007BFF"></stop>
-              <stop offset="55%" stop-color="#005BF3"></stop>
-              <stop offset="100%" stop-color="#0038C8"></stop>
-            </linearGradient>
-
-            
-            <linearGradient id="grad-left-lower" x1="180" y1="780" x2="410" y2="480" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#0048EC"></stop>
-              <stop offset="65%" stop-color="#003CE2"></stop>
-              <stop offset="100%" stop-color="#0029AC"></stop>
-            </linearGradient>
-
-            
-            <linearGradient id="grad-fold-shadow-upper" x1="292" y1="393" x2="242" y2="440" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#00126E" stop-opacity="0.80"></stop>
-              <stop offset="48%" stop-color="#001F96" stop-opacity="0.36"></stop>
-              <stop offset="100%" stop-color="#0048E8" stop-opacity="0"></stop>
-            </linearGradient>
-
-            <linearGradient id="grad-fold-shadow-lower" x1="382" y1="490" x2="332" y2="545" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#001168" stop-opacity="0.82"></stop>
-              <stop offset="50%" stop-color="#001E8E" stop-opacity="0.38"></stop>
-              <stop offset="100%" stop-color="#003CE2" stop-opacity="0"></stop>
-            </linearGradient>
-
-            
-            <linearGradient id="grad-n-ribbon-main" x1="210" y1="220" x2="660" y2="780" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#0080FF"></stop>
-              <stop offset="35%" stop-color="#069CFF"></stop>
-              <stop offset="70%" stop-color="#0077FF"></stop>
-              <stop offset="100%" stop-color="#0044EE"></stop>
-            </linearGradient>
-
-            
-            <linearGradient id="grad-n-ribbon-crest" x1="535" y1="375" x2="415" y2="505" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#2AD0FF" stop-opacity="0.88"></stop>
-              <stop offset="45%" stop-color="#08A6FF" stop-opacity="0.35"></stop>
-              <stop offset="100%" stop-color="#0047EE" stop-opacity="0"></stop>
-            </linearGradient>
-
-            
-            <linearGradient id="grad-i-dot" x1="662" y1="352" x2="816" y2="212" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#003CE8"></stop>
-              <stop offset="38%" stop-color="#0074FF"></stop>
-              <stop offset="75%" stop-color="#02C0FF"></stop>
-              <stop offset="100%" stop-color="#08F2FF"></stop>
-            </linearGradient>
-
-            
-            <linearGradient id="grad-i-top-cap" x1="658" y1="425" x2="829" y2="510" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#0066FA"></stop>
-              <stop offset="48%" stop-color="#00ACFF"></stop>
-              <stop offset="100%" stop-color="#07F0FF"></stop>
-            </linearGradient>
-
-            
-            <linearGradient id="grad-i-dark-band" x1="658" y1="445" x2="829" y2="675" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#0020A4"></stop>
-              <stop offset="35%" stop-color="#0038CA"></stop>
-              <stop offset="75%" stop-color="#0064F6"></stop>
-              <stop offset="100%" stop-color="#0080FF"></stop>
-            </linearGradient>
-
-            
-            <linearGradient id="grad-i-band-shadow" x1="658" y1="470" x2="725" y2="540" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#00126B" stop-opacity="0.65"></stop>
-              <stop offset="100%" stop-color="#0020A4" stop-opacity="0"></stop>
-            </linearGradient>
-
-            
-            <linearGradient id="grad-i-cyan-base" x1="658" y1="535" x2="818" y2="785" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#0096FF"></stop>
-              <stop offset="42%" stop-color="#02CBFF"></stop>
-              <stop offset="85%" stop-color="#06F0FF"></stop>
-              <stop offset="100%" stop-color="#0AF8FF"></stop>
-            </linearGradient>
-
-            
-            <clipPath id="clip-left-stem">
-              <path d="M 173,266 L 200,245 L 410,470 L 410,733 A 80,80 0 0 1 330,813 L 253,813 A 80,80 0 0 1 173,733 Z"></path>
-            </clipPath>
-
-            
-            <clipPath id="clip-right-stem">
-              <path d="M 658,460 A 62,62 0 0 1 720,398 L 767,398 A 62,62 0 0 1 829,460 L 829,728 A 85,85 0 0 1 744,813 L 684,813 C 674,813 665,812.6 658,811.2 L 657,800 L 657,518 L 658,518 Z"></path>
-            </clipPath>
-            <!-- Alpha-only moving waterline. White is a mask value, not a displayed color. -->
-            <mask id="hero-ni-fill-mask" maskUnits="userSpaceOnUse"
-                  maskContentUnits="userSpaceOnUse"
-                  x="0" y="0" width="1000" height="1000" style="mask-type:alpha">
-              <g class="hero-ni-fill-level">
-                <g class="hero-ni-fill-back">
-                  <path class="hero-ni-mask-surface" fill="#fff" opacity=".60" d="M -1100 0 C -940 -90 -770 105 -580 0 C -385 -106 -205 83 -15 0 C 175 -90 360 108 545 0 C 735 -105 915 93 1100 0 C 1285 -99 1470 105 1650 0 C 1840 -91 2010 88 2200 0 L 2200 1500 L -1100 1500 Z"></path>
-                </g>
-                <g class="hero-ni-fill-front">
-                  <path class="hero-ni-mask-surface" fill="#fff" d="M -1100 0 C -930 110 -740 -118 -560 0 C -375 116 -190 -108 -5 0 C 170 119 355 -117 545 0 C 735 120 920 -108 1105 0 C 1295 116 1480 -121 1665 0 C 1855 118 2020 -107 2200 0 L 2200 1500 L -1100 1500 Z"></path>
-                </g>
-              </g>
-            </mask>
-            <!-- Neutral glass edge only; original logo fills are not displayed until revealed. -->
-            <filter id="hero-ni-glass-edge" x="-5%" y="-5%" width="110%" height="110%"
-                    color-interpolation-filters="sRGB">
-              <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="outer"></feMorphology>
-              <feMorphology in="SourceAlpha" operator="erode" radius="4" result="inner"></feMorphology>
-              <feComposite in="outer" in2="inner" operator="out" result="rim"></feComposite>
-              <feFlood flood-color="#8CA4BA" flood-opacity=".84" result="glass-tone"></feFlood>
-              <feComposite in="glass-tone" in2="rim" operator="in"></feComposite>
-            </filter>
-          </defs>
-
-          
-          
-
-          
-          
-          
-          <!-- A faint original-color silhouette gives the filling logo its container shape.
-               These use elements repeat the unchanged official SVG, not new colors. -->
-          <g class="hero-ni-empty-glass" filter="url(#hero-ni-glass-edge)"
-             aria-hidden="true" pointer-events="none">
-            <use href="#layer-left-stem"></use>
-            <use href="#layer-right-stem"></use>
-            <use href="#layer-main-ribbon"></use>
-            <use href="#path-i-dot"></use>
-          </g>
-          <!-- Reveal the actual, original gradient-filled vectors with a gentle waterline.
-               Only this group is masked, so no color can paint outside Ni. -->
-          <g class="hero-ni-filled" mask="url(#hero-ni-fill-mask)">
-          <g id="layer-left-stem" clip-path="url(#clip-left-stem)">
-            
-            <path id="path-left-lower" d="M 173,632 L 354,460 L 410,460 L 410,813 L 173,813 Z" fill="url(#grad-left-lower)"></path>
-
-            
-            <path id="path-left-upper" d="M 173,250 L 370,445 L 354,460 L 173,632 Z" fill="url(#grad-left-upper)"></path>
-
-            
-            <path d="M 173,266 L 354,460 L 295,516 L 173,375 Z" fill="url(#grad-fold-shadow-upper)"></path>
-
-            
-            <path d="M 354,460 L 410,526.4 L 410,615 L 295,516 Z" fill="url(#grad-fold-shadow-lower)"></path>
-          </g>
-
-          
-          
-          
-          <g id="layer-right-stem" clip-path="url(#clip-right-stem)">
-            
-            <path id="path-i-top-cap" d="M 656,398 L 829,398 L 829,595 L 656,424 Z" fill="url(#grad-i-top-cap)"></path>
-
-            
-            <path id="path-i-dark-band" d="M 656,424 L 829,595 L 829,713 L 656,518 Z" fill="url(#grad-i-dark-band)"></path>
-            
-            <path d="M 656,424 L 829,595 L 829,713 L 656,518 Z" fill="url(#grad-i-band-shadow)"></path>
-
-            
-            <path id="path-i-cyan-base" d="M 656,518 L 829,713 L 829,813 L 656,813 Z" fill="url(#grad-i-cyan-base)"></path>
-          </g>
-
-          
-          
-          
-          <g id="layer-main-ribbon">
-            
-            <path id="path-n-ribbon" d="M 173,266
-                 C 173,225 207,197 256,197
-                 L 318,197
-                 C 352,197 376,204 398,221
-                 L 658,518
-                 L 658,811.2
-                 C 644,808.4 630,788 618,773
-                 L 354,460
-                 Z" fill="url(#grad-n-ribbon-main)"></path>
-
-            
-            <path d="M 173,266
-                 C 173,225 207,197 256,197
-                 L 318,197
-                 C 352,197 376,204 398,221
-                 L 658,518
-                 L 658,811.2
-                 C 644,808.4 630,788 618,773
-                 L 354,460
-                 Z" fill="url(#grad-n-ribbon-crest)"></path>
-          </g>
-
-          
-          
-          
-          <circle id="path-i-dot" cx="738.5" cy="285.5" r="90.5" fill="url(#grad-i-dot)"></circle>
-          </g>
-</svg>
-    </div>
+  <div class="neural-scene" aria-hidden="true">
+    <div class="neural-aura"></div>
+    <svg class="neural-network" viewBox="0 0 560 560" xmlns="http://www.w3.org/2000/svg" focusable="false">
+      <g class="neural-links" fill="none" stroke-linecap="round"></g>
+      <g class="neural-nodes"></g>
+      <g class="neural-signals"></g>
+    </svg>
   </div>
 </section>
 
 <section id="about-orchstring" class="intro reveal">
   <div class="eyebrow">OrchString</div>
-  <h2>OrchString.<br><span>Orchestration for real business work.</span></h2>
-  <p>orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.</p>
+  <h2><span class="intro-brand-heading">OrchString.</span><br><span class="intro-heading-text">Orchestration for real business work.</span></h2>
+  <p class="brand-introduction"><strong class="intro-brand">OrchString</strong> is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.</p>
   <p>orchstring brings together business steps, AI-assisted tasks, people, applications, approvals and evidence so organizations can coordinate work across departments with greater clarity and control.</p>
 </section>
 
@@ -808,6 +611,6 @@
   <a href="https://www.linkedin.com/in/thedeveloperyug">Yogesh Pandey on LinkedIn <svg class="orchstring-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#orchstring-icon-arrow-up-right"></use></svg></a>
   <a href="mailto:rishabh@neytraintelligence.com">Sales: rishabh@neytraintelligence.com</a>
 </footer>
-<script src="app.js"></script>
+<script src="app.js?v=20261026-neural-network"></script>
 </body>
 </html>

@@ -14,6 +14,7 @@ CANONICAL = "https://orchstring.com/"
 SITEMAP = CANONICAL + "sitemap.xml"
 BRAND_TITLE = "OrchString | Enterprise AI Execution"
 BRAND_INTRO = "orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows."
+VISIBLE_BRAND_INTRO = BRAND_INTRO.replace("orchstring", "OrchString", 1)
 
 
 class SiteParser(HTMLParser):
@@ -78,12 +79,12 @@ def main():
     if not any(tag == "h1" and "OrchString" in text for tag, text in captures):
         errors.append("Homepage h1 must include OrchString")
     paragraphs = [text for tag, text in captures if tag == "p"]
-    if paragraphs.count(BRAND_INTRO) < 2:
-        errors.append("Official orchstring introduction must appear in visible homepage content")
+    if paragraphs.count(VISIBLE_BRAND_INTRO) < 2:
+        errors.append("Official introduction must appear in the hero and introduction sections")
     for tag, text in captures:
         if tag == "script":
             continue
-        expected = "orchstring" if tag == "p" else "OrchString"
+        expected = "orchstring" if tag == "p" and text != VISIBLE_BRAND_INTRO else "OrchString"
         if any(match[0] != expected for match in re.finditer(r"\borchstring\b", text, re.I)):
             errors.append(tag + " must use the " + expected + " spelling")
     schemas = [text for tag, text in captures if tag == "script"]
