@@ -67,95 +67,65 @@
     return element;
   };
 
-  // A fixed spherical topology keeps every neuron connected while the entire
-  // network softly deforms. No random layout changes or third-party libraries.
-  const count = 100;
-  const goldenAngle = Math.PI * (3 - Math.sqrt(5));
-  const nodes = Array.from({ length: count }, (_, index) => {
-    const y = 1 - 2 * (index + 0.5) / count;
-    const radius = Math.sqrt(1 - y * y);
-    const angle = index * goldenAngle;
-    const element = makeElement('circle', nodesGroup);
-    return { x: Math.cos(angle) * radius, y, z: Math.sin(angle) * radius, element };
-  });
-
-  const edges = [];
-  const connected = new Set();
-  nodes.forEach((node, from) => {
-    const neighbors = nodes.map((other, to) => ({
-      to,
-      distance: Math.hypot(node.x - other.x, node.y - other.y, node.z - other.z)
-    })).filter(other => other.to !== from).sort((a, b) => a.distance - b.distance).slice(0, 4);
-    neighbors.forEach(({ to }) => {
-      const key = Math.min(from, to) + ':' + Math.max(from, to);
-      if (connected.has(key)) return;
-      connected.add(key);
-      edges.push({ from, to, element: makeElement('path', linksGroup) });
-    });
-  });
-
-  const signals = Array.from({ length: 18 }, (_, index) => ({
-    edge: edges[(index * 13) % edges.length],
-    offset: index * 0.618,
-    halo: makeElement('circle', signalsGroup),
-    dot: makeElement('circle', signalsGroup)
+  const phones = matchMedia('(max-width: 767px), (max-width: 980px) and (max-height: 500px) and (pointer: coarse)');
+  const center = { x: 320, y: 300 };
+  const nodes = Array.from(nodesGroup.querySelectorAll('.connector-node'), (element, index) => ({
+    element,
+    x: Number(element.dataset.x),
+    y: Number(element.dataset.y),
+    tailX: Number(element.dataset.tailX),
+    tailY: Number(element.dataset.tailY),
+    link: linksGroup.querySelector('[data-link="' + index + '"]'),
+    trail: svg.querySelector('[data-trail="' + index + '"]')
   }));
-  signals.forEach(signal => {
-    signal.halo.setAttribute('class', 'neural-signal-halo');
-    signal.halo.setAttribute('r', '8');
-    signal.dot.setAttribute('class', 'neural-signal-dot');
-    signal.dot.setAttribute('r', '2.8');
-  });
 
+  // Each illustrated business connector has an independent open strand.
+  // Soft cubic curves carry every signal inward to the same console hub.
+  const signals = nodes.flatMap((node, index) => Array.from({ length: 2 }, (_, pulse) => {
+    const halo = makeElement('circle', signalsGroup);
+    const dot = makeElement('circle', signalsGroup);
+    halo.setAttribute('class', 'neural-signal-halo');
+    halo.setAttribute('r', '7');
+    dot.setAttribute('class', 'neural-signal-dot');
+    dot.setAttribute('r', '2.7');
+    return { node, offset: index * 0.173 + pulse * 0.5, halo, dot };
+  }));
+  const coordinate = point => point.x.toFixed(2) + ',' + point.y.toFixed(2);
   const draw = time => {
-    const turn = 0.3 + Math.sin(time * 0.19) * 0.32;
-    const cos = Math.cos(turn);
-    const sin = Math.sin(turn);
-    const points = nodes.map((node, index) => {
-      const wave = Math.sin(time * 0.9 + node.y * 3.5 + node.z * 1.8);
-      const swell = 1 + 0.055 * Math.sin(time * 0.8 + node.y * 2.2);
-      const x = node.x * 182 * swell + wave * 15;
-      const y = node.y * 186 / swell + Math.sin(time * 0.95 + node.x * 3) * 12;
-      const z = node.z * 178 + Math.cos(time * 0.75 + node.y * 3) * 9;
-      const depth = z * cos - x * sin;
-      const perspective = 1 + depth / 1000;
-      const point = {
-        x: 280 + (x * cos + z * sin) * perspective,
-        y: 280 + y * perspective,
-        depth: Math.max(0, Math.min(1, (depth + 210) / 420))
+    nodes.forEach((node, index) => {
+      const wave = Math.sin(time * 0.8 + index * 1.4);
+      node.point = {
+        x: node.x + Math.sin(time * 0.65 + index * 1.7) * 7,
+        y: node.y + Math.cos(time * 0.72 + index * 1.3) * 8
       };
-      node.element.setAttribute('cx', point.x.toFixed(2));
-      node.element.setAttribute('cy', point.y.toFixed(2));
-      node.element.setAttribute('r', (2 + point.depth * 2.2).toFixed(2));
-      node.element.setAttribute('opacity', (0.25 + point.depth * 0.7).toFixed(2));
-      // Selected neurons stay hollow, giving the network a lighter appearance.
-      node.element.setAttribute('fill', index % 5 === 0 ? '#ffffff' : '#1a73e8');
-      return point;
-    });
-
-    edges.forEach((edge, index) => {
-      const a = points[edge.from];
-      const b = points[edge.to];
-      const bend = Math.sin(time * 0.85 + index * 0.7) * 0.16;
-      edge.control = {
-        x: (a.x + b.x) / 2 + (b.y - a.y) * bend,
-        y: (a.y + b.y) / 2 - (b.x - a.x) * bend
+      const dx = center.x - node.point.x;
+      const dy = center.y - node.point.y;
+      node.control1 = {
+        x: node.point.x + dx * 0.38 + wave * 19,
+        y: node.point.y + dy * 0.2 + Math.cos(time * 0.7 + index) * 23
       };
-      edge.element.setAttribute('d', 'M' + a.x.toFixed(2) + ',' + a.y.toFixed(2) +
-        ' Q' + edge.control.x.toFixed(2) + ',' + edge.control.y.toFixed(2) +
-        ' ' + b.x.toFixed(2) + ',' + b.y.toFixed(2));
-      edge.element.setAttribute('opacity', (0.1 + (a.depth + b.depth) * 0.22).toFixed(2));
+      node.control2 = {
+        x: node.point.x + dx * 0.72 - wave * 17,
+        y: node.point.y + dy * 0.83 - Math.cos(time * 0.75 + index) * 16
+      };
+      node.element.setAttribute('transform', 'translate(' + coordinate(node.point) + ')');
+      node.link.setAttribute('d', 'M' + coordinate(node.point) + ' C' +
+        coordinate(node.control1) + ' ' + coordinate(node.control2) + ' ' + coordinate(center));
+      node.trail.setAttribute('d', 'M' + node.tailX + ',' + node.tailY + ' C' +
+        (node.tailX + (node.point.x - node.tailX) * 0.4).toFixed(2) + ',' + (node.tailY + wave * 22).toFixed(2) +
+        ' ' + (node.point.x + wave * 24).toFixed(2) + ',' + (node.point.y - 18).toFixed(2) +
+        ' ' + coordinate(node.point));
     });
 
     signals.forEach(signal => {
       const phase = (time * 0.16 + signal.offset) % 1;
       const inverse = 1 - phase;
-      const a = points[signal.edge.from];
-      const b = points[signal.edge.to];
-      const control = signal.edge.control;
-      const x = inverse * inverse * a.x + 2 * inverse * phase * control.x + phase * phase * b.x;
-      const y = inverse * inverse * a.y + 2 * inverse * phase * control.y + phase * phase * b.y;
-      const opacity = Math.sin(phase * Math.PI) * (0.35 + (a.depth + b.depth) * 0.3);
+      const { point, control1, control2 } = signal.node;
+      const x = inverse ** 3 * point.x + 3 * inverse ** 2 * phase * control1.x +
+        3 * inverse * phase ** 2 * control2.x + phase ** 3 * center.x;
+      const y = inverse ** 3 * point.y + 3 * inverse ** 2 * phase * control1.y +
+        3 * inverse * phase ** 2 * control2.y + phase ** 3 * center.y;
+      const opacity = Math.min(1, phase * 5) * Math.min(1, (1 - phase) * 5);
       [signal.halo, signal.dot].forEach(element => {
         element.setAttribute('cx', x.toFixed(2));
         element.setAttribute('cy', y.toFixed(2));
@@ -181,7 +151,9 @@
     if (frame) cancelAnimationFrame(frame);
     frame = 0;
     lastTime = 0;
-    if (motion.matches) {
+    if (phones.matches) {
+      return;
+    } else if (motion.matches) {
       draw(0);
     } else if (visible && !document.hidden) {
       frame = requestAnimationFrame(animate);
@@ -194,4 +166,5 @@
   }, { threshold: 0 }).observe(scene);
   document.addEventListener('visibilitychange', updateAnimation);
   motion.addEventListener('change', updateAnimation);
+  phones.addEventListener('change', updateAnimation);
 })();

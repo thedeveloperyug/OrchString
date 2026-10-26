@@ -2908,24 +2908,46 @@ main > section:not(.hero) {
   z-index:2;
   right:max(1%,calc((100vw - 1400px)/2));
   top:50%;
-  width:min(45vw,620px);
-  aspect-ratio:1;
+  width:min(46vw,680px);
+  aspect-ratio:640 / 600;
   transform:translateY(-50%);
   pointer-events:none;
   isolation:isolate;
 }
-.neural-aura {
-  position:absolute;
-  inset:6%;
-  border-radius:50%;
-  background:radial-gradient(ellipse,rgba(26,115,232,.075),rgba(103,171,255,.025) 52%,transparent 72%);
-  z-index:-1;
-}
-.neural-network { display:block; width:100%; height:100%; overflow:visible; }
-.neural-links { stroke:#1a73e8; stroke-width:1.15; }
-.neural-nodes { stroke:#1a73e8; stroke-width:1; }
+.neural-network { display:block; width:100%; height:100%; overflow:hidden; }
+.neural-links { stroke:url(#connector-flow-blue); stroke-width:1.5; opacity:.42; }
+.neural-trails { stroke:#82b5fa; stroke-width:1.2; opacity:.2; }
 .neural-signal-halo { fill:rgba(26,115,232,.12); }
-.neural-signal-dot { fill:#0b57d0; }
+.neural-signal-dot { fill:#1a73e8; }
+.connector-node-card {
+  fill:#fff;
+  stroke:#deE8f6;
+  stroke-width:1;
+  filter:url(#connector-card-shadow);
+}
+.connector-node-label {
+  font:500 12px Roboto,Arial,sans-serif;
+  fill:#5f6368;
+  text-anchor:middle;
+}
+.neural-hub-aura { fill:#e8f0fe; fill-opacity:.6; }
+.neural-hub-card {
+  fill:#fff;
+  stroke:#b5d2f8;
+  stroke-width:1.3;
+  filter:url(#connector-card-shadow);
+}
+.neural-hub-name {
+  font:600 21px Roboto,Arial,sans-serif;
+  fill:#1a73e8;
+  text-anchor:middle;
+  letter-spacing:-.7px;
+}
+.neural-hub-label {
+  font:500 15px Roboto,Arial,sans-serif;
+  fill:#202124;
+  text-anchor:middle;
+}
 @media(max-width:1180px) and (min-width:981px) {
   .hero .hero-copy { width:56% !important; }
   .hero h1 { font-size:clamp(62px,7.2vw,86px); }
@@ -2945,7 +2967,7 @@ main > section:not(.hero) {
     top:auto;
     right:auto;
     transform:none;
-    width:min(100%,480px);
+    width:min(100%,640px);
     align-self:center;
     margin:10px auto -30px;
   }
@@ -2953,8 +2975,12 @@ main > section:not(.hero) {
 @media(max-width:720px) {
   .site-header a.brand { font-size:24px; }
   .hero.orchstring-hero { padding-bottom:40px !important; }
-  .neural-scene { width:min(100%,380px); margin:8px auto -20px; }
   .hero .brand-introduction { max-width:100%; }
+}
+
+/* Phones show only hero content; the illustration reserves no layout space. */
+@media(max-width:767px), (max-width:980px) and (max-height:500px) and (pointer:coarse) {
+  .neural-scene { display:none; }
 }
 
 /* Official business contact: direct sales access, no source repository CTA. */

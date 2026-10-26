@@ -67,12 +67,15 @@ The website therefore presents orchstring as the active platform while retaining
 The site uses a white, blue and black visual system, including:
 
 - Text-only navigation wordmark: blue **orch**, black **string**
-- A blue neural network with soft wave and jelly deformation
-- Curved connections, depth-aware neurons and traveling signals
+- An open blue connector network converging on **OrchString Console**
+- Recognizable icons for Teams, Outlook, Gmail, Google Drive, Microsoft and Google
+  accounts, billing, payments, invoices and AI models
+- Soft wave and jelly motion with signals traveling inward to the console
+- The hero illustration is hidden on phones, including common landscape layouts
 - Blue, slightly bold **OrchString** emphasis in the visible introductions
 - Reveal-on-scroll sections
 - Responsive mobile navigation
-- Reduced-motion accessibility support with a still network illustration
+- Reduced-motion accessibility support with a still connector diagram
 - Animation that pauses when off-screen or the browser tab is hidden
 
 The orchstring experience adds visual representations for:

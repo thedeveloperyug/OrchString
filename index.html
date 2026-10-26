@@ -90,7 +90,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style-new.css?v=20261026-neural-network">
+<link rel="stylesheet" href="style-new.css?v=20261026-connector-network">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" class="orchstring-icon-sprite" aria-hidden="true" focusable="false"><defs>
@@ -154,12 +154,110 @@
     </div>
   </div>
 
-  <div class="neural-scene" aria-hidden="true">
-    <div class="neural-aura"></div>
-    <svg class="neural-network" viewBox="0 0 560 560" xmlns="http://www.w3.org/2000/svg" focusable="false">
-      <g class="neural-links" fill="none" stroke-linecap="round"></g>
-      <g class="neural-nodes"></g>
+  <div class="neural-scene" role="img" aria-label="Business connectors converge on OrchString Console: Teams, Outlook, Gmail, Google Drive, Microsoft account, Google account, billing, payments, invoices and AI models.">
+    <svg class="neural-network" viewBox="0 0 640 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="connector-flow-blue" x1="0" y1="0" x2="1" y2="1">
+          <stop stop-color="#90BFFF"/>
+          <stop offset="1" stop-color="#1A73E8"/>
+        </linearGradient>
+        <filter id="connector-card-shadow" x="-30%" y="-30%" width="160%" height="170%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1A73E8" flood-opacity=".08"/>
+        </filter>
+        <symbol id="connector-icon-teams" viewBox="0 0 32 32"><circle cx="23" cy="9" r="4" fill="#7B83EB"/><circle cx="13" cy="7" r="5" fill="#7B83EB"/><path d="M20 15h10v8a5 5 0 0 1-10 0Z" fill="#5059C9"/><path d="M8 14h15v10a7.5 7.5 0 0 1-15 0Z" fill="#7B83EB"/><rect x="1" y="10" width="17" height="18" rx="2" fill="#5059C9"/><path d="M5 15h9m-4.5 0v9" fill="none" stroke="#fff" stroke-width="2"/></symbol>
+        <symbol id="connector-icon-outlook" viewBox="0 0 32 32"><rect x="13" y="3" width="16" height="22" rx="2" fill="#28A8EA"/><path d="M16 8h10M16 12h10M16 16h10" stroke="#fff" stroke-width="1.5"/><path d="M10 15h21v13a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2Z" fill="#0078D4"/><path d="m10 16 10.5 8L31 16" fill="#50B5F1"/><rect x="1" y="9" width="17" height="18" rx="2" fill="#106EBE"/><ellipse cx="9.5" cy="18" rx="4" ry="5" fill="none" stroke="#fff" stroke-width="2"/></symbol>
+        <symbol id="connector-icon-gmail" viewBox="0 0 32 32"><path d="M3 8v18h6V13Z" fill="#4285F4"/><path d="M23 13v13h6V8Z" fill="#34A853"/><path d="m3 8 13 10L29 8l-4-3-9 7L7 5Z" fill="#EA4335"/><path d="m3 8 6 5V7L7 5a2.5 2.5 0 0 0-4 3Z" fill="#C5221F"/><path d="m23 7 2-2a2.5 2.5 0 0 1 4 3l-6 5Z" fill="#FBBC04"/></symbol>
+        <symbol id="connector-icon-drive" viewBox="0 0 32 32"><path d="M11 3h10l11 19H21Z" fill="#FFC107"/><path d="M11 3 0 22l5.5 9L16 12Z" fill="#34A853"/><path d="M0 22h32l-5.5 9h-21Z" fill="#4285F4"/></symbol>
+        <symbol id="connector-icon-microsoft" viewBox="0 0 32 32"><path d="M2 2h13v13H2Z" fill="#F25022"/><path d="M17 2h13v13H17Z" fill="#7FBA00"/><path d="M2 17h13v13H2Z" fill="#00A4EF"/><path d="M17 17h13v13H17Z" fill="#FFB900"/></symbol>
+        <symbol id="connector-icon-google" viewBox="0 0 32 32"><g transform="scale(.6666667)"><path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3A12 12 0 0 1 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7A19.9 19.9 0 0 0 24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.2-.1-2.4-.4-3.5Z"/><path fill="#34A853" d="m6.3 33.3 6.6-5.1A12 12 0 0 0 24 36c3.1 0 5.9-1.2 8-3.1l6.2 5.2A19.9 19.9 0 0 1 24 44c-7.6 0-14.2-4.2-17.7-10.7Z"/><path fill="#FBBC05" d="M4 24c0-3.2.8-6.2 2.1-8.9l6.6 5.1a12 12 0 0 0 .2 8l-6.6 5.1A19.9 19.9 0 0 1 4 24Z"/><path fill="#EA4335" d="m6.1 15.1 6.6 5.1A12 12 0 0 1 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7A19.9 19.9 0 0 0 24 4c-7.8 0-14.5 4.5-17.9 11.1Z"/></g></symbol>
+        <symbol id="connector-icon-billing" viewBox="0 0 32 32"><g fill="none" stroke="#1A73E8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h18v26l-3-2-3 2-3-2-3 2-3-2-3 2Z"/><path d="M11 9h10M11 23h10M16 12v8m3-6c-1-2-6-2-6 .5s6 .5 6 3-5 2.5-6 .5"/></g></symbol>
+        <symbol id="connector-icon-payments" viewBox="0 0 32 32"><g fill="none" stroke="#1A73E8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="28" height="20" rx="4"/><path d="M2 13h28M7 21h5"/><path d="m20 22 3 3 6-7" stroke="#0B57D0" stroke-width="2.3"/></g></symbol>
+        <symbol id="connector-icon-invoices" viewBox="0 0 32 32"><g fill="none" stroke="#1A73E8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3H6v26h20V10Zm0 0v8h7M10 15h9M10 20h5"/><path d="m18 23 3 3 7-8" stroke="#0B57D0" stroke-width="2.2"/></g></symbol>
+        <symbol id="connector-icon-models" viewBox="0 0 32 32"><g fill="none" stroke="#1A73E8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="18" height="18" rx="5"/><path d="M12 2v5m8-5v5M12 25v5m8-5v5M2 12h5m-5 8h5m18-8h5m-5 8h5"/><path d="m16 11 1.5 3.5L21 16l-3.5 1.5L16 21l-1.5-3.5L11 16l3.5-1.5Z" fill="#E8F0FE"/></g></symbol>
+      </defs>
+      <g class="neural-trails" fill="none" stroke-linecap="round">
+        <path data-trail="0" d="M-30,36 Q105,36 105,78"/>
+        <path data-trail="1" d="M258,-55 Q304,-55 304,42"/>
+        <path data-trail="2" d="M667,20 Q536,20 536,92"/>
+        <path data-trail="3" d="M700,230 Q584,230 584,267"/>
+        <path data-trail="4" d="M700,501 Q548,501 548,444"/>
+        <path data-trail="5" d="M410,650 Q367,650 367,545"/>
+        <path data-trail="6" d="M100,655 Q159,655 159,522"/>
+        <path data-trail="7" d="M-70,460 Q54,460 54,384"/>
+        <path data-trail="8" d="M-60,192 Q80,192 80,228"/>
+        <path data-trail="9" d="M478,-50 Q396,-50 396,158"/>
+      </g>
+      <g class="neural-links" fill="none" stroke-linecap="round">
+        <path data-link="0" d="M105,78 C105,300 320,78 320,300"/>
+        <path data-link="1" d="M304,42 C304,300 320,42 320,300"/>
+        <path data-link="2" d="M536,92 C536,300 320,92 320,300"/>
+        <path data-link="3" d="M584,267 C584,300 320,267 320,300"/>
+        <path data-link="4" d="M548,444 C548,300 320,444 320,300"/>
+        <path data-link="5" d="M367,545 C367,300 320,545 320,300"/>
+        <path data-link="6" d="M159,522 C159,300 320,522 320,300"/>
+        <path data-link="7" d="M54,384 C54,300 320,384 320,300"/>
+        <path data-link="8" d="M80,228 C80,300 320,228 320,300"/>
+        <path data-link="9" d="M396,158 C396,300 320,158 320,300"/>
+      </g>
       <g class="neural-signals"></g>
+      <g class="neural-nodes">
+        <g class="connector-node" data-x="105" data-y="78" data-tail-x="-30" data-tail-y="36" transform="translate(105 78)">
+          <rect class="connector-node-card" x="-27" y="-27" width="54" height="54" rx="15"/>
+          <svg class="connector-node-icon" x="-16" y="-16" width="32" height="32" viewBox="0 0 32 32"><use href="#connector-icon-teams"/></svg>
+          <text class="connector-node-label" x="0" y="46">Teams</text>
+        </g>
+        <g class="connector-node" data-x="304" data-y="42" data-tail-x="258" data-tail-y="-55" transform="translate(304 42)">
+          <rect class="connector-node-card" x="-27" y="-27" width="54" height="54" rx="15"/>
+          <svg class="connector-node-icon" x="-16" y="-16" width="32" height="32" viewBox="0 0 32 32"><use href="#connector-icon-outlook"/></svg>
+          <text class="connector-node-label" x="0" y="46">Outlook</text>
+        </g>
+        <g class="connector-node" data-x="536" data-y="92" data-tail-x="667" data-tail-y="20" transform="translate(536 92)">
+          <rect class="connector-node-card" x="-27" y="-27" width="54" height="54" rx="15"/>
+          <svg class="connector-node-icon" x="-16" y="-16" width="32" height="32" viewBox="0 0 32 32"><use href="#connector-icon-gmail"/></svg>
+          <text class="connector-node-label" x="0" y="46">Gmail</text>
+        </g>
+        <g class="connector-node" data-x="584" data-y="267" data-tail-x="700" data-tail-y="230" transform="translate(584 267)">
+          <rect class="connector-node-card" x="-27" y="-27" width="54" height="54" rx="15"/>
+          <svg class="connector-node-icon" x="-16" y="-16" width="32" height="32" viewBox="0 0 32 32"><use href="#connector-icon-drive"/></svg>
+          <text class="connector-node-label" x="0" y="46">Google Drive</text>
+        </g>
+        <g class="connector-node" data-x="548" data-y="444" data-tail-x="700" data-tail-y="501" transform="translate(548 444)">
+          <rect class="connector-node-card" x="-27" y="-27" width="54" height="54" rx="15"/>
+          <svg class="connector-node-icon" x="-16" y="-16" width="32" height="32" viewBox="0 0 32 32"><use href="#connector-icon-microsoft"/></svg>
+          <text class="connector-node-label" x="0" y="46">Microsoft account</text>
+        </g>
+        <g class="connector-node" data-x="367" data-y="545" data-tail-x="410" data-tail-y="650" transform="translate(367 545)">
+          <rect class="connector-node-card" x="-27" y="-27" width="54" height="54" rx="15"/>
+          <svg class="connector-node-icon" x="-16" y="-16" width="32" height="32" viewBox="0 0 32 32"><use href="#connector-icon-google"/></svg>
+          <text class="connector-node-label" x="0" y="46">Google account</text>
+        </g>
+        <g class="connector-node" data-x="159" data-y="522" data-tail-x="100" data-tail-y="655" transform="translate(159 522)">
+          <rect class="connector-node-card" x="-27" y="-27" width="54" height="54" rx="15"/>
+          <svg class="connector-node-icon" x="-16" y="-16" width="32" height="32" viewBox="0 0 32 32"><use href="#connector-icon-billing"/></svg>
+          <text class="connector-node-label" x="0" y="46">Billing</text>
+        </g>
+        <g class="connector-node" data-x="54" data-y="384" data-tail-x="-70" data-tail-y="460" transform="translate(54 384)">
+          <rect class="connector-node-card" x="-27" y="-27" width="54" height="54" rx="15"/>
+          <svg class="connector-node-icon" x="-16" y="-16" width="32" height="32" viewBox="0 0 32 32"><use href="#connector-icon-payments"/></svg>
+          <text class="connector-node-label" x="0" y="46">Payments</text>
+        </g>
+        <g class="connector-node" data-x="80" data-y="228" data-tail-x="-60" data-tail-y="192" transform="translate(80 228)">
+          <rect class="connector-node-card" x="-27" y="-27" width="54" height="54" rx="15"/>
+          <svg class="connector-node-icon" x="-16" y="-16" width="32" height="32" viewBox="0 0 32 32"><use href="#connector-icon-invoices"/></svg>
+          <text class="connector-node-label" x="0" y="46">Invoices</text>
+        </g>
+        <g class="connector-node" data-x="396" data-y="158" data-tail-x="478" data-tail-y="-50" transform="translate(396 158)">
+          <rect class="connector-node-card" x="-27" y="-27" width="54" height="54" rx="15"/>
+          <svg class="connector-node-icon" x="-16" y="-16" width="32" height="32" viewBox="0 0 32 32"><use href="#connector-icon-models"/></svg>
+          <text class="connector-node-label" x="0" y="46">AI models</text>
+        </g>
+      </g>
+      <g class="neural-hub" transform="translate(320 300)">
+        <rect class="neural-hub-aura" x="-103" y="-54" width="206" height="108" rx="25"/>
+        <rect class="neural-hub-card" x="-93" y="-44" width="186" height="88" rx="18"/>
+        <text class="neural-hub-name" x="0" y="-3">OrchString</text>
+        <text class="neural-hub-label" x="0" y="21">Console</text>
+      </g>
     </svg>
   </div>
 </section>
@@ -611,6 +709,6 @@
   <a href="https://www.linkedin.com/in/thedeveloperyug">Yogesh Pandey on LinkedIn <svg class="orchstring-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#orchstring-icon-arrow-up-right"></use></svg></a>
   <a href="mailto:rishabh@neytraintelligence.com">Sales: rishabh@neytraintelligence.com</a>
 </footer>
-<script src="app.js?v=20261026-neural-network"></script>
+<script src="app.js?v=20261026-connector-network"></script>
 </body>
 </html>
