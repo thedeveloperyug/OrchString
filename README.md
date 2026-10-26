@@ -5,7 +5,7 @@ Official website: https://orchstring.com/
 **Primary project:** OrchString
 
 **Status:** Active development  
-**Tagline:** Think. Adapt. Act.
+**Tagline:** Automate your business with one platform.
 
 ## Purpose
 
@@ -14,7 +14,7 @@ orchstring is an AI-powered, enterprise-oriented execution platform designed to 
 This repository contains the public-facing website for **orchstring**.
 
 orchstring is being developed as a complete enterprise software platform for
-coordinating business operations from start to finish, across planning, approvals,
+end-to-end business automation across planning, approvals,
 execution, verification and recovery. Workflow automation and agent orchestration
 are capabilities within that broader platform.
 

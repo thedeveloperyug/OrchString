@@ -16,7 +16,7 @@ Status: Active development
 
 ## Facts and scope
 
-orchstring is being developed as a complete enterprise software platform for coordinating business operations from start to finish. It brings together people, agents, replaceable AI models, data, tools and connected applications across planning, approvals, execution, verification and recovery. Workflow automation and agent orchestration are capabilities within this broader platform. Intended workflows include invoice processing, onboarding, service requests, purchasing, reporting and evidence reviews.
+orchstring is being developed as a complete enterprise software platform for end-to-end business automation. It brings together people, agents, replaceable AI models, data, tools and connected applications across planning, approvals, execution, verification and recovery. Workflow automation and agent orchestration are capabilities within this broader platform. Intended workflows include invoice processing, onboarding, service requests, purchasing, reporting and evidence reviews.
 
 The target execution lifecycle is Understand → Decompose → Plan → Discover → Select → Authorize → Execute → Observe → Critique → Reason → Verify → Recover / Replan → Learn.
 

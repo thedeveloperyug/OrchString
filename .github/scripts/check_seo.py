@@ -16,7 +16,7 @@ BASE = 'https://orchstring.com/'
 BRAND_TITLE = 'OrchString | Enterprise AI Execution Platform'
 BRAND_INTRO = 'orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.'
 VISIBLE_BRAND_INTRO = BRAND_INTRO.replace('orchstring', 'OrchString', 1)
-HOMEPAGE_DESCRIPTION = 'orchstring is an enterprise AI execution platform designed to coordinate business operations, people, apps and workflows from objectives to verified outcomes.'
+HOMEPAGE_DESCRIPTION = 'Automate your business with orchstring, an enterprise AI execution platform connecting people, apps and AI through controlled, verifiable workflows.'
 
 
 def normalized(text):
@@ -128,7 +128,7 @@ def main():
             if parser.metadata.get(key) != description:
                 fail(url, key + ' must match description')
         for key in ('og:image', 'twitter:image'):
-            if parser.metadata.get(key) != BASE + 'assets/orchstring-social.png':
+            if parser.metadata.get(key) != BASE + 'assets/orchstring-social.png?v=20261026-one-platform':
                 fail(url, key + ' must use the published social preview')
         if not parser.metadata.get('og:image:alt') or not parser.metadata.get('twitter:image:alt'):
             fail(url, 'social preview needs descriptive alt text')

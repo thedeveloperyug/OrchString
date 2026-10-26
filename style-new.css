@@ -2902,7 +2902,7 @@ main > section:not(.hero) {
 }
 .hero h1 .hero-tagline {
   display:inline-block;
-  font-size:.82em;
+  font-size:.74em;
   line-height:1.08;
   vertical-align:top;
 }

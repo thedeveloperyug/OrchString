@@ -7,7 +7,7 @@ content. These keyword themes follow the platform's documented scope; they are
 not search-volume, competition or ranking measurements.
 
 The core product identity is a complete enterprise execution platform being
-developed to coordinate business operations from start to finish. Workflow
+developed for end-to-end business automation. Workflow
 automation, agent orchestration and invoice processing are capabilities and
 examples within that broader platform; they do not define its entire scope.
 
