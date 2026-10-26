@@ -1,16 +1,16 @@
-# Neytra Intelligence
+# OrchString
 
-> The Neytra Intelligence Platform (NIP) is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.
+> orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.
 
-Neytra Intelligence develops the NIP enterprise execution platform.
+orchstring develops an enterprise execution platform.
 
 ## Official website
 
-https://neytraintelligence.com/
+https://orchstring.com/
 
-## Neytra Intelligence Platform (NIP)
+## OrchString
 
-NIP is an intelligent execution platform designed to turn goals into controlled, observable and verifiable work across agents, models, tools, applications and operating systems.
+orchstring is an intelligent execution platform designed to turn goals into controlled, observable and verifiable work across agents, models, tools, applications and operating systems.
 
 Core concepts include:
 - Goal-driven agent execution
@@ -24,24 +24,24 @@ Core concepts include:
 - Execution attempts, leases and fencing
 - Checkpoints, recovery and replanning
 - Developer intelligence
-- OS-agnostic execution with future Neytra OS integration
+- OS-agnostic execution with future native OS integration
 
 ## Architecture
 
-NIP separates intelligence from any single model, application or operating system. Its target lifecycle is:
+orchstring separates intelligence from any single model, application or operating system. Its target lifecycle is:
 
 Understand → Decompose → Plan → Discover → Select → Authorize → Execute → Observe → Critique → Reason → Verify → Recover / Replan → Learn
 
 ## Projects
 
-- Website: https://neytraintelligence.com/
-- NIP: https://github.com/thedeveloperyug/NIP
+- Website: https://orchstring.com/
+- Execution platform source: https://github.com/thedeveloperyug/NIP
 - Website source: https://github.com/thedeveloperyug/neytra-intelligence
-- Neytra OS: https://github.com/thedeveloperyug/Neytra_OS
+- Operating-system research source: https://github.com/thedeveloperyug/Neytra_OS
 
 ## Founder
 
-Yogesh Pandey — Founder and creator of the Neytra platform vision.
+Yogesh Pandey — Founder and creator of the orchstring platform vision.
 
 https://www.linkedin.com/in/thedeveloperyug
 

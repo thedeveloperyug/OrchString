@@ -1,4 +1,4 @@
-name: Deploy Neytra Intelligence Website to GitHub Pages
+name: Deploy OrchString Website to GitHub Pages
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate SEO metadata and sitemap
+      - name: Validate OrchString branding, SEO metadata and sitemap
         run: python3 .github/scripts/check_seo.py
 
       - name: Setup GitHub Pages

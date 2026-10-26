@@ -1,24 +1,25 @@
-# Neytra Intelligence Platform — Website
+# OrchString — Website
 
-Official website: https://neytraintelligence.com/
+Official website: https://orchstring.com/
 
-**Primary project:** Neytra Intelligence Platform (NIP)  
+**Primary project:** OrchString
+
 **Status:** Active development  
 **Tagline:** Think. Adapt. Act.
 
 ## Purpose
 
-The Neytra Intelligence Platform (NIP) is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.
+orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.
 
-This repository contains the public-facing website for **NIP — Neytra Intelligence Platform**.
+This repository contains the public-facing website for **orchstring**.
 
-NIP is an OS-agnostic intelligent execution platform designed for reasoning, planning, model orchestration, memory, environment awareness, capability discovery, tool intelligence, multi-task execution, verification, developer intelligence and controlled autonomy.
+orchstring is an OS-agnostic intelligent execution platform designed for reasoning, planning, model orchestration, memory, environment awareness, capability discovery, tool intelligence, multi-task execution, verification, developer intelligence and controlled autonomy.
 
-**NIP is the current engineering focus. Neytra OS remains a separate future operating-system project and is intentionally preserved as part of the Neytra vision.**
+orchstring is the current engineering focus. The future operating-system project remains separate, with native integration planned as part of the long-term vision.
 
-## What NIP is
+## What OrchString does
 
-NIP is designed as a control plane and execution platform rather than a chatbot or simple LLM wrapper.
+orchstring is designed as a control plane and execution platform rather than a chatbot or simple LLM wrapper.
 
 Its target lifecycle is:
 
@@ -45,25 +46,25 @@ The architecture supports:
 - Verification and evidence traceability
 - Developer intelligence
 - Linux and future multi-OS adapters
-- Future deep Neytra OS integration
+- Future native OS integration
 
-## NIP ↔ Neytra OS
+## OrchString and future OS integration
 
 The projects have a deliberate boundary:
 
 | Project | Responsibility |
 |---|---|
-| **NIP** | Intelligence, jobs, tasks, agents, models, capabilities, tools, reasoning, verification |
-| **Neytra OS** | Operating system, services, desktop, hardware, isolation and system-level authority |
+| **OrchString** | Intelligence, jobs, tasks, agents, models, capabilities, tools, reasoning, verification |
+| **Future OS project** | Operating system, services, desktop, hardware, isolation and system-level authority |
 | **Integration Bridge** | Requests, events, capabilities, permissions, execution results and artifacts |
 
-**Neytra OS provides the system. NIP provides the intelligence.**
+**The future OS project provides the system. orchstring provides the intelligence.**
 
-The website therefore presents NIP as the active platform while retaining Neytra OS as the future operating-system direction.
+The website therefore presents orchstring as the active platform while retaining the future OS project as the future operating-system direction.
 
 ## Website design
 
-The site keeps the existing Neytra visual language and animations, including:
+The site keeps the existing orchstring visual language and animations, including:
 
 - Animated particle field
 - Interactive cursor glow
@@ -77,71 +78,71 @@ The site keeps the existing Neytra visual language and animations, including:
 - Responsive mobile navigation
 - Reduced-motion accessibility support
 
-The new NIP-first experience adds visual representations for:
+The orchstring experience adds visual representations for:
 
-- NIP execution lifecycle
+- OrchString execution lifecycle
 - Platform architecture
 - Core capabilities
 - Controlled execution
 - Model runtime
-- NIP ↔ Neytra OS boundary
+- Intelligence and operating-system boundary
 - Development roadmap
 
-## Repository naming
+## Repository and deployment
 
-The current GitHub repository is named `neytra-os-website`. The intended identity of this website is now **Neytra Intelligence Platform**.
+Source: https://github.com/thedeveloperyug/neytra-intelligence
 
-GitHub repository renaming is an account-level repository setting; after renaming it, update the GitHub Pages URL and any external references if GitHub does not automatically preserve the expected redirect.
+The repository keeps its existing GitHub URL. Its website, documentation and
+workflow use the orchstring brand.
 
-## Deployment
+GitHub Actions deploys `main` to GitHub Pages through
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The workflow
+validates branding, SEO metadata and the sitemap before uploading the static
+website and running the deployment job. It also supports manual runs with
+`workflow_dispatch`.
 
-GitHub Actions deploys `main` to GitHub Pages via:
+Run the deployment checks locally:
 
-`.github/workflows/deploy.yml`
+```sh
+python3 .github/scripts/check_seo.py
+node --check app.js
+```
+
+The Pages custom domain is `orchstring.com`. `CNAME` records the same domain in
+source control. No build step or package installation is required.
+
+The existing logo artwork and favicon assets are retained until replacement
+artwork is provided. Existing sales email and console destinations are retained
+until replacement addresses are configured; the console link is labeled
+**Explore OrchString Console**.
 
 ## Founder
 
-**Yogesh Pandey** — Founder & creator of the Neytra platform vision.
+**Yogesh Pandey** — Founder & creator of the orchstring platform vision.
 
 LinkedIn: https://www.linkedin.com/in/thedeveloperyug  
 Email: thedeveloperyug@gmail.com
 
 ---
 
-**NIP — The intelligence layer for Neytra.**
+**OrchString — Intelligent business execution.**
 
 **Think. Adapt. Act.**
 
 ## SEO and domain routing
 
-**Canonical website:** `https://neytraintelligence.com/` (the one-page public site).
+**Canonical website:** `https://orchstring.com/` (the one-page public site).
 
-**Secondary domain:** `neytraintelligence.in` is a redirect-only domain. Neither
-the .in domain nor a `www` alias should serve a separately indexable copy.
-
-The following should be configured at the DNS/CDN/registrar/hosting redirect layer,
-**not** as a JavaScript redirect in `index.html`:
-
-| Incoming URL | Expected response | Destination |
-| --- | --- | --- |
-| `http://neytraintelligence.in/` | 301 or 308 | `https://neytraintelligence.com/` |
-| `https://neytraintelligence.in/` | 301 or 308 | `https://neytraintelligence.com/` |
-| `http://www.neytraintelligence.in/` | 301 or 308 | `https://neytraintelligence.com/` |
-| `https://www.neytraintelligence.in/` | 301 or 308 | `https://neytraintelligence.com/` |
-| `https://www.neytraintelligence.com/` | 301 or 308 | `https://neytraintelligence.com/` |
-| `http://neytraintelligence.com/` | 301 or 308 | `https://neytraintelligence.com/` |
-
-Keep redirects **permanent, direct, and server-side**; preserve paths and query
-strings when an equivalent destination exists. Ensure all four hostnames have
-correct DNS and valid HTTPS certificates before requiring HTTPS redirects.
-Do not add `noindex` or disallow these URLs in `robots.txt` merely to remove
-Search Console's expected "Page with redirect" or "Alternate page with proper
-canonical tag" classifications.
+Any previous domains or `www` aliases should redirect permanently and directly
+to the canonical website at the DNS/CDN/registrar/hosting layer. Preserve paths
+and query strings when an equivalent destination exists, and configure valid
+HTTPS certificates for each redirecting hostname. External domain redirects are
+managed outside this repository.
 
 ### Indexability signals
 
 - `index.html` sets a self-referencing canonical and matching Open Graph URL.
-- `robots.txt` allows crawlers and references `https://neytraintelligence.com/sitemap.xml`.
+- `robots.txt` allows crawlers and references `https://orchstring.com/sitemap.xml`.
 - `sitemap.xml` lists **only** the canonical homepage. The current navigation
   uses same-page hash fragments, which are not standalone pages to submit.
 - The GitHub Pages workflow executes `.github/scripts/check_seo.py` before deploy
@@ -150,18 +151,13 @@ canonical tag" classifications.
 
 ### Google Search Console verification
 
-1. Verify ownership of **both domains** (Domain properties if possible).
-2. Submit `https://neytraintelligence.com/sitemap.xml` in the .com property's
-   Sitemaps section.
-3. In URL Inspection for `https://neytraintelligence.com/`, run **Test Live URL**
-   and **Request Indexing** if it is eligible but not indexed.
-4. Under Pages > Not indexed, inspect the **exact URLs** associated with
-   "Page with redirect" and "Alternate page with proper canonical tag".
-   These are normal when they point to the intended indexed .com canonical.
-   Escalate only if the preferred .com URL is itself excluded or Google selects
-   a different canonical.
-5. Test HTTP status codes and final destinations for the table above.
-   GitHub source code alone cannot configure the external .in forwarding service.
+1. Verify ownership of `orchstring.com` (a Domain property if possible).
+2. Submit `https://orchstring.com/sitemap.xml` in the property's Sitemaps section.
+3. In URL Inspection for `https://orchstring.com/`, run **Test Live URL** and
+   **Request Indexing** if it is eligible but not indexed.
+4. Confirm that redirected and alternate URLs point to the canonical homepage.
+   Configure any old-domain forwarding at the external hosting or DNS provider.
+5. Check HTTP status codes and final destinations after routing changes.
 
 Google indexing and rankings are determined by Google's crawl/indexing systems;
 deployment does not guarantee immediate inclusion in search results.
