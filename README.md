@@ -9,9 +9,14 @@ Official website: https://orchstring.com/
 
 ## Purpose
 
-orchstring is an AI workflow automation and agent orchestration platform for business processes, connected apps, human approvals and verifiable execution.
+orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.
 
 This repository contains the public-facing website for **orchstring**.
+
+orchstring is being developed as a complete enterprise software platform for
+coordinating business operations from start to finish, across planning, approvals,
+execution, verification and recovery. Workflow automation and agent orchestration
+are capabilities within that broader platform.
 
 orchstring is an OS-agnostic intelligent execution platform designed for reasoning, planning, model orchestration, memory, environment awareness, capability discovery, tool intelligence, multi-task execution, verification, developer intelligence and controlled autonomy.
 
@@ -111,9 +116,9 @@ node --check app.js
 The Pages custom domain is `orchstring.com`. `CNAME` records the same domain in
 source control. No build step or package installation is required.
 
-The hero and navigation no longer display the previous logo. Favicon assets
-remain available for browser icons. Existing sales email and console destinations
-are retained until replacement addresses are configured; the console link is labeled
+The hero and navigation no longer display the previous logo. The browser icon
+is a blue capital O SVG; the Apple touch icon uses the same O artwork. Existing
+sales email and console destinations are retained until replacement addresses are configured; the console link is labeled
 **Explore OrchString Console**.
 
 ## Founder

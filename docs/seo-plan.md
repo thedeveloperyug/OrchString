@@ -6,9 +6,14 @@ The implementation targets relevant search intent through useful, crawlable
 content. These keyword themes follow the platform's documented scope; they are
 not search-volume, competition or ranking measurements.
 
+The core product identity is a complete enterprise execution platform being
+developed to coordinate business operations from start to finish. Workflow
+automation, agent orchestration and invoice processing are capabilities and
+examples within that broader platform; they do not define its entire scope.
+
 | Canonical page | Main intent | Keyword themes |
 | --- | --- | --- |
-| `https://orchstring.com/` | Product discovery | OrchString, AI workflow automation platform, AI agent orchestration, business process orchestration |
+| `https://orchstring.com/` | Product discovery | OrchString, enterprise execution platform, enterprise AI software, business operations orchestration |
 | `https://orchstring.com/ai-workflow-automation/` | Understand and scope a workflow | AI workflow automation for business, enterprise workflow automation, human-in-the-loop workflows, business app integration |
 | `https://orchstring.com/ai-agent-orchestration/` | Understand execution architecture | AI agent orchestration, multi-agent task coordination, model routing, controlled AI execution, agent verification |
 | `https://orchstring.com/invoice-processing-automation/` | Evaluate a finance workflow | invoice processing automation, accounts payable workflow automation, purchase order matching, invoice approval workflows, three-way matching |

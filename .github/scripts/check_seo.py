@@ -13,9 +13,10 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = 'https://orchstring.com/'
-BRAND_TITLE = 'OrchString | AI Workflow Automation & Agent Orchestration'
-BRAND_INTRO = 'orchstring is an AI workflow automation and agent orchestration platform for business processes, connected apps, human approvals and verifiable execution.'
+BRAND_TITLE = 'OrchString | Enterprise AI Execution Platform'
+BRAND_INTRO = 'orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.'
 VISIBLE_BRAND_INTRO = BRAND_INTRO.replace('orchstring', 'OrchString', 1)
+HOMEPAGE_DESCRIPTION = 'orchstring is an enterprise AI execution platform designed to coordinate business operations, people, apps and workflows from objectives to verified outcomes.'
 
 
 def normalized(text):
@@ -32,6 +33,7 @@ class SiteParser(HTMLParser):
         self.ids = []
         self.links = []
         self.assets = []
+        self.icons = []
         self.faqs = []
         self.current_faq = None
 
@@ -50,6 +52,8 @@ class SiteParser(HTMLParser):
             self.active[tag] = capture
         if tag == 'article' and 'faq-answer' in data.get('class', '').split():
             self.current_faq = {}
+        if tag == 'link' and data.get('rel') == 'icon':
+            self.icons.append(data.get('href', ''))
         if tag == 'link' and data.get('rel') == 'canonical':
             self.canonicals.append(data.get('href', ''))
         if tag == 'meta':
@@ -102,6 +106,8 @@ def main():
         title = parser.texts('title')
         description = parser.metadata.get('description', '')
         h1 = parser.texts('h1')
+        if parser.icons != ['/assets/orchstring-o.svg']:
+            fail(url, 'must use only the blue O SVG favicon')
         if parser.canonicals != [url]:
             fail(url, 'needs exactly one self-referencing canonical')
         if len(title) != 1 or not title[0] or title[0] in titles:
@@ -155,7 +161,7 @@ def main():
                     node = nodes[BASE + '#' + fragment]
                     if node['@type'] != kind or node['name'] != 'OrchString' or node['url'] != BASE:
                         raise ValueError('brand entities must use the canonical brand identity')
-                if title != [BRAND_TITLE] or description != BRAND_INTRO:
+                if title != [BRAND_TITLE] or description != HOMEPAGE_DESCRIPTION:
                     raise ValueError('homepage metadata must match brand positioning')
                 if parser.texts('p').count(VISIBLE_BRAND_INTRO) < 2:
                     raise ValueError('visible introductions must match the official introduction')

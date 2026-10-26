@@ -2900,9 +2900,18 @@ main > section:not(.hero) {
   color:#202124 !important;
   -webkit-text-fill-color:#202124 !important;
 }
+.hero h1 .hero-tagline {
+  display:inline-block;
+  font-size:.82em;
+  line-height:1.08;
+  vertical-align:top;
+}
 .hero .brand-introduction,
 .intro .brand-introduction { color:#202124 !important; }
 .intro-brand { color:#1a73e8; font-weight:600; }
+.hero .enterprise-positioning,
+.intro .enterprise-positioning { color:#202124 !important; }
+.hero .enterprise-positioning { font-size:16px !important; line-height:1.65 !important; }
 .neural-scene {
   position:absolute;
   z-index:2;

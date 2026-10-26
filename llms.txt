@@ -1,6 +1,6 @@
 # OrchString
 
-> orchstring is an AI workflow automation and agent orchestration platform for business processes, connected apps, human approvals and verifiable execution.
+> orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.
 
 Canonical website: https://orchstring.com/
 Language: English
@@ -8,7 +8,7 @@ Status: Active development
 
 ## Official pages
 
-- [Platform overview](https://orchstring.com/): AI workflow automation, connected business apps, approvals and verifiable execution.
+- [Platform overview](https://orchstring.com/): Enterprise AI execution software for coordinating business operations, connected apps, approvals and verified outcomes.
 - [AI workflow automation](https://orchstring.com/ai-workflow-automation/): Definition, onboarding example, comparison and pilot evaluation.
 - [AI agent orchestration](https://orchstring.com/ai-agent-orchestration/): Task dependencies, models, authorization, recovery and verification.
 - [Invoice processing automation](https://orchstring.com/invoice-processing-automation/): Accounts payable extraction, matching, exception review and approval boundaries.
@@ -16,7 +16,7 @@ Status: Active development
 
 ## Facts and scope
 
-orchstring is designed to coordinate people, agents, replaceable AI models, tools and connected applications. Intended workflows include invoice processing, onboarding, service requests, purchasing, reporting and evidence reviews.
+orchstring is being developed as a complete enterprise software platform for coordinating business operations from start to finish. It brings together people, agents, replaceable AI models, data, tools and connected applications across planning, approvals, execution, verification and recovery. Workflow automation and agent orchestration are capabilities within this broader platform. Intended workflows include invoice processing, onboarding, service requests, purchasing, reporting and evidence reviews.
 
 The target execution lifecycle is Understand → Decompose → Plan → Discover → Select → Authorize → Execute → Observe → Critique → Reason → Verify → Recover / Replan → Learn.
 
