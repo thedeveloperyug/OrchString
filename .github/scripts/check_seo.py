@@ -128,7 +128,7 @@ def main():
             if parser.metadata.get(key) != description:
                 fail(url, key + ' must match description')
         for key in ('og:image', 'twitter:image'):
-            if parser.metadata.get(key) != BASE + 'assets/orchstring-social.png?v=20261026-one-platform':
+            if parser.metadata.get(key) != BASE + 'assets/orchstring-social.png?v=20261026-tagline':
                 fail(url, key + ' must use the published social preview')
         if not parser.metadata.get('og:image:alt') or not parser.metadata.get('twitter:image:alt'):
             fail(url, 'social preview needs descriptive alt text')

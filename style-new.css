@@ -2902,8 +2902,11 @@ main > section:not(.hero) {
 }
 .hero h1 .hero-tagline {
   display:inline-block;
-  font-size:.74em;
-  line-height:1.08;
+  font-size:clamp(20px,3.2vw,46px);
+  line-height:1.23;
+  letter-spacing:-.025em;
+  white-space:nowrap;
+  max-width:100%;
   vertical-align:top;
 }
 .hero .brand-introduction,

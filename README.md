@@ -5,7 +5,7 @@ Official website: https://orchstring.com/
 **Primary project:** OrchString
 
 **Status:** Active development  
-**Tagline:** Automate your business with one platform.
+**Tagline:** One intelligence platform<br>Infinite business possibilities
 
 ## Purpose
 
@@ -132,7 +132,8 @@ Email: thedeveloperyug@gmail.com
 
 **OrchString — Intelligent business execution.**
 
-**Think. Adapt. Act.**
+**One intelligence platform**<br>
+**Infinite business possibilities**
 
 ## SEO and domain routing
 
