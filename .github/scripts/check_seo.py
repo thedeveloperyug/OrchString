@@ -106,8 +106,8 @@ def main():
         title = parser.texts('title')
         description = parser.metadata.get('description', '')
         h1 = parser.texts('h1')
-        if parser.icons != ['/assets/orchstring-o.svg']:
-            fail(url, 'must use only the blue O SVG favicon')
+        if parser.icons != ['/assets/orchstring-mark.svg']:
+            fail(url, 'must use the new OrchString SVG favicon')
         if parser.canonicals != [url]:
             fail(url, 'needs exactly one self-referencing canonical')
         if len(title) != 1 or not title[0] or title[0] in titles:

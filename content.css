@@ -63,3 +63,14 @@ a:focus-visible,summary:focus-visible{outline:3px solid #1a73e8;outline-offset:5
  .content-page .content-main>.content-contact{padding:24px!important}
 }
 @media(prefers-reduced-motion:reduce){.resource-card{transition:none}}
+
+/* OrchString visual identity: uploaded blue-and-gold mark and black/blue wordmark. */
+.site-header a.brand{gap:9px;align-items:center}
+.brand-logo-mark{display:block;width:41px;height:36px;object-fit:contain;flex:0 0 auto}
+.brand-orch,.os-brand-orch{color:#000000 !important;-webkit-text-fill-color:#000000 !important}
+.brand-string,.os-brand-string{color:#1a73e8 !important;-webkit-text-fill-color:#1a73e8 !important}
+.os-brand-name{white-space:nowrap}
+.hero h1 .hero-brand-name .os-brand-orch,.intro h2 .intro-brand-heading .os-brand-orch{color:#000 !important;-webkit-text-fill-color:#000 !important}
+.hero h1 .hero-brand-name .os-brand-string,.intro h2 .intro-brand-heading .os-brand-string{color:#1a73e8 !important;-webkit-text-fill-color:#1a73e8 !important}
+.primary .os-brand-name,.nav-sales .os-brand-name{background:#fff;border-radius:3px;padding:0 .15em}
+@media(max-width:650px){.brand-logo-mark{width:32px;height:30px}.site-header a.brand{gap:7px}}

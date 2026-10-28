@@ -3031,3 +3031,14 @@ svg.orchstring-icon{display:inline-block;width:1.1em;height:1.1em;flex:none;vert
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a73e8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14m-6-6 6 6-6 6'/%3E%3C/svg%3E");
   background-position:center;background-repeat:no-repeat;background-size:17px 17px
 }
+
+/* OrchString visual identity: uploaded blue-and-gold mark and black/blue wordmark. */
+.site-header a.brand{gap:9px;align-items:center}
+.brand-logo-mark{display:block;width:41px;height:36px;object-fit:contain;flex:0 0 auto}
+.brand-orch,.os-brand-orch{color:#000000 !important;-webkit-text-fill-color:#000000 !important}
+.brand-string,.os-brand-string{color:#1a73e8 !important;-webkit-text-fill-color:#1a73e8 !important}
+.os-brand-name{white-space:nowrap}
+.hero h1 .hero-brand-name .os-brand-orch,.intro h2 .intro-brand-heading .os-brand-orch{color:#000 !important;-webkit-text-fill-color:#000 !important}
+.hero h1 .hero-brand-name .os-brand-string,.intro h2 .intro-brand-heading .os-brand-string{color:#1a73e8 !important;-webkit-text-fill-color:#1a73e8 !important}
+.primary .os-brand-name,.nav-sales .os-brand-name{background:#fff;border-radius:3px;padding:0 .15em}
+@media(max-width:650px){.brand-logo-mark{width:32px;height:30px}.site-header a.brand{gap:7px}}
