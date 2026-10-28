@@ -3042,3 +3042,7 @@ svg.orchstring-icon{display:inline-block;width:1.1em;height:1.1em;flex:none;vert
 .hero h1 .hero-brand-name .os-brand-string,.intro h2 .intro-brand-heading .os-brand-string{color:#1a73e8 !important;-webkit-text-fill-color:#1a73e8 !important}
 .primary .os-brand-name,.nav-sales .os-brand-name{background:#fff;border-radius:3px;padding:0 .15em}
 @media(max-width:650px){.brand-logo-mark{width:32px;height:30px}.site-header a.brand{gap:7px}}
+
+/* Keep the new OrchString mark visibly aligned with the navbar wordmark. */
+.site-header a.brand > .brand-logo-mark{display:block !important;width:46px !important;height:41px !important;min-width:46px;flex:none !important;object-fit:contain !important;opacity:1 !important;visibility:visible !important}
+@media(max-width:650px){.site-header a.brand > .brand-logo-mark{width:38px !important;height:34px !important;min-width:38px}}
