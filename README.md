@@ -117,8 +117,8 @@ The Pages custom domain is `orchstring.com`. `CNAME` records the same domain in
 source control. No build step or package installation is required.
 
 The hero and navigation no longer display the previous logo. The browser icon
-is a blue capital O SVG; the Apple touch icon uses the same O artwork. Existing
-sales email and console destinations are retained until replacement addresses are configured; the console link is labeled
+is a blue capital O SVG; the Apple touch icon uses the same O artwork. The console destination remains unchanged; the contact addresses now use
+orchstring.com email accounts. The console link is labeled
 **Explore OrchString Console**.
 
 ## Founder
@@ -127,6 +127,9 @@ sales email and console destinations are retained until replacement addresses ar
 
 LinkedIn: https://www.linkedin.com/in/thedeveloperyug  
 Email: yogesh.pandey@orchstring.com
+
+Co-founder: **Rishabh Saluja** — Business and growth  
+Email: rishabh.saluja@orchstring.com
 
 ---
 
