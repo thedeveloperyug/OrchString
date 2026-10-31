@@ -43,6 +43,6 @@ Yogesh Pandey is the founder and creator. Rishabh Saluja is the co-founder focus
 
 - [Sitemap](https://orchstring.com/sitemap.xml)
 - [Crawler policy](https://orchstring.com/robots.txt)
-- [Website source](https://github.com/thedeveloperyug/neytra-intelligence)
+- [Website source](https://github.com/thedeveloperyug/OrchString)
 
 This file is an optional summary. The visible website pages are the primary source for context; this file does not confer ranking or citation eligibility.
