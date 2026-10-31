@@ -1,6 +1,6 @@
 # OrchString search and answer discovery
 
-Updated: 26 October 2026
+Updated: 1 November 2026
 
 The implementation targets relevant search intent through useful, crawlable
 content. These keyword themes follow the platform's documented scope; they are
@@ -18,6 +18,17 @@ examples within that broader platform; they do not define its entire scope.
 | `https://orchstring.com/ai-agent-orchestration/` | Understand execution architecture | AI agent orchestration, multi-agent task coordination, model routing, controlled AI execution, agent verification |
 | `https://orchstring.com/invoice-processing-automation/` | Evaluate a finance workflow | invoice processing automation, accounts payable workflow automation, purchase order matching, invoice approval workflows, three-way matching |
 | `https://orchstring.com/faq/` | Get direct product answers | what is OrchString, integrations, AI models, approvals, development status, pilot and pricing inquiries |
+
+## November 2026 audit and implementation
+
+- Retained canonical page structure, unique metadata, static content, sitemap and crawler access.
+- Expanded the business description in `llms.txt` to cover the actual platform mission, customer use cases, development status, leadership, and both company-domain contact emails.
+- Fixed stale Gmail contact information in homepage Organization JSON-LD, and included leadership email addresses on the founder/co-founder records.
+- Added customer-oriented Q&A about intended business solutions and how to contact the founders; answers match visible text and FAQ JSON-LD.
+- Added a plainly readable homepage summary of business use cases, with pilot and availability qualifications.
+- Updated the `lastmod` dates only for changed pages.
+- **Visibility limitation:** Public web-search queries did not surface the site during this audit, but that is not proof of Google non-indexing or rankings; use Search Console for confirmation. Live HTTP/redirect checks were unavailable from the audit environment.
+- **Google AEO/GEO:** Google states its AI Search results follow core SEO principles; `llms.txt` is not used as a ranking factor by Google. Focus on crawlable, original, evidence-backed content rather than AI-only markup or ranking promises.
 
 ## Implemented in the repository
 
@@ -65,12 +76,13 @@ update with HTTP 403, so HTTPS enforcement was not changed.
    references as they become available. Do not add invented reviews, customer
    results, certifications, addresses or unsupported integrations.
 
-No Search Console submission or ranking measurement was performed by this
+No Search Console submission, Core Web Vitals field measurement, or verified Google ranking measurement was performed by this
 repository change. Search crawling, indexing, ranking and generative-answer
 citations are determined by the relevant services and are not guaranteed.
 
 ## Reference guidance
 
+- [Google generative AI Search optimization guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
 - [Google SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
 - [Google AI features and your website](https://developers.google.com/search/docs/appearance/ai-features)
 - [Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview)
