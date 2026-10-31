@@ -95,7 +95,7 @@ The orchstring experience adds visual representations for:
 
 ## Repository and deployment
 
-Source: https://github.com/thedeveloperyug/neytra-intelligence
+Source: https://github.com/thedeveloperyug/OrchString
 
 The repository keeps its existing GitHub URL. Its website, documentation and
 workflow use the orchstring brand.
@@ -126,7 +126,7 @@ sales email and console destinations are retained until replacement addresses ar
 **Yogesh Pandey** — Founder & creator of the orchstring platform vision.
 
 LinkedIn: https://www.linkedin.com/in/thedeveloperyug  
-Email: thedeveloperyug@gmail.com
+Email: yogesh.pandey@orchstring.com
 
 ---
 
