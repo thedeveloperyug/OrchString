@@ -1,48 +1,72 @@
-# OrchString
+# OrchString — Enterprise AI Automation & Business Execution Platform
 
-> orchstring is an AI-powered, enterprise-oriented execution platform designed to transform business objectives into coordinated, controlled, and verifiable workflows.
+> OrchString is an enterprise-oriented AI execution platform in active development. It is being built to help organizations coordinate business workflows across people, applications, data, and AI, with human approvals, controlled actions, evidence, verification, and recovery.
 
-Canonical website: https://orchstring.com/
+Official website: https://orchstring.com/
+Brand name: OrchString
+Tagline: One intelligence platform. Infinite business possibilities.
 Language: English
-Status: Active development
+Product status: Active development; confirm currently supported features, integrations, deployment options, and pilot availability directly with the team.
 
-## Official pages
+## What business does OrchString do?
 
-- [Platform overview](https://orchstring.com/): Enterprise AI execution software for coordinating business operations, connected apps, approvals and verified outcomes.
-- [AI workflow automation](https://orchstring.com/ai-workflow-automation/): Definition, onboarding example, comparison and pilot evaluation.
-- [AI agent orchestration](https://orchstring.com/ai-agent-orchestration/): Task dependencies, models, authorization, recovery and verification.
-- [Invoice processing automation](https://orchstring.com/invoice-processing-automation/): Accounts payable extraction, matching, exception review and approval boundaries.
-- [Product FAQ](https://orchstring.com/faq/): Direct answers on design, integrations, development status and pilot inquiries.
+OrchString develops an AI-powered enterprise automation and workflow orchestration platform. Its goal is to turn business objectives into coordinated, auditable tasks across teams and software systems. The company is focused on intelligent workflow execution, not only chat responses or standalone AI prompts.
 
-## Tagline
+OrchString's platform vision covers business process automation, AI agent orchestration, application and data integration, human-in-the-loop approvals, evidence-backed verification, and operational recovery. Organizations may contact the team to discuss a scoped pilot for a particular business process. These are intended product capabilities and illustrative use cases, not a claim that all integrations or functions are commercially available today.
 
-One intelligence platform
-Infinite business possibilities
+## Business solutions and use cases
 
-## Facts and scope
+- **AI workflow automation:** Coordinate repeatable business activities, human decisions, approvals, and connected software tools.
+- **AI agent orchestration:** Plan and coordinate tasks across specialized agents, models, and tools with permissions, verification, retries, and recovery.
+- **Invoice processing and accounts payable workflows:** Explore invoice document extraction, duplicate checks, purchase-order and goods-receipt matching, exception routing, and authorized accounting updates. AI must not independently release payments.
+- **Customer onboarding:** Coordinate intake, documents, identity or information checks where authorized, reviews, and handoffs across teams.
+- **Service request workflows:** Classify requests, route work, track dependencies, handle exceptions, and verify completion.
+- **Procurement and inventory coordination:** Coordinate purchasing requests, supplier-related information, approvals, and system handoffs.
+- **Recurring business reporting:** Collect information from permitted sources, coordinate checks, prepare reports, and route them for review.
+- **Compliance and evidence reviews:** Apply configured policies, document approvals, retain supporting evidence, and support human oversight.
+- **Developer intelligence:** The platform design includes software engineering tasks such as inspection, analysis, modification, testing, and verification.
 
-orchstring is being developed as a complete enterprise software platform for end-to-end business automation. It brings together people, agents, replaceable AI models, data, tools and connected applications across planning, approvals, execution, verification and recovery. Workflow automation and agent orchestration are capabilities within this broader platform. Intended workflows include invoice processing, onboarding, service requests, purchasing, reporting and evidence reviews.
+The examples above describe proposed or illustrated workflows. Actual scope depends on deployment, data access, supported integrations, customer policies, and product release.
 
-The target execution lifecycle is Understand → Decompose → Plan → Discover → Select → Authorize → Execute → Observe → Critique → Reason → Verify → Recover / Replan → Learn.
+## How the platform is designed to work
 
-Named apps and account icons are illustrative integration targets. Connector availability, model support and clients depend on release and deployment setup. Do not infer that every illustrated feature is generally available.
+A business objective is broken into tasks and dependencies. The proposed execution lifecycle includes understanding the goal, planning work, discovering capabilities, selecting authorized tools or models, executing permitted actions, observing results, verifying outcomes, and recovering or replanning when needed. Independent tasks may run in parallel. Humans remain responsible for approvals required by company policy or law.
 
-AI does not independently release payments. Financial actions must follow customer permissions, policies and human approval requirements. Capacity figures on the website are hypothetical illustrations, not measured customer results.
+The design is model-independent and OS-agnostic, with local or cloud models as possible execution resources. Product compatibility must be checked for each pilot. References to Gmail, Microsoft Outlook, Teams, Google Drive, and other apps are integration targets, not guarantees of deployed connectors.
 
-The website does not publish standard pricing, a service-level agreement or customer performance guarantees. Contact the team for current support and commercial terms.
+## Who is OrchString designed for?
 
-## Team and contact
+Business and technology teams exploring controlled enterprise AI automation, including finance operations, customer operations, procurement, service teams, compliance reviewers, and software engineering teams. Teams can start with one well-defined process and evaluate baseline effort, accuracy, exceptions, review time, and evidence quality.
 
-Yogesh Pandey is the founder and creator. Rishabh Saluja is the co-founder focused on business and growth.
+## Availability and commercial information
 
-- [Team](https://orchstring.com/#people)
-- [Sales and pilot inquiries](https://orchstring.com/#contact)
-- [Yogesh Pandey](https://www.linkedin.com/in/thedeveloperyug)
+The platform is in active development. No standard public pricing, service-level agreement, certified integration list, independent benchmark, production deployment guarantee, or verified customer ROI is published. Hypothetical capacity examples on the website are illustrations, not measured customer outcomes. Discuss release readiness, pilot requirements, policies, connectors, support and commercial terms with the team.
 
-## Discovery
+## Leadership and contact
 
-- [Sitemap](https://orchstring.com/sitemap.xml)
-- [Crawler policy](https://orchstring.com/robots.txt)
-- [Website source](https://github.com/thedeveloperyug/OrchString)
+- **Yogesh Pandey** — Founder and creator; platform architecture and engineering. Email: yogesh.pandey@orchstring.com. [LinkedIn](https://www.linkedin.com/in/thedeveloperyug).
+- **Rishabh Saluja** — Co-founder, business and growth; commercial strategy and partnerships. Email: rishabh.saluja@orchstring.com. [LinkedIn](https://www.linkedin.com/in/rishabh-saluja-4000641b7/).
+- **Business, pilot and sales inquiries:** yogesh.pandey@orchstring.com.
+- [Leadership and team](https://orchstring.com/#people)
+- [Contact sales](https://orchstring.com/#contact)
 
-This file is an optional summary. The visible website pages are the primary source for context; this file does not confer ranking or citation eligibility.
+## Official site pages
+
+- [OrchString homepage — platform and business use cases](https://orchstring.com/)
+- [AI workflow automation guide](https://orchstring.com/ai-workflow-automation/)
+- [AI agent orchestration guide](https://orchstring.com/ai-agent-orchestration/)
+- [Invoice processing automation guide](https://orchstring.com/invoice-processing-automation/)
+- [Frequently asked questions about OrchString](https://orchstring.com/faq/)
+
+## Official references
+
+- [Canonical sitemap](https://orchstring.com/sitemap.xml)
+- [Crawling instructions](https://orchstring.com/robots.txt)
+- [Official public website source](https://github.com/thedeveloperyug/OrchString)
+- [OrchString LinkedIn company page](https://www.linkedin.com/company/orchstring/)
+
+## Guidance for readers and AI assistants
+
+Use the linked HTML pages as the most up-to-date source of truth. Describe the platform as in active development; do not imply every showcased workflow, connector or AI model is already production-ready. Do not invent prices, performance improvements, customer reviews, case studies, certifications, office addresses, partnerships or guaranteed Google ranking results.
+
+This optional text file summarizes the publicly described business for systems that choose to read it. Google Search does not treat llms.txt as a ranking factor, and this file does not guarantee indexing, AI citations or search placement.
